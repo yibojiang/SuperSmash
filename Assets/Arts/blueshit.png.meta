@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 51a27506402b34f528e42c71f5d1b9fa
+guid: 0de3c6b4b962d4a40811d4355fd03528
 TextureImporter:
   fileIDToRecycleName:
-    21300000: eva_0
-    21300002: eva_1
-    21300004: eva_2
-    21300006: eva_3
+    21300000: blueshit_0
+    21300002: blueshit_1
+    21300004: blueshit_2
+    21300006: blueshit_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +25,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -47,45 +47,45 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: eva_0
+    - name: blueshit_0
       rect:
         serializedVersion: 2
-        x: 208
-        y: 183
-        width: 182
-        height: 815
+        x: 842
+        y: 505
+        width: 562
+        height: 515
       alignment: 9
-      pivot: {x: .465276867, y: .893522561}
+      pivot: {x: .496753395, y: .0748459324}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eva_1
+    - name: blueshit_1
       rect:
         serializedVersion: 2
-        x: 451
-        y: 203
-        width: 166
-        height: 797
+        x: 756
+        y: 1179
+        width: 853
+        height: 439
       alignment: 9
-      pivot: {x: .5, y: .894480884}
+      pivot: {x: .119247094, y: .64962709}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eva_2
+    - name: blueshit_2
       rect:
         serializedVersion: 2
-        x: 772
-        y: 97
-        width: 349
-        height: 901
+        x: 34
+        y: 489
+        width: 483
+        height: 1120
       alignment: 9
-      pivot: {x: .391353041, y: .891031086}
+      pivot: {x: .696439266, y: .0845733061}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eva_3
+    - name: blueshit_3
       rect:
         serializedVersion: 2
-        x: 1209
-        y: 97
-        width: 374
-        height: 949
+        x: 693
+        y: 36
+        width: 790
+        height: 252
       alignment: 9
-      pivot: {x: .526409924, y: .0226492286}
+      pivot: {x: .516167521, y: .811343431}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
