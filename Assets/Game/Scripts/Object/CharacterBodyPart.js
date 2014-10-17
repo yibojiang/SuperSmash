@@ -47,8 +47,10 @@ function Init(_character:Character){
 	
 	character=_character;
 	transform.parent=character.transform;
+	transform.localPosition=Vector3(0,0,0);
 	hpObj=Instantiate(GameManager.Instance().hpPrefab);
 	character.hpObj.AddHPObj(hpObj);
+
 
 	if (rigidbody!=null){
 		gameObject.Destroy(rigidbody);

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: dd146164341074ffe9dae96f46bd9089
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: horse_bottom
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

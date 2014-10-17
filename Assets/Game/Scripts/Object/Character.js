@@ -85,8 +85,26 @@ function Attack2(){
 	}
 }
 
-function PickupBody(){
-	
+function DropBodyPart(_part:int){
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].part==_part){
+			bodyParts[i].Drop();
+		}
+	}
+
+}
+
+function PickupBodyPart(){
+	var hitColliders = Physics.OverlapSphere(transform.position, detectRadius, 1 << LayerMask.NameToLayer("Body"));
+	for (var i = 0; i < hitColliders.Length; i++) {
+		var bp:CharacterBodyPart=hitColliders[i].gameObject.GetComponent(CharacterBodyPart) as CharacterBodyPart;
+		if (bp!=null && !bp.Alive()){
+			DropBodyPart(bp.part);
+			AddBodyPart(bp.part,bp);
+			return;		
+		}	
+	}
 }
 
 function IsHurting():boolean{
@@ -125,9 +143,10 @@ function DetectDropItem():boolean{
 			return true;	
 		}	
 	}
-
 	return false;
 }
+
+
 
 function CheckDie(){
 	if (bodyParts.Count==0){
@@ -162,12 +181,7 @@ function Update () {
 		recoverToggle+=Time.deltaTime;
 	}
 
-	if (DetectDropItem()){
-		tTip.text="'B' to pickup";
-	}
-	else{
-		tTip.text="";	
-	}
+	
 
 	
 	var device:InputDevice;
@@ -177,7 +191,7 @@ function Update () {
 		if (device!=null){
 			var dir:Vector2=device.Direction;
 
-			Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
+ 			//Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
 			if (!GetWalkPart().IsAttacking() && !IsHurting() ){
 				
 				var newPos:Vector3=transform.position;
@@ -209,18 +223,26 @@ function Update () {
 					Attack2();
 				}
 
-				//B button
-				if ( device.Action2.IsPressed ){
-					if (pickupToggle<pickupInterval){
-						pickupToggle+=Time.deltaTime;
+				if (DetectDropItem()){
+					tTip.text="'B' to pickup";
+					//B button
+					if ( device.Action2.IsPressed ){
+						if (pickupToggle<pickupInterval){
+							pickupToggle+=Time.deltaTime;
+						}
+						else{
+							PickupBodyPart();
+							pickupToggle=0;
+						}
 					}
 					else{
-						PickupBody();
+						pickupToggle=0;
 					}
 				}
 				else{
-					pickupToggle=0;
+					tTip.text="";	
 				}
+				
 
 				pickupBar.transform.localScale.x=(pickupToggle/pickupInterval)*200;
 			}
