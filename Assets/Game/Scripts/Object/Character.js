@@ -33,6 +33,8 @@ var hpObj:HPContainer;
 var initPart1:CharacterBodyPart;
 var initPart2:CharacterBodyPart;
 
+var flipDir:int;
+
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	bodyParts[_part]=_body;
 	_body.Init(this);
@@ -41,6 +43,13 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 function Start () {
 	AddBodyPart(0,initPart1);
 	AddBodyPart(1,initPart2);
+
+	if (controlIndex % 2==0){
+		SetDir(1);
+	}
+	else{
+		SetDir(-1);		
+	}
 }
 
 function Hurt(_damage:float){
@@ -87,6 +96,18 @@ function IsHurting():boolean{
 	}
 }
 
+
+
+function SetDir(_dir:int){
+	flipDir=_dir;
+	if (flipDir>0){
+		transform.localRotation.y=0;
+	}
+	else{
+		transform.localRotation.y=180;
+	}
+}
+
 function Update () {
 
 	if (recoverToggle<recoverInterval){
@@ -102,6 +123,8 @@ function Update () {
 
 			
 			transform.position.x+=dir.x*speed*Time.deltaTime;
+
+
 			
 			//if is recoving, cant attack or jump
 			if (!IsHurting()){

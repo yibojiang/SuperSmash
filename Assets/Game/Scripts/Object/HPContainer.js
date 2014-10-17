@@ -9,6 +9,7 @@ function UpdateLayout(){
 	for (i=0;i<hpbars.Count;i++){
 		hpbars[i].transform.localPosition.x=0;
 		hpbars[i].transform.localPosition.y=i*0.3;
+		hpbars[i].transform.localPosition.z=0;
 	}
 }
 

@@ -10,6 +10,7 @@ var anim:Animator;
 function Awake(){
 
 	anim=GetComponent(Animator) as Animator;
+	Debug.Log("anim: "+anim);
 }
 
 
