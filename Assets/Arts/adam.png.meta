@@ -50,42 +50,42 @@ TextureImporter:
     - name: adam_0
       rect:
         serializedVersion: 2
-        x: 91
+        x: 70
         y: 155
-        width: 351
-        height: 1079
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        width: 277
+        height: 874
+      alignment: 9
+      pivot: {x: .318799287, y: .897898078}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: adam_1
       rect:
         serializedVersion: 2
-        x: 519
-        y: 155
-        width: 364
-        height: 905
-      alignment: 9
-      pivot: {x: .726536334, y: .8565377}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: adam_2
-      rect:
-        serializedVersion: 2
-        x: 1002
+        x: 411
         y: 212
         width: 235
         height: 841
       alignment: 9
-      pivot: {x: .583908558, y: .907116711}
+      pivot: {x: .385579348, y: .896459162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adam_2
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 155
+        width: 364
+        height: 905
+      alignment: 9
+      pivot: {x: .29808715, y: .876345336}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: adam_3
       rect:
         serializedVersion: 2
-        x: 1297
-        y: 153
-        width: 277
-        height: 874
+        x: 1206
+        y: 155
+        width: 351
+        height: 1079
       alignment: 9
-      pivot: {x: .68767184, y: .897898018}
+      pivot: {x: .474464357, y: .119551748}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

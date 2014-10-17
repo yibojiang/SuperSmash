@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 5e90b3e71785e421bb2f387eff5c417d
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bear_0
+    21300002: bear_1
+    21300004: bear_2
+    21300006: bear_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,6 +46,46 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: bear_0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1425
+        width: 535
+        height: 513
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bear_1
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1185
+        width: 637
+        height: 917
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bear_2
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 314
+        width: 254
+        height: 476
+      alignment: 9
+      pivot: {x: .5, y: .764380455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bear_3
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 184
+        width: 306
+        height: 606
+      alignment: 9
+      pivot: {x: .520562887, y: .832264543}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

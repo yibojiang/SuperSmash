@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 19972317c46c3431cb72cf4727817d07
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: egale_0
+    21300002: egale_1
+    21300004: egale_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,6 +45,36 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: egale_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 789
+        width: 475
+        height: 660
+      alignment: 9
+      pivot: {x: .818950951, y: .106489055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: egale_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 721
+        width: 205
+        height: 506
+      alignment: 9
+      pivot: {x: .510557592, y: .876401663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: egale_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 83
+        width: 850
+        height: 447
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
