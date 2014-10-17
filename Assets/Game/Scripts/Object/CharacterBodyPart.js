@@ -7,9 +7,21 @@ var maxHP:float;
 var character:Character;
 var anim:Animator;
 
+var part:int;
+
 function Awake(){
 
 	anim=GetComponent(Animator) as Animator;
+	//Debug.Log("anim: "+anim);
+}
+
+function Alive():boolean{
+	if (character==null){
+		return false;
+	}
+	else{
+		return true;	
+	}
 }
 
 
@@ -18,9 +30,15 @@ function Start () {
 }
 
 function Init(_character:Character){
+	
 	character=_character;
+	transform.parent=character.transform;
 	hpObj=Instantiate(GameManager.Instance().hpPrefab);
 	character.hpObj.AddHPObj(hpObj);
+
+	if (rigidbody!=null){
+		gameObject.Destroy(rigidbody);
+	}
 }
 
 function Update(){
@@ -32,7 +50,7 @@ function Update(){
 function Hurt(_damage:float){
 	HP-=_damage;
 	if (HP<0){
-		Die();
+		Drop();
 	}
 
 	if (character!=null){
@@ -40,15 +58,40 @@ function Hurt(_damage:float){
 	}
 }
 
+
+function Drop(){
+	if (hpObj!=null){
+		character.hpObj.RemoveHPObj(hpObj);
+		Destroy(hpObj);
+		//Destroy(this.gameObject);
+		transform.parent=null;
+		character=null;
+		//HP=maxHP;
+
+		gameObject.AddComponent(Rigidbody);
+
+	}
+}
+
+/*
 function Die(){
 	if (hpObj!=null){
 		character.hpObj.RemoveHPObj(hpObj);
 		Destroy(hpObj);
-		Destroy(this.gameObject);
+		//Destroy(this.gameObject);
+		transform.parent=null;
+		character=null;
+		//HP=maxHP;
+
+		gameObject.AddComponent(Rigidbody);
+
 	}
-	
 }
+*/
 
 function Attack(){
-	anim.SetTrigger("Attack");
+	if (anim!=null){
+		anim.SetTrigger("Attack");	
+	}
+	
 }

@@ -33,6 +33,10 @@ var hpObj:HPContainer;
 var initPart1:CharacterBodyPart;
 var initPart2:CharacterBodyPart;
 
+var flipDir:int;
+
+var tTip:TextMesh;
+
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	bodyParts[_part]=_body;
 	_body.Init(this);
@@ -41,6 +45,13 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 function Start () {
 	AddBodyPart(0,initPart1);
 	AddBodyPart(1,initPart2);
+
+	if (controlIndex % 2==0){
+		SetDir(1);
+	}
+	else{
+		SetDir(-1);		
+	}
 }
 
 function Hurt(_damage:float){
@@ -72,10 +83,8 @@ function Attack2(){
 	}
 }
 
-function Attack3(){
-	if (bodyParts[2]!=null){
-		bodyParts[2].Attack();
-	}
+function PickupBody(){
+	
 }
 
 function IsHurting():boolean{
@@ -87,11 +96,50 @@ function IsHurting():boolean{
 	}
 }
 
+
+
+function SetDir(_dir:int){
+	flipDir=_dir;
+	if (flipDir>0){
+		transform.localRotation.y=0;
+	}
+	else{
+		transform.localRotation.y=180;
+	}
+}
+
+var detectRadius:float=10;
+var pickupToggle:float=0;
+var pickupInterval:float=1;
+var pickupBar:GameObject;
+
+function DetectDropItem():boolean{
+	var hitColliders = Physics.OverlapSphere(transform.position, detectRadius, 1 << LayerMask.NameToLayer("Body"));
+	for (var i = 0; i < hitColliders.Length; i++) {
+
+		var bp:CharacterBodyPart=hitColliders[i].gameObject.GetComponent(CharacterBodyPart) as CharacterBodyPart;
+		
+		if (bp!=null && !bp.Alive()){
+			return true;	
+		}	
+	}
+
+	return false;
+}
+
 function Update () {
 
 	if (recoverToggle<recoverInterval){
 		recoverToggle+=Time.deltaTime;
 	}
+
+	if (DetectDropItem()){
+		tTip.text="'B' to pickup";
+	}
+	else{
+		tTip.text="";	
+	}
+
 	
 	var device:InputDevice;
 	if (controlIndex<InputManager.Devices.Count){
@@ -101,7 +149,12 @@ function Update () {
 			var dir:Vector2=device.Direction;
 
 			
-			transform.position.x+=dir.x*speed*Time.deltaTime;
+			//transform.position.x+=dir.x*speed*Time.deltaTime;
+			var newPos:Vector3=transform.position;
+			newPos.x+=dir.x*speed*Time.deltaTime;
+			rigidbody.MovePosition(newPos);
+
+
 			
 			//if is recoving, cant attack or jump
 			if (!IsHurting()){
@@ -116,9 +169,19 @@ function Update () {
 				}
 
 				//B button
-				if ( device.Action2.WasPressed ){
-					Attack3();
-				}	
+				if ( device.Action2.IsPressed ){
+					if (pickupToggle<pickupInterval){
+						pickupToggle+=Time.deltaTime;
+					}
+					else{
+						PickupBody();	
+					}
+				}
+				else{
+					pickupToggle=0;
+				}
+
+				pickupBar.transform.localScale.x=(pickupToggle/pickupInterval)*200;
 			}
 		}
 	}
