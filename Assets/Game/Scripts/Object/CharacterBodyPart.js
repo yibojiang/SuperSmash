@@ -9,10 +9,18 @@ var anim:Animator;
 
 var part:int;
 
+private var atkState :int= Animator.StringToHash("Base Layer.Attack");
+private var walkState:int=Animator.StringToHash("Base Layer.Walk");
+private var idleState:int=Animator.StringToHash("Base Layer.Idle");
+
 function Awake(){
 
 	anim=GetComponent(Animator) as Animator;
 	//Debug.Log("anim: "+anim);
+}
+
+function Start(){
+	atkState=Animator.StringToHash("Base Layer.Attack");
 }
 
 function Alive():boolean{
@@ -24,10 +32,16 @@ function Alive():boolean{
 	}
 }
 
-
-function Start () {
-
+function IsAttacking():boolean{
+	if (anim.GetCurrentAnimatorStateInfo(0).nameHash == atkState ){
+		return true;
+	}
+	else{
+		return false;
+	}
 }
+
+
 
 function Init(_character:Character){
 	

@@ -37,6 +37,8 @@ var flipDir:int;
 
 var tTip:TextMesh;
 
+
+
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	bodyParts[_part]=_body;
 	_body.Init(this);
@@ -134,11 +136,28 @@ function CheckDie(){
 }
 
 function Die(){
+
+}
+
+function GetWalkPart():CharacterBodyPart{
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].part==1){
+			return bodyParts[i];
+		}
+	}
+
+	for (i=0;i<bodyParts.Count;i++){
+		return bodyParts[i];
+	}
 	
+		
 }
 
 function Update () {
-
+	if (bodyParts.Count==0){
+		return;
+	}
 	if (recoverToggle<recoverInterval){
 		recoverToggle+=Time.deltaTime;
 	}
@@ -158,12 +177,24 @@ function Update () {
 		if (device!=null){
 			var dir:Vector2=device.Direction;
 
-			
-			//transform.position.x+=dir.x*speed*Time.deltaTime;
-			var newPos:Vector3=transform.position;
-			newPos.x+=dir.x*speed*Time.deltaTime;
-			rigidbody.MovePosition(newPos);
+			Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
+			if (!GetWalkPart().IsAttacking() && !IsHurting() ){
+				
+				var newPos:Vector3=transform.position;
 
+				var walkSpeed:float=dir.x*speed*Time.deltaTime;
+				newPos.x+=walkSpeed;
+				GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
+				rigidbody.MovePosition(newPos);
+			}
+
+
+			if (dir.x>0){
+				SetDir(1);
+			}
+			else if (dir.x<0){
+				SetDir(-1);
+			}
 
 			
 			//if is recoving, cant attack or jump
@@ -184,7 +215,7 @@ function Update () {
 						pickupToggle+=Time.deltaTime;
 					}
 					else{
-						PickupBody();	
+						PickupBody();
 					}
 				}
 				else{
