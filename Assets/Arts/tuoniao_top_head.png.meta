@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 675a30c0f5f9e4042af35c8118a2ca94
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tuoniao_top_head
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

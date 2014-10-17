@@ -127,6 +127,16 @@ function DetectDropItem():boolean{
 	return false;
 }
 
+function CheckDie(){
+	if (bodyParts.Count==0){
+		Die();
+	}
+}
+
+function Die(){
+	
+}
+
 function Update () {
 
 	if (recoverToggle<recoverInterval){

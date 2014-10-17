@@ -64,9 +64,11 @@ function Drop(){
 		character.hpObj.RemoveHPObj(hpObj);
 		Destroy(hpObj);
 		//Destroy(this.gameObject);
+		character.CheckDie();
 		transform.parent=null;
 		character=null;
 		//HP=maxHP;
+
 
 		gameObject.AddComponent(Rigidbody);
 
