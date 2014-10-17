@@ -8,6 +8,7 @@ var character:Character;
 var anim:Animator;
 
 var part:int;
+var speed:float=2;
 
 private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");

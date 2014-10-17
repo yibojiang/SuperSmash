@@ -4,7 +4,7 @@ import InControl;
 import System.Collections.Generic;
 
 
-var speed:float;
+
 
 
 var controlIndex:int;
@@ -200,7 +200,7 @@ function Update () {
 				
 				var newPos:Vector3=transform.position;
 
-				var walkSpeed:float=dir.x*speed*Time.deltaTime;
+				var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
 				newPos.x+=walkSpeed;
 				GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
 				rigidbody.MovePosition(newPos);

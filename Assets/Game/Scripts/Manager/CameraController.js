@@ -32,6 +32,6 @@ function LateUpdate () {
 
 
 	transform.position.x=target.position.x;
-	transform.position.z=-290-(rightX-leftX);
+	transform.position.z=(-293-(rightX-leftX)*0.3 );
 	//transform.position.y=target.positiion.y;
 }
