@@ -7,11 +7,24 @@ function OnTriggerEnter(_other:Collider){
 	//Debug.Log(_other.tag);
 
 	if (_other.CompareTag("BodyPart")){
-		Debug.Log(_other.name);
+		
 		var bp:CharacterBodyPart=_other.GetComponent(CharacterBodyPart) as CharacterBodyPart;
 
 		if (bp.Alive() ){
-			bp.Hurt(damage);	
+			
+			var myChar:Character=GetComponentInParent(Character) as Character;
+
+			if (myChar!=null){
+				Debug.Log(myChar.name+" : "+ bp.character.name);
+			
+				if (myChar!=bp.character ){
+					Debug.Log(_other.name);
+					bp.Hurt(damage);		
+				}	
+			}
+			
+			
+			
 		}
 		
 	}

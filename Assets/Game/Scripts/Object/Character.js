@@ -40,8 +40,12 @@ var tTip:TextMesh;
 
 
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
-	bodyParts[_part]=_body;
+	//bodyParts[_part]=_body;
+	bodyParts.Add(_body);
 	_body.Init(this);
+
+	//groundCheck=GetWalkPart().collider.size;
+
 }
 
 function Start () {
@@ -121,10 +125,10 @@ function IsHurting():boolean{
 function SetDir(_dir:int){
 	flipDir=_dir;
 	if (flipDir>0){
-		transform.localRotation.y=0;
+		transform.eulerAngles.y=0;
 	}
 	else{
-		transform.localRotation.y=180;
+		transform.eulerAngles.y=180;
 	}
 }
 
@@ -155,7 +159,7 @@ function CheckDie(){
 }
 
 function Die(){
-
+	Destroy(rigidbody);
 }
 
 function GetWalkPart():CharacterBodyPart{
@@ -252,7 +256,7 @@ function Update () {
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	//Debug.Log(grounded);
 	
-	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting() ){
+	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting() && GetWalkPart().part==1 ){
 		jump=true;
 	}
 

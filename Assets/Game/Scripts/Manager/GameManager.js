@@ -11,10 +11,5 @@ public static function Instance() : GameManager
 
 var hpPrefab:GameObject;
 
-function Start () {
+var characters:List.<Character>;
 
-}
-
-function Update () {
-
-}

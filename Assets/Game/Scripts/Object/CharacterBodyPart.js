@@ -13,6 +13,25 @@ private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");
 private var idleState:int=Animator.StringToHash("Base Layer.Idle");
 
+function RedFlash(){
+	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
+	var toggle:float=0;
+	
+	while (toggle<0.2){
+		toggle+=Time.deltaTime;
+
+		var i:int;
+		for (i=0;i<sr.Length;i++){
+			sr[i].color=Color.Lerp(Color.red,Color.white,toggle/0.2);	
+		}
+		
+		yield WaitForEndOfFrame();
+
+	}
+
+
+}
+
 function Awake(){
 
 	anim=GetComponent(Animator) as Animator;
@@ -41,8 +60,6 @@ function IsAttacking():boolean{
 	}
 }
 
-
-
 function Init(_character:Character){
 	
 	character=_character;
@@ -65,6 +82,7 @@ function Update(){
 
 function Hurt(_damage:float){
 	HP-=_damage;
+	RedFlash();
 	if (HP<0){
 		Drop();
 	}
@@ -81,9 +99,11 @@ function Drop(){
 		Destroy(hpObj);
 		//Destroy(this.gameObject);
 		character.CheckDie();
+		character.bodyParts.Remove(this);
 		transform.parent=null;
 		character=null;
-		//HP=maxHP;
+		
+		HP=maxHP;
 
 
 		gameObject.AddComponent(Rigidbody);
