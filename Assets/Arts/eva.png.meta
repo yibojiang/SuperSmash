@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 51a27506402b34f528e42c71f5d1b9fa
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: eva_0
+    21300002: eva_1
+    21300004: eva_2
+    21300006: eva_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,6 +46,46 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: eva_0
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 183
+        width: 182
+        height: 815
+      alignment: 9
+      pivot: {x: .465276867, y: .893522561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eva_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 203
+        width: 166
+        height: 797
+      alignment: 9
+      pivot: {x: .5, y: .894480884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eva_2
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 97
+        width: 349
+        height: 901
+      alignment: 9
+      pivot: {x: .391353041, y: .891031086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eva_3
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 97
+        width: 374
+        height: 949
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
