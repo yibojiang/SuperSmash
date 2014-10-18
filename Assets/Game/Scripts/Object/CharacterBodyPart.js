@@ -10,6 +10,8 @@ var anim:Animator;
 var part:int;
 var speed:float=2;
 
+var jumpForce:float=3000;
+
 private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");
 private var idleState:int=Animator.StringToHash("Base Layer.Idle");
@@ -85,7 +87,8 @@ function Hurt(_damage:float,_force:Vector3){
 	HP-=_damage;
 	RedFlash();
 	if (HP<0){
-		Drop();
+		//Drop();
+		FlyAway(_force);
 	}
 
 	if (character!=null){
@@ -93,6 +96,16 @@ function Hurt(_damage:float,_force:Vector3){
 	}
 }
 
+function FlyAway(_force:Vector3){
+
+	Drop();
+
+	var smoke:GameObject=Instantiate(GameManager.Instance().smokePrefab);
+	smoke.transform.parent=transform;
+	smoke.transform.localPosition=Vector3(0,0,0);
+	rigidbody.AddForce(1000*(_force.normalized+Vector3(0,1,0) ) );
+	rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY |RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionZ;
+}
 
 function Drop(){
 	if (hpObj!=null){

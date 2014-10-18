@@ -560,6 +560,7 @@ MonoBehaviour:
   anim: {fileID: 9500000}
   part: 0
   speed: 10
+  jumpForce: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -572,12 +573,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 400
+  maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
   speed: 20
+  jumpForce: 3000
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -641,7 +643,6 @@ MonoBehaviour:
   grounded: 0
   bodyParts: []
   jump: 0
-  jumpForce: 3000
   recoverRate: 100
   recoverToggle: 0
   recoverInterval: 0
@@ -650,6 +651,8 @@ MonoBehaviour:
   initPart2: {fileID: 11400002}
   flipDir: 0
   tTip: {fileID: 10200000}
+  ai: 0
+  characterName: Tuo Niao
   detectRadius: 1.20000005
   pickupToggle: 0
   pickupInterval: 1

@@ -3,10 +3,6 @@
 import InControl;
 import System.Collections.Generic;
 
-
-
-
-
 var controlIndex:int;
 
 var groundCheck:GameObject;
@@ -16,9 +12,6 @@ var grounded:boolean;
 var bodyParts:List.<CharacterBodyPart>;
 
 var jump:boolean;
-
-var jumpForce:float;
-
 
 
 var recoverRate:float;
@@ -39,7 +32,7 @@ var tTip:TextMesh;
 
 var ai:boolean;
 
-
+var characterName:String;
 
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	//bodyParts[_part]=_body;
@@ -196,9 +189,17 @@ function GetWalkPart():CharacterBodyPart{
 }
 
 function Update () {
+
+	if (transform.position.y<0){
+		GameManager.Instance().characters.Remove(this);
+		Destroy(this.gameObject);
+	}
+
 	if (bodyParts.Count==0){
 		return;
 	}
+
+
 	if (recoverToggle<recoverInterval){
 		recoverToggle+=Time.deltaTime;
 	}
@@ -264,7 +265,7 @@ function Update () {
 			}
 		}
 		else{
-			tTip.text=(controlIndex+1)+"P";	
+			tTip.text=(controlIndex+1)+"P"+": "+characterName;	
 		}
 		
 		pickupBar.transform.localScale.x=(pickupToggle/pickupInterval)*200;
@@ -278,14 +279,12 @@ function Update () {
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	//Debug.Log(grounded);
 	
-	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting() && GetWalkPart().part==1 ){
+	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting()  ){
 		jump=true;
 	}
 
 	if (jump){
-		rigidbody.AddForce(Vector3(0,jumpForce,0) );
+		rigidbody.AddForce(Vector3(0,GetWalkPart().jumpForce,0) );
 		jump=false;
 	}
-	
-
 }

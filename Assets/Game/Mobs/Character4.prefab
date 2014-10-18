@@ -537,6 +537,7 @@ MonoBehaviour:
   anim: {fileID: 9500000}
   part: 0
   speed: 2
+  jumpForce: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,12 +550,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 400
+  maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
   speed: 5
+  jumpForce: 1500
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -583,7 +585,6 @@ MonoBehaviour:
   grounded: 0
   bodyParts: []
   jump: 0
-  jumpForce: 3000
   recoverRate: 100
   recoverToggle: 0
   recoverInterval: 0
@@ -592,6 +593,8 @@ MonoBehaviour:
   initPart2: {fileID: 11400006}
   flipDir: 0
   tTip: {fileID: 10200000}
+  ai: 0
+  characterName: Blue Shit
   detectRadius: 1.20000005
   pickupToggle: 0
   pickupInterval: 1
