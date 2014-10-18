@@ -1,11 +1,16 @@
 fileFormatVersion: 2
 guid: 91952993b287b4bdeb09b69bd5fb7aa6
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: llama_0
+    21300002: llama_1
+    21300004: llama_2
+    21300006: llama_3
+    21300008: llama_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -21,27 +26,77 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: llama_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 149
+        width: 280
+        height: 659
+      alignment: 9
+      pivot: {x: .547054946, y: .834883332}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: llama_1
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 218
+        width: 165
+        height: 556
+      alignment: 9
+      pivot: {x: .539925516, y: .855451763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: llama_2
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 86
+        width: 372
+        height: 770
+      alignment: 9
+      pivot: {x: .314056724, y: .0807824284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: llama_3
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 681
+        width: 121
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: llama_4
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 83
+        width: 746
+        height: 390
+      alignment: 9
+      pivot: {x: .826735914, y: .770264864}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
