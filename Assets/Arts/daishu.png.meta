@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 70c28430496d2462e84794ee27b3a56b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: daishu_0
+    21300002: daishu_1
+    21300004: daishu_2
+    21300006: daishu_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -25,23 +29,63 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: daishu_0
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1046
+        width: 418
+        height: 646
+      alignment: 9
+      pivot: {x: .274590313, y: .826711178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: daishu_1
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1504
+        width: 763
+        height: 728
+      alignment: 9
+      pivot: {x: .139415503, y: .199734703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: daishu_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 138
+        width: 984
+        height: 735
+      alignment: 9
+      pivot: {x: .814070642, y: .807661057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: daishu_3
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 811
+        width: 108
+        height: 472
+      alignment: 9
+      pivot: {x: .674484789, y: .875287831}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
