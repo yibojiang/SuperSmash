@@ -54,8 +54,8 @@ TextureImporter:
         y: 1425
         width: 535
         height: 513
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .543060601, y: .761959314}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bear_1
       rect:
@@ -64,8 +64,8 @@ TextureImporter:
         y: 1185
         width: 637
         height: 917
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .331227154, y: .0854759738}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bear_2
       rect:
