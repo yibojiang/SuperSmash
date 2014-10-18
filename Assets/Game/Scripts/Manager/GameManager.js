@@ -57,6 +57,14 @@ function LogEvent(_eventStr:String){
 
 }
 
+function GeneratePlayer(_playerIndex:int){
+	var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
+	var mob:Character=Instantiate(mobs[Random.Range(0,mobs.Length)],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+	mob.ai=false;
+	mob.controlIndex=_playerIndex;
+	characters.Add(mob);
+}
+
 function Update(){
 	tLog.text="";
 	tScoreBoard.text="";
@@ -65,8 +73,23 @@ function Update(){
 		tLog.text+=logString[i]+"\n";
 	}
 
+	var winPlayerIndex:int=0;
+	
 	for (i=0;i<scoreString.Count;i++){
-		tScoreBoard.text+=(i+1)+"P: "+scoreString[i]+"\n";
+		if (scoreString[i]>scoreString[winPlayerIndex]){
+			winPlayerIndex=i;
+		}
+	}
+	
+	for (i=0;i<scoreString.Count;i++){
+
+		if (winPlayerIndex==i){
+			tScoreBoard.text+=(i+1)+"P: "+scoreString[i]+" *\n";
+		}
+		else{
+			tScoreBoard.text+=(i+1)+"P: "+scoreString[i]+"\n";	
+		}
+		
 	}
 
 	var device:InputDevice=InputManager.ActiveDevice;

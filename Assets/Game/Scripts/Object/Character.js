@@ -167,10 +167,25 @@ function CheckDie(){
 	if (bodyParts.Count==0){
 		Die();
 	}
+
+	//Debug.Log("Die");
 }
 
 function Die(){
-	Destroy(rigidbody);
+	//Debug.Log("Die");
+	//Destroy(rigidbody);
+
+	if (!ai){
+		Reborn(0.0);
+	}
+
+}
+
+
+function Reborn(_spawnDuration:float){
+	//Debug.Log("REBORN");
+	//yield WaitForSeconds(_spawnDuration);
+	GameManager.Instance().GeneratePlayer(controlIndex);
 }
 
 function GetWalkPart():CharacterBodyPart{
@@ -193,6 +208,9 @@ var dirInterval:float;
 var attackToggle:float;
 var attackInterval:float;
 var dir:Vector2;
+var jumpToggle:float;
+var jumpInterval:float=5;
+
 function Update () {
 
 	if (transform.position.y<0){
@@ -229,7 +247,7 @@ function Update () {
 		}
 		else{
 			dirToggle-=dirInterval;
-			dir=Vector2(Random.Range(-1,1),0);
+			dir=Vector2(Random.Range(-2,2),0);
 			dir.Normalize();
 			dirInterval=Random.Range(1.0,4.0);
 		}
@@ -308,7 +326,8 @@ function Update () {
 	
 
 	if (ai){
-		tTip.text="Robot"+": "+characterName;
+		//tTip.text="Robot"+": "+characterName;
+		tTip.text="";
 	}
 
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
@@ -316,6 +335,22 @@ function Update () {
 	
 	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting()  ){
 		jump=true;
+	}
+
+	if (ai){
+		jumpToggle+=Time.deltaTime;
+		if (jumpToggle<jumpInterval){
+			
+		}
+		else{
+			jumpToggle-=jumpInterval;
+			jumpInterval=Random.Range(8.0,12.0);
+			if ( grounded && !IsHurting()){
+				jump=true;		
+			}
+			
+		}
+		
 	}
 
 	if (jump){
