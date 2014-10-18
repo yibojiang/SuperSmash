@@ -34,6 +34,18 @@ var ai:boolean;
 
 var characterName:String;
 
+var originColor:Color=Color.white;
+
+var mobIndex:int;
+
+function SetColor(_color:Color){
+	originColor=_color;
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		bodyParts[i].SetColor(_color);
+	}	
+}
+
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	//bodyParts[_part]=_body;
 	bodyParts.Add(_body);
@@ -44,6 +56,7 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 		bodyParts[i].transform.localPosition=Vector3(0,0,0);
 	}
 
+	_body.SetColor(originColor);
 	//groundCheck=GetWalkPart().collider.size;
 
 }
@@ -185,7 +198,7 @@ function Die(){
 function Reborn(_spawnDuration:float){
 	//Debug.Log("REBORN");
 	//yield WaitForSeconds(_spawnDuration);
-	GameManager.Instance().GeneratePlayer(controlIndex);
+	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex);
 }
 
 function GetWalkPart():CharacterBodyPart{

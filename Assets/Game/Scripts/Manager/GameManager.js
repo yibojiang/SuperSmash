@@ -15,7 +15,7 @@ public static function Instance() : GameManager
 var hpPrefab:GameObject;
 
 var characters:List.<Character>;
-
+var playerCharacters:List.<Character>;
 var mobs:GameObject[];
 
 var mobToggle:float;
@@ -31,12 +31,15 @@ var smokePrefab:GameObject;
 var tLog:TextMesh;
 
 var gameStartAnim:Animator;
+var gameOverAnim:Animator;
 
 var logString:List.<String>;
 
 var tScoreBoard:TextMesh;
 
 var scoreString:List.<int>;
+
+var tWin:TextMesh;
 
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
@@ -57,13 +60,26 @@ function LogEvent(_eventStr:String){
 
 }
 
-function GeneratePlayer(_playerIndex:int){
+function GeneratePlayer(_playerIndex:int,_characterIndex:int){
+	//GeneratePlayer(_playerIndex,_characterIndex );
 	var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
-	var mob:Character=Instantiate(mobs[Random.Range(0,mobs.Length)],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+	var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
 	mob.ai=false;
+	mob.mobIndex=_characterIndex;
+	mob.controlIndex=_playerIndex;
+	mob.SetColor(Color.white);
+	characters.Add(mob);
+}
+
+/*
+function GenerateMobs(_playerIndex:int,_characterIndex:int){
+	var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
+	var mob:Character=Instantiate(mobs[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+	mob.ai=true;
 	mob.controlIndex=_playerIndex;
 	characters.Add(mob);
 }
+*/
 
 function Update(){
 	tLog.text="";
@@ -95,10 +111,20 @@ function Update(){
 	var device:InputDevice=InputManager.ActiveDevice;
 
 	if (!gameStart){
+
+		//Time.timeScale=0;
 		tCountDown.text="Press 'A' or 'Space' to Start.";
 		if (Input.GetKeyDown(KeyCode.Space) || device.Action1.WasPressed ){
 			gameStart=true;
+			
+			GeneratePlayer(0,0);
+			GeneratePlayer(1,1);
+
 			gameStartAnim.Play("GameStart");
+
+			if (tWin.gameObject.activeInHierarchy){
+				Application.LoadLevel(0);
+			}
 
 		}
 	}
@@ -108,7 +134,13 @@ function Update(){
 			tCountDown.text=countDown.ToString("f2");
 		}
 		else{
-			//GameOver();
+			gameOverAnim.Play("GameStart");
+			
+			tWin.text=(winPlayerIndex+1)+"P WINS !";
+			gameStart=false;
+
+
+			tWin.gameObject.SetActive(true);
 		}
 
 		mobToggle+=Time.deltaTime;
@@ -118,7 +150,12 @@ function Update(){
 		else{
 			mobToggle-=mobInterval;
 			var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
-			var mob:Character=Instantiate(mobs[Random.Range(0,mobs.Length)],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+			
+
+			var randomIndex:int=Random.Range(0,mobs.Length);
+			var mob:Character=Instantiate(mobs[randomIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+			mob.mobIndex=Random.Range(0,mobs.Length);
+			mob.SetColor(Color(150.0/255,150.0/255,150.0/255));
 			mob.ai=true;
 		}
 		

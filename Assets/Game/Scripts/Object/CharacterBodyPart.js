@@ -25,14 +25,25 @@ function RedFlash(){
 
 		var i:int;
 		for (i=0;i<sr.Length;i++){
-			sr[i].color=Color.Lerp(Color.red,Color.white,toggle/0.2);	
+			if (character!=null){
+				sr[i].color=Color.Lerp(Color.red,character.originColor,toggle/0.2);		
+			}
+			else{
+				sr[i].color=Color.Lerp(Color.red,Color.white,toggle/0.2);			
+			}
+			
 		}
 		
 		yield WaitForEndOfFrame();
-
 	}
+}
 
-
+function SetColor(_color:Color){
+	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
+	var i:int;
+	for (i=0;i<sr.Length;i++){
+		sr[i].color=_color;
+	}
 }
 
 function Awake(){

@@ -28,10 +28,9 @@ function LateUpdate () {
 	
 	target.position.x=(leftX+rightX)/2;
 
-
-
-
 	transform.position.x=target.position.x;
-	transform.position.z=(-293-(rightX-leftX)*0.45 );
+
+	var targetZ:float=(-293-(rightX-leftX)*0.45 );
+	transform.position.z+= (targetZ-transform.position.z)*Time.deltaTime*3;
 	//transform.position.y=target.positiion.y;
 }
