@@ -45,6 +45,8 @@ var titleUI:GameObject;
 var gameUI:GameObject;
 var gameBgm:AudioSource;
 
+var gameOverUI:GameObject;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
@@ -84,6 +86,22 @@ function GenerateMobs(_playerIndex:int,_characterIndex:int){
 	characters.Add(mob);
 }
 */
+function ShowGameOverUI(){
+	gameOverUI.SetActive(true);
+	gameOverUI.transform.localPosition.y=10;
+	var toggle:float;
+	var interval:float=5;
+	while(toggle<interval){
+		toggle+=Time.deltaTime;
+		gameOverUI.transform.localPosition.y=Mathf.Lerp(10,0,toggle/interval);
+		yield WaitForEndOfFrame();
+	}
+
+	gameOverUI.transform.localPosition.y=0;
+
+}
+
+var gameOver:boolean;
 
 function Update(){
 	tLog.text="";
@@ -117,22 +135,23 @@ function Update(){
 	if (!gameStart){
 
 		//Time.timeScale=0;
-		tCountDown.text="Press 'A' or 'Space' to Start.";
+		//tCountDown.text="Press 'A' or 'Space' to Start.";
+		tCountDown.text="";
 		if (Input.GetKeyDown(KeyCode.Space) || device.Action1.WasPressed ){
-			gameStart=true;
 			
-			GeneratePlayer(0,0);
-			GeneratePlayer(1,1);
+			if (!gameOver){
+				gameStart=true;
+			
+				GeneratePlayer(0,0);
+				GeneratePlayer(1,1);
 
-			gameStartAnim.Play("GameStart");
-			gameBgm.Play();
+				gameStartAnim.Play("GameStart");
+				gameBgm.Play();
 
-			if (tWin.gameObject.activeInHierarchy){
-				Application.LoadLevel(0);
+				gameUI.SetActive(true);
+				titleUI.SetActive(false);	
 			}
-
-			gameUI.SetActive(true);
-			titleUI.SetActive(false);
+			
 
 		}
 	}
@@ -142,13 +161,17 @@ function Update(){
 			tCountDown.text=countDown.ToString("f2");
 		}
 		else{
-			gameOverAnim.Play("GameStart");
+			gameOver=true;
+			//gameOverAnim.Play("GameStart");
 			
 			tWin.text=(winPlayerIndex+1)+"P WINS !";
 			gameStart=false;
 
 
 			tWin.gameObject.SetActive(true);
+			//tWin.gameObject.SetActive(false);
+
+			ShowGameOverUI();
 		}
 
 		mobToggle+=Time.deltaTime;

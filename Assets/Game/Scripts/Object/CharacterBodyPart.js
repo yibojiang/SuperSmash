@@ -29,7 +29,7 @@ function RedFlash(){
 				sr[i].color=Color.Lerp(Color.red,character.originColor,toggle/0.2);		
 			}
 			else{
-				sr[i].color=Color.Lerp(Color.red,Color.white,toggle/0.2);			
+				sr[i].color=Color.Lerp(Color.red,Color(150.0/255,150.0/255,150.0/255),toggle/0.2);			
 			}
 			
 		}
@@ -78,6 +78,7 @@ function Init(_character:Character){
 	transform.parent=character.transform;
 	transform.localPosition=Vector3(0,0,0);
 	hpObj=Instantiate(GameManager.Instance().hpPrefab);
+	hpObj.SetActive(false);
 	character.hpObj.AddHPObj(hpObj);
 
 
