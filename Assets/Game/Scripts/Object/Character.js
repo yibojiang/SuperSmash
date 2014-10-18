@@ -37,12 +37,19 @@ var flipDir:int;
 
 var tTip:TextMesh;
 
+var ai:boolean;
+
 
 
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	//bodyParts[_part]=_body;
 	bodyParts.Add(_body);
 	_body.Init(this);
+
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		bodyParts[i].transform.localPosition=Vector3(0,0,0);
+	}
 
 	//groundCheck=GetWalkPart().collider.size;
 
@@ -60,30 +67,41 @@ function Start () {
 	}
 }
 
-function Hurt(_damage:float){
+function Hurt(_damage:float,_force:Vector3){
 	recoverToggle=0;
 	recoverInterval=0;
-	if (_damage>100){
+	rigidbody.AddForce(_force.normalized*3000 );
+
+	if (_damage>20){
 		recoverInterval=0.5;
+
 	}
 
-	if (_damage>200){
+	if (_damage>40){
 		recoverInterval=1;
+		//rigidbody.AddForce(_force.normalized*1000 );
 	}
 
-	if (_damage>300){
+	if (_damage>100){
 		recoverInterval=1.5;	
+		//rigidbody.AddForce(_force.normalized*2000);
 	}
 	
 }
 
 function Attack(){
+	if(bodyParts.Count<1){
+		return;
+	}
 	if (bodyParts[0]!=null){
 		bodyParts[0].Attack();
 	}
 }
 
 function Attack2(){
+	if(bodyParts.Count<2){
+		return;
+	}
 	if (bodyParts[1]!=null){
 		bodyParts[1].Attack();
 	}
@@ -191,66 +209,70 @@ function Update () {
 	var device:InputDevice;
 	if (controlIndex<InputManager.Devices.Count){
 		device=InputManager.Devices[controlIndex];
+	}
 
-		if (device!=null){
-			var dir:Vector2=device.Direction;
+	if (device!=null){
+		var dir:Vector2=device.Direction;
+	}
 
- 			//Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
-			if (!GetWalkPart().IsAttacking() && !IsHurting() ){
-				
-				var newPos:Vector3=transform.position;
+		//Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
+	if (!GetWalkPart().IsAttacking() && !IsHurting() ){
+		
+		var newPos:Vector3=transform.position;
 
-				var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
-				newPos.x+=walkSpeed;
-				GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
-				rigidbody.MovePosition(newPos);
-			}
+		var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
+		newPos.x+=walkSpeed;
+		GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
+		rigidbody.MovePosition(newPos);
+	}
 
 
-			if (dir.x>0){
-				SetDir(1);
-			}
-			else if (dir.x<0){
-				SetDir(-1);
-			}
+	if (dir.x>0){
+		SetDir(1);
+	}
+	else if (dir.x<0){
+		SetDir(-1);
+	}
 
-			
-			//if is recoving, cant attack or jump
-			if (!IsHurting()){
-				//X button
-				if ( device.Action3.WasPressed ){
-					Attack();
-				}
+	
+	//if is recoving, cant attack or jump
+	if (!IsHurting()){
+		//X button
+		if (device!=null && device.Action3.WasPressed ){
+			Attack();
+		}
 
-				//Y button
-				if ( device.Action4.WasPressed ){
-					Attack2();
-				}
+		//Y button
+		if (device!=null && device.Action4.WasPressed ){
+			Attack2();
+		}
 
-				if (DetectDropItem()){
-					tTip.text="'B' to pickup";
-					//B button
-					if ( device.Action2.IsPressed ){
-						if (pickupToggle<pickupInterval){
-							pickupToggle+=Time.deltaTime;
-						}
-						else{
-							PickupBodyPart();
-							pickupToggle=0;
-						}
-					}
-					else{
-						pickupToggle=0;
-					}
+		if (DetectDropItem()){
+			tTip.text="'B' to pickup";
+			//B button
+			if (device!=null && device.Action2.IsPressed ){
+				if (pickupToggle<pickupInterval){
+					pickupToggle+=Time.deltaTime;
 				}
 				else{
-					tTip.text="";	
+					PickupBodyPart();
+					pickupToggle=0;
 				}
-				
-
-				pickupBar.transform.localScale.x=(pickupToggle/pickupInterval)*200;
+			}
+			else{
+				pickupToggle=0;
 			}
 		}
+		else{
+			tTip.text=(controlIndex+1)+"P";	
+		}
+		
+		pickupBar.transform.localScale.x=(pickupToggle/pickupInterval)*200;
+	}
+	
+
+	if (ai){
+		tTip.text="Robot";
 	}
 
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  

@@ -16,10 +16,10 @@ function OnTriggerEnter(_other:Collider){
 
 			if (myChar!=null){
 				Debug.Log(myChar.name+" : "+ bp.character.name);
-			
+				
 				if (myChar!=bp.character ){
-					Debug.Log(_other.name);
-					bp.Hurt(damage);		
+					//Debug.Log(_other.name);
+					bp.Hurt(damage,bp.character.transform.position- myChar.transform.position);
 				}	
 			}
 			

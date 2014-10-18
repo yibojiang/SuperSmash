@@ -81,7 +81,7 @@ function Update(){
 	}
 }
 
-function Hurt(_damage:float){
+function Hurt(_damage:float,_force:Vector3){
 	HP-=_damage;
 	RedFlash();
 	if (HP<0){
@@ -89,7 +89,7 @@ function Hurt(_damage:float){
 	}
 
 	if (character!=null){
-		character.Hurt(_damage);
+		character.Hurt(_damage,_force );
 	}
 }
 
