@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18bf62ce22814d41be33a2f63e04538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlIndex: 3
+  controlIndex: 0
   groundCheck: {fileID: 100018}
   grounded: 0
   bodyParts: []

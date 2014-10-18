@@ -15,11 +15,13 @@ function OnTriggerEnter(_other:Collider){
 			var myChar:Character=GetComponentInParent(Character) as Character;
 
 			if (myChar!=null){
-				Debug.Log(myChar.name+" : "+ bp.character.name);
+				//Debug.Log(myChar.name+" : "+ bp.character.name);
 				
 				if (myChar!=bp.character ){
-					//Debug.Log(_other.name);
-					bp.Hurt(damage,bp.character.transform.position- myChar.transform.position);
+					
+					//GameManager.Instance().LogEvent(myChar.name+" X "+ bp.character.name+" "+damage+" Damage" );
+					bp.Hurt(damage,bp.character.transform.position- myChar.transform.position,myChar);
+					
 				}	
 			}
 			

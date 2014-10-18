@@ -36,9 +36,7 @@ function RedFlash(){
 }
 
 function Awake(){
-
 	anim=GetComponent(Animator) as Animator;
-	//Debug.Log("anim: "+anim);
 }
 
 function Start(){
@@ -83,11 +81,12 @@ function Update(){
 	}
 }
 
-function Hurt(_damage:float,_force:Vector3){
+function Hurt(_damage:float,_force:Vector3,_character:Character){
 	HP-=_damage;
 	RedFlash();
 	if (HP<0){
-		//Drop();
+		GameManager.Instance().LogEvent(_character.characterName+" X " +character.characterName);
+		GameManager.Instance().AddScore(_character.controlIndex,50);
 		FlyAway(_force);
 	}
 
@@ -111,7 +110,6 @@ function Drop(){
 	if (hpObj!=null){
 		character.hpObj.RemoveHPObj(hpObj);
 		Destroy(hpObj);
-		//Destroy(this.gameObject);
 		character.CheckDie();
 		character.bodyParts.Remove(this);
 		transform.parent=null;
@@ -125,21 +123,6 @@ function Drop(){
 	}
 }
 
-/*
-function Die(){
-	if (hpObj!=null){
-		character.hpObj.RemoveHPObj(hpObj);
-		Destroy(hpObj);
-		//Destroy(this.gameObject);
-		transform.parent=null;
-		character=null;
-		//HP=maxHP;
-
-		gameObject.AddComponent(Rigidbody);
-
-	}
-}
-*/
 
 function Attack(){
 	if (anim!=null){

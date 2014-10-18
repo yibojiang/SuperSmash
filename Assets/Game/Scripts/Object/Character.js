@@ -203,20 +203,22 @@ function Update () {
 	if (recoverToggle<recoverInterval){
 		recoverToggle+=Time.deltaTime;
 	}
-
-	
-
 	
 	var device:InputDevice;
 	if (controlIndex<InputManager.Devices.Count){
 		device=InputManager.Devices[controlIndex];
 	}
 
-	if (device!=null){
-		var dir:Vector2=device.Direction;
-	}
+	var dir:Vector2;
+	
 
-		//Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
+	if (!ai){
+		if (device!=null){
+			dir=device.Direction;
+		}	
+	}
+	
+
 	if (!GetWalkPart().IsAttacking() && !IsHurting() ){
 		
 		var newPos:Vector3=transform.position;
@@ -239,12 +241,12 @@ function Update () {
 	//if is recoving, cant attack or jump
 	if (!IsHurting()){
 		//X button
-		if (device!=null && device.Action3.WasPressed ){
+		if (!ai && device!=null && device.Action3.WasPressed ){
 			Attack();
 		}
 
 		//Y button
-		if (device!=null && device.Action4.WasPressed ){
+		if (!ai && device!=null && device.Action4.WasPressed ){
 			Attack2();
 		}
 
