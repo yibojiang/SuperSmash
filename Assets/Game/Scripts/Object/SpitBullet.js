@@ -25,8 +25,11 @@ function OnTriggerEnter(_other:Collider){
 
 		if (bp.Alive() ){
 			if (character!=bp.character ){
-				bp.Hurt(damage,bp.character.transform.position- character.transform.position,character);
-				Destroy(this.gameObject);
+				if (bp.character!=null){
+					bp.Hurt(damage,bp.character.transform.position- character.transform.position,character);
+					Destroy(this.gameObject);	
+				}
+				
 				
 			}	
 		}

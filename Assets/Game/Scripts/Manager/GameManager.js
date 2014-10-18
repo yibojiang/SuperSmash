@@ -41,6 +41,10 @@ var scoreString:List.<int>;
 
 var tWin:TextMesh;
 
+var titleUI:GameObject;
+var gameUI:GameObject;
+var gameBgm:AudioSource;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
@@ -121,10 +125,14 @@ function Update(){
 			GeneratePlayer(1,1);
 
 			gameStartAnim.Play("GameStart");
+			gameBgm.Play();
 
 			if (tWin.gameObject.activeInHierarchy){
 				Application.LoadLevel(0);
 			}
+
+			gameUI.SetActive(true);
+			titleUI.SetActive(false);
 
 		}
 	}

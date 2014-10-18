@@ -9,12 +9,15 @@ function Spit(){
 	//Debug.Log(sp);
 	sp.character=bp.character;
 
-	sp.gameObject.rigidbody.AddForce(Vector3(bp.character.flipDir*600,0,0) );
-	if (bp.character.flipDir>0){
-		sp.transform.eulerAngles.y=0;
+	if (bp.character!=null){
+		sp.gameObject.rigidbody.AddForce(Vector3(bp.character.flipDir*600,0,0) );
+		if (bp.character.flipDir>0){
+			sp.transform.eulerAngles.y=0;
+		}
+		else{
+			sp.transform.eulerAngles.y=180;
+		}	
 	}
-	else{
-		sp.transform.eulerAngles.y=180;
-	}
+	
 	
 }

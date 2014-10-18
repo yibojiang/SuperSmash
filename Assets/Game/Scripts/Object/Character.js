@@ -188,9 +188,7 @@ function Die(){
 	//Debug.Log("Die");
 	//Destroy(rigidbody);
 
-	if (!ai){
-		Reborn(0.0);
-	}
+	
 
 }
 
@@ -228,6 +226,10 @@ function Update () {
 
 	if (transform.position.y<0){
 		GameManager.Instance().characters.Remove(this);
+
+		if (!ai){
+			Reborn(0.0);
+		}
 		Destroy(this.gameObject);
 	}
 
