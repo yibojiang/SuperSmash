@@ -188,6 +188,11 @@ function GetWalkPart():CharacterBodyPart{
 		
 }
 
+var dirToggle:float;
+var dirInterval:float;
+var attackToggle:float;
+var attackInterval:float;
+var dir:Vector2;
 function Update () {
 
 	if (transform.position.y<0){
@@ -203,20 +208,50 @@ function Update () {
 	if (recoverToggle<recoverInterval){
 		recoverToggle+=Time.deltaTime;
 	}
-
-	
-
 	
 	var device:InputDevice;
 	if (controlIndex<InputManager.Devices.Count){
 		device=InputManager.Devices[controlIndex];
 	}
 
-	if (device!=null){
-		var dir:Vector2=device.Direction;
+	
+	
+
+	if (!ai){
+		if (device!=null){
+			dir=device.Direction;
+		}	
+	}
+	else{
+		dirToggle+=Time.deltaTime;
+		if (dirToggle<dirInterval){
+			
+		}
+		else{
+			dirToggle-=dirInterval;
+			dir=Vector2(Random.Range(-1,1),0);
+			dir.Normalize();
+			dirInterval=Random.Range(1.0,4.0);
+		}
+
+		attackToggle+=Time.deltaTime;
+		if (attackToggle<attackInterval){
+
+		}
+		else{
+			attackInterval=Random.Range(2.0,3.0);
+			attackToggle-=attackInterval;
+			if(Random.value>0.5){
+				Attack();
+			}
+			else{
+				Attack2();	
+			}
+			
+		}
 	}
 
-		//Debug.Log(GetWalkPart().gameObject.name+": "+GetWalkPart().IsAttacking());
+
 	if (!GetWalkPart().IsAttacking() && !IsHurting() ){
 		
 		var newPos:Vector3=transform.position;
@@ -239,12 +274,12 @@ function Update () {
 	//if is recoving, cant attack or jump
 	if (!IsHurting()){
 		//X button
-		if (device!=null && device.Action3.WasPressed ){
+		if (!ai && device!=null && device.Action3.WasPressed ){
 			Attack();
 		}
 
 		//Y button
-		if (device!=null && device.Action4.WasPressed ){
+		if (!ai && device!=null && device.Action4.WasPressed ){
 			Attack2();
 		}
 
@@ -273,7 +308,7 @@ function Update () {
 	
 
 	if (ai){
-		tTip.text="Robot";
+		tTip.text="Robot"+": "+characterName;
 	}
 
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
