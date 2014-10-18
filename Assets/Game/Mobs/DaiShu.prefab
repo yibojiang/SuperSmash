@@ -711,10 +711,19 @@ MonoBehaviour:
   tTip: {fileID: 10200000}
   ai: 0
   characterName: Australian
+  originColor: {r: 1, g: 1, b: 1, a: 1}
+  mobIndex: 0
   detectRadius: 1.20000005
   pickupToggle: 0
   pickupInterval: 1
   pickupBar: {fileID: 100020}
+  dirToggle: 0
+  dirInterval: 0
+  attackToggle: 0
+  attackInterval: 0
+  dir: {x: 0, y: 0}
+  jumpToggle: 0
+  jumpInterval: 5
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
