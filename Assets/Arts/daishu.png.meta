@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 5e90b3e71785e421bb2f387eff5c417d
+guid: 70c28430496d2462e84794ee27b3a56b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bear_0
-    21300002: bear_1
-    21300004: bear_2
-    21300006: bear_3
+    21300000: daishu_0
+    21300002: daishu_1
+    21300004: daishu_2
+    21300006: daishu_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +25,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -47,45 +47,45 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: bear_0
+    - name: daishu_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 1425
-        width: 535
-        height: 513
+        x: 181
+        y: 1046
+        width: 418
+        height: 646
       alignment: 9
-      pivot: {x: .543060601, y: .761959314}
+      pivot: {x: .274590313, y: .826711178}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear_1
+    - name: daishu_1
       rect:
         serializedVersion: 2
-        x: 916
-        y: 1185
-        width: 637
-        height: 917
+        x: 777
+        y: 1504
+        width: 763
+        height: 728
       alignment: 9
-      pivot: {x: .331227154, y: .0854759738}
+      pivot: {x: .139415503, y: .199734703}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear_2
+    - name: daishu_2
       rect:
         serializedVersion: 2
-        x: 245
-        y: 314
-        width: 254
-        height: 476
+        x: 76
+        y: 138
+        width: 984
+        height: 735
       alignment: 9
-      pivot: {x: .5, y: .764380455}
+      pivot: {x: .814070642, y: .807661057}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear_3
+    - name: daishu_3
       rect:
         serializedVersion: 2
-        x: 1028
-        y: 184
-        width: 306
-        height: 606
+        x: 1352
+        y: 811
+        width: 108
+        height: 472
       alignment: 9
-      pivot: {x: .520562887, y: .832264543}
+      pivot: {x: .674484789, y: .875287831}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
