@@ -1,11 +1,18 @@
 fileFormatVersion: 2
 guid: b296ff86fe2ed463f9c5e298ef1a7422
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: elephant_0
+    21300002: elephant_1
+    21300004: elephant_2
+    21300006: elephant_3
+    21300008: elephant_4
+    21300010: elephant_5
+    21300012: elephant_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -21,27 +28,97 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: elephant_0
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 762
+        width: 890
+        height: 619
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_1
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 764
+        width: 585
+        height: 438
+      alignment: 9
+      pivot: {x: .324627936, y: .510409951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 49
+        width: 207
+        height: 571
+      alignment: 9
+      pivot: {x: .533040822, y: .827401876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_3
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 49
+        width: 168
+        height: 513
+      alignment: 9
+      pivot: {x: .445717961, y: .82886517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_4
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 391
+        width: 147
+        height: 338
+      alignment: 9
+      pivot: {x: .468981266, y: .769802809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_5
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 421
+        width: 174
+        height: 277
+      alignment: 9
+      pivot: {x: .434486836, y: .771604896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elephant_6
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 102
+        width: 125
+        height: 164
+      alignment: 9
+      pivot: {x: .463521987, y: .805831611}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
