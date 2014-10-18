@@ -188,6 +188,11 @@ function GetWalkPart():CharacterBodyPart{
 		
 }
 
+var dirToggle:float;
+var dirInterval:float;
+var attackToggle:float;
+var attackInterval:float;
+var dir:Vector2;
 function Update () {
 
 	if (transform.position.y<0){
@@ -209,7 +214,7 @@ function Update () {
 		device=InputManager.Devices[controlIndex];
 	}
 
-	var dir:Vector2;
+	
 	
 
 	if (!ai){
@@ -217,7 +222,35 @@ function Update () {
 			dir=device.Direction;
 		}	
 	}
-	
+	else{
+		dirToggle+=Time.deltaTime;
+		if (dirToggle<dirInterval){
+			
+		}
+		else{
+			dirToggle-=dirInterval;
+			dir=Vector2(Random.Range(-1,1),0);
+			dir.Normalize();
+			dirInterval=Random.Range(1.0,4.0);
+		}
+
+		attackToggle+=Time.deltaTime;
+		if (attackToggle<attackInterval){
+
+		}
+		else{
+			attackInterval=Random.Range(2.0,3.0);
+			attackToggle-=attackInterval;
+			if(Random.value>0.5){
+				Attack();
+			}
+			else{
+				Attack2();	
+			}
+			
+		}
+	}
+
 
 	if (!GetWalkPart().IsAttacking() && !IsHurting() ){
 		
@@ -275,7 +308,7 @@ function Update () {
 	
 
 	if (ai){
-		tTip.text="Robot";
+		tTip.text="Robot"+": "+characterName;
 	}
 
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  

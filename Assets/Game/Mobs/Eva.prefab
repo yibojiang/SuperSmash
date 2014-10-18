@@ -309,7 +309,7 @@ Transform:
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: 1.12709999, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
   m_RootOrder: 0
@@ -319,7 +319,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.318132132, w: .948046386}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -346,9 +346,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: 0, z: -.140367895, w: -.99009949}
-  m_LocalPosition: {x: -.0112304688, y: .0805704594, z: 0}
-  m_LocalScale: {x: .199595794, y: .199595466, z: .199595466}
+  m_LocalRotation: {x: 0, y: 0, z: .0205082893, w: -.999789715}
+  m_LocalPosition: {x: -.187229767, y: .0883486569, z: 0}
+  m_LocalScale: {x: .201550931, y: .201550707, z: .199595466}
   m_Children:
   - {fileID: 400024}
   - {fileID: 400026}
@@ -398,7 +398,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
-  m_LocalRotation: {x: 0, y: 0, z: -.42261833, w: .906307817}
+  m_LocalRotation: {x: 0, y: 0, z: .453289896, w: .891363204}
   m_LocalPosition: {x: -.847530484, y: 4.68405437, z: -.751795292}
   m_LocalScale: {x: 1.0307368, y: 1.03073657, z: 1.03073668}
   m_Children:
@@ -411,7 +411,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
-  m_LocalRotation: {x: 0, y: 0, z: -.342020184, w: .939692616}
+  m_LocalRotation: {x: 0, y: 0, z: -.353239834, w: -.935532808}
   m_LocalPosition: {x: -.899299622, y: 4.88194656, z: 1.29901421}
   m_LocalScale: {x: 1.0307368, y: 1.03073657, z: 1.03073668}
   m_Children: []
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18bf62ce22814d41be33a2f63e04538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlIndex: 0
+  controlIndex: 1
   groundCheck: {fileID: 100018}
   grounded: 0
   bodyParts: []

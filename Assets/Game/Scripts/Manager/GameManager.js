@@ -95,7 +95,8 @@ function Update(){
 		else{
 			mobToggle-=mobInterval;
 			var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
-			Instantiate(mobs[Random.Range(0,mobs.Length)],generatePos,Quaternion.identity);	
+			var mob:Character=Instantiate(mobs[Random.Range(0,mobs.Length)],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+			mob.ai=true;
 		}
 		
 	}

@@ -86,7 +86,11 @@ function Hurt(_damage:float,_force:Vector3,_character:Character){
 	RedFlash();
 	if (HP<0){
 		GameManager.Instance().LogEvent(_character.characterName+" X " +character.characterName);
-		GameManager.Instance().AddScore(_character.controlIndex,50);
+
+		if (!_character.ai){
+			GameManager.Instance().AddScore(_character.controlIndex,50);	
+		}
+		
 		FlyAway(_force);
 	}
 
