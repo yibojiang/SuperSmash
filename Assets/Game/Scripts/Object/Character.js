@@ -118,8 +118,11 @@ function DropBodyPart(_part:int){
 	for (i=0;i<bodyParts.Count;i++){
 		if (bodyParts[i].part==_part){
 			bodyParts[i].Drop();
+			
 		}
 	}
+
+
 
 }
 

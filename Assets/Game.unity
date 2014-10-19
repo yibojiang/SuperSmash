@@ -213,7 +213,6 @@ MonoBehaviour:
   speed: 10
   jumpForce: 0
   life: 0
-  lifeTime: 10
 --- !u!65 &59542890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349,7 +348,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &90248544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -563,7 +561,6 @@ MonoBehaviour:
   speed: 5
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &117583398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -984,7 +981,6 @@ MonoBehaviour:
   speed: 20
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &153758118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3870,7 +3866,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 0
   life: 0
-  lifeTime: 10
 --- !u!65 &934281700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3962,7 +3957,6 @@ MonoBehaviour:
   speed: 8
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &940927800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4181,7 +4175,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 1500
   life: 0
-  lifeTime: 10
 --- !u!65 &981273665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4728,7 +4721,6 @@ MonoBehaviour:
   speed: 6
   jumpForce: 1000
   life: 0
-  lifeTime: 10
 --- !u!65 &1172168363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4908,7 +4900,6 @@ MonoBehaviour:
   speed: 5
   jumpForce: 6000
   life: 0
-  lifeTime: 10
 --- !u!95 &1240594666
 Animator:
   serializedVersion: 3
@@ -5981,7 +5972,6 @@ MonoBehaviour:
   speed: 5
   jumpForce: 1500
   life: 0
-  lifeTime: 10
 --- !u!65 &1432443605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6641,7 +6631,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 0
   life: 0
-  lifeTime: 10
 --- !u!65 &1601418168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6747,7 +6736,6 @@ MonoBehaviour:
   speed: 5
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &1617280591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6910,7 +6898,6 @@ MonoBehaviour:
   speed: 4
   jumpForce: 1500
   life: 0
-  lifeTime: 10
 --- !u!95 &1643852989
 Animator:
   serializedVersion: 3
@@ -7389,7 +7376,6 @@ MonoBehaviour:
   speed: 12
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!65 &1750746061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7554,7 +7540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: ff6358b7266f84bf9ab3496248796524, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100028, guid: ff6358b7266f84bf9ab3496248796524, type: 2}
       propertyPath: m_IsActive

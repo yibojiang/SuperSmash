@@ -13,7 +13,7 @@ var speed:float=2;
 var jumpForce:float=3000;
 
 var life:float;
-var lifeTime:float=10;
+private var lifeTime:float=30;
 
 private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");
@@ -147,13 +147,14 @@ function Drop(){
 		
 		HP=maxHP;
 		gameObject.AddComponent(Rigidbody);
+		SetColor(Color(150.0/255,150.0/255,150.0/255));
 
 	}
 }
 
 
 function SmallJump(){
-	Debug.Log("Small Jump");
+	//Debug.Log("Small Jump");
 
 	if (character!=null && character.grounded){
 		//bodyPart.character.jump=true;	

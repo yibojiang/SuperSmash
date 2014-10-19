@@ -97,6 +97,13 @@ function ShowGameOverUI(){
 
 	gameOverUI.transform.localPosition.y=0;
 
+	while(1){
+		if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+			Application.LoadLevel("Game");
+		}
+		yield WaitForEndOfFrame();
+	}
+
 }
 
 var gameOver:boolean;
@@ -135,7 +142,7 @@ function Update(){
 		//Time.timeScale=0;
 		//tCountDown.text="Press 'A' or 'Space' to Start.";
 		tCountDown.text="";
-		if (Input.GetKeyDown(KeyCode.Space) || device.Action1.WasPressed ){
+		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || device.Action1.WasPressed ){
 			
 			if (!gameOver){
 				maxCountDown=countDown;
