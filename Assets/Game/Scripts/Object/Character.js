@@ -196,7 +196,7 @@ function Die(){
 function Reborn(_spawnDuration:float){
 	//Debug.Log("REBORN");
 	//yield WaitForSeconds(_spawnDuration);
-	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex);
+	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(444,485),15,-286 ));
 }
 
 function GetWalkPart():CharacterBodyPart{
@@ -248,12 +248,23 @@ function Update () {
 	}
 
 	
-	
+	var km:KeyboardManager=KeyboardManager.Instance();
 
 	if (!ai){
 		if (device!=null){
 			dir=device.Direction;
-		}	
+		}
+		else{
+			dir=Vector2.zero;
+			if (km.GetKeyAction("Left",controlIndex)){
+				dir=Vector2(-1,0);
+			}
+
+			if (km.GetKeyAction("Right",controlIndex)){
+				dir=Vector2(1,0);
+			}
+			//Debug.Log(dir);
+		}
 	}
 	else{
 		dirToggle+=Time.deltaTime;
@@ -306,31 +317,72 @@ function Update () {
 	
 	//if is recoving, cant attack or jump
 	if (!IsHurting()){
+
 		//X button
-		if (!ai && device!=null && device.Action3.WasPressed ){
-			Attack();
+		if (!ai ){
+			if (device!=null && device.Action3.WasPressed){
+
+			}
+			else{
+				if (km.GetKeyActionDown("Attack1",controlIndex)){
+					Attack();
+				}
+			}
+			
 		}
+		
 
 		//Y button
-		if (!ai && device!=null && device.Action4.WasPressed ){
-			Attack2();
+		if (!ai ){
+			if (device!=null && device.Action4.WasPressed){
+				Attack2();	
+			}
+			else{
+				if (km.GetKeyActionDown("Attack2",controlIndex)){
+					Attack2();
+				}
+			}
 		}
 
 		if (DetectDropItem()){
-			tTip.text="'B' to pickup";
+			//tTip.text="'B' to pickup";
+
+			
 			//B button
-			if (device!=null && device.Action2.IsPressed ){
-				if (pickupToggle<pickupInterval){
-					pickupToggle+=Time.deltaTime;
+
+			if (!ai){
+				tTip.text="Hold "+km.GetKeyName("Pickup",controlIndex)+" To Pickup !";
+				if (device!=null  ){
+					if  (device.Action2.IsPressed){
+						if (pickupToggle<pickupInterval){
+							pickupToggle+=Time.deltaTime;
+						}
+						else{
+							PickupBodyPart();
+							pickupToggle=0;
+						}	
+					}
+					else{
+						pickupToggle=0;
+					}
+					
 				}
 				else{
-					PickupBodyPart();
-					pickupToggle=0;
-				}
+					if (km.GetKeyAction("Pickup",controlIndex)){
+						if (pickupToggle<pickupInterval){
+							pickupToggle+=Time.deltaTime;
+						}
+						else{
+							PickupBodyPart();
+							pickupToggle=0;
+						}	
+					}
+					else{
+						pickupToggle=0;
+					}
+				}	
 			}
-			else{
-				pickupToggle=0;
-			}
+			
 		}
 		else{
 			tTip.text=(controlIndex+1)+"P"+": "+characterName;	
@@ -348,9 +400,7 @@ function Update () {
 	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	//Debug.Log(grounded);
 	
-	if (device!=null && device.Action1.WasPressed && grounded && !IsHurting()  ){
-		jump=true;
-	}
+	
 
 	if (ai){
 		jumpToggle+=Time.deltaTime;
@@ -365,7 +415,19 @@ function Update () {
 			}
 			
 		}
-		
+	}
+	else{
+		if ( grounded && !IsHurting()  ){
+			if (device!=null && device.Action1.WasPressed ){
+				jump=true;	
+			}
+			else{
+				if (km.GetKeyActionDown("Jump",controlIndex) ){
+					jump=true;			
+				}
+			}
+			
+		}	
 	}
 
 	if (jump){

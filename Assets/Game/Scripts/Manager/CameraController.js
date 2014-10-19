@@ -2,14 +2,9 @@
 
 var target:Transform;
 
-function Start () {
-
-}
-
 function LateUpdate () {
 
 	//Get Center Position of all players
-
 	var i:int;
 	//Get left player
 	var leftX:float=100000;
@@ -26,11 +21,13 @@ function LateUpdate () {
 		}
 	}
 	
-	target.position.x=(leftX+rightX)/2;
+	if (GameManager.Instance().characters.Count>0){
+		target.position.x=(leftX+rightX)/2;
 
-	transform.position.x+=(target.position.x-transform.position.x)*Time.deltaTime*3;
-	var targetZ:float=(-293-(rightX-leftX)*0.45 );
-	transform.position.z+=(targetZ-transform.position.z)*Time.deltaTime*3;
-	//transform.position.z= targetZ;
-	//transform.position.y=target.positiion.y;
+		transform.position.x+=(target.position.x-transform.position.x)*Time.deltaTime*3;
+
+	
+		var targetZ:float=(-293-(rightX-leftX)*0.45 );
+		transform.position.z+=(targetZ-transform.position.z)*Time.deltaTime*3;
+	}
 }

@@ -22,6 +22,7 @@ var mobToggle:float;
 var mobInterval:float=2;
 
 var countDown:float=30;
+var maxCountDown:float;
 var tCountDown:TextMesh;
 
 var gameStart:boolean;
@@ -47,6 +48,11 @@ var gameBgm:AudioSource;
 
 var gameOverUI:GameObject;
 
+var sunPath:SunPath;
+
+var adamApple:GameObject;
+var evaApple:GameObject;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
@@ -66,9 +72,9 @@ function LogEvent(_eventStr:String){
 
 }
 
-function GeneratePlayer(_playerIndex:int,_characterIndex:int){
+function GeneratePlayer(_playerIndex:int,_characterIndex:int,_pos:Vector3){
 	//GeneratePlayer(_playerIndex,_characterIndex );
-	var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
+	var generatePos:Vector3=_pos;//Vector3(Random.Range(444,485),15,-286 );
 	var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
 	mob.ai=false;
 	mob.mobIndex=_characterIndex;
@@ -77,15 +83,7 @@ function GeneratePlayer(_playerIndex:int,_characterIndex:int){
 	characters.Add(mob);
 }
 
-/*
-function GenerateMobs(_playerIndex:int,_characterIndex:int){
-	var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
-	var mob:Character=Instantiate(mobs[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
-	mob.ai=true;
-	mob.controlIndex=_playerIndex;
-	characters.Add(mob);
-}
-*/
+
 function ShowGameOverUI(){
 	gameOverUI.SetActive(true);
 	gameOverUI.transform.localPosition.y=10;
@@ -140,14 +138,13 @@ function Update(){
 		if (Input.GetKeyDown(KeyCode.Space) || device.Action1.WasPressed ){
 			
 			if (!gameOver){
+				maxCountDown=countDown;
+				//max_time
 				gameStart=true;
-			
-				GeneratePlayer(0,0);
-				GeneratePlayer(1,1);
-
+				GeneratePlayer(0,0,Vector3(460,15,-286));
+				GeneratePlayer(1,1,Vector3(470,15,-286));
 				gameStartAnim.Play("GameStart");
 				gameBgm.Play();
-
 				gameUI.SetActive(true);
 				titleUI.SetActive(false);	
 			}
@@ -157,6 +154,21 @@ function Update(){
 	}
 	if (gameStart){
 		if (countDown>0){
+			if (scoreString[0]>scoreString[1]){
+				adamApple.SetActive(true);
+				evaApple.SetActive(false);
+			}
+			else if (scoreString[0]<scoreString[1]){
+				adamApple.SetActive(false);
+				evaApple.SetActive(true);
+			}
+			else{
+				adamApple.SetActive(false);
+				evaApple.SetActive(false);
+			}
+
+
+			sunPath.UpdateTime(countDown/maxCountDown);
 			countDown-=Time.deltaTime;
 			tCountDown.text=countDown.ToString("f2");
 		}
@@ -169,7 +181,7 @@ function Update(){
 
 
 			tWin.gameObject.SetActive(true);
-			//tWin.gameObject.SetActive(false);
+			tWin.gameObject.SetActive(false);
 
 			ShowGameOverUI();
 		}

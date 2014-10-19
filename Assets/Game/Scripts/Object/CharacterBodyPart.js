@@ -12,9 +12,13 @@ var speed:float=2;
 
 var jumpForce:float=3000;
 
+var life:float;
+var lifeTime:float=10;
+
 private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");
 private var idleState:int=Animator.StringToHash("Base Layer.Idle");
+
 
 function RedFlash(){
 	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
@@ -81,7 +85,7 @@ function Init(_character:Character){
 	hpObj.SetActive(false);
 	character.hpObj.AddHPObj(hpObj);
 
-
+	life=0;
 	if (rigidbody!=null){
 		gameObject.Destroy(rigidbody);
 	}
@@ -90,6 +94,15 @@ function Init(_character:Character){
 function Update(){
 	if (hpObj!=null){
 		hpObj.transform.localScale.x=HP/maxHP*100;	
+	}
+
+	if(character==null){
+		if (life<lifeTime){
+			life+=Time.deltaTime;
+		}
+		else{
+			Destroy(this.gameObject);
+		}
 	}
 }
 
@@ -133,17 +146,23 @@ function Drop(){
 		character=null;
 		
 		HP=maxHP;
-
-
 		gameObject.AddComponent(Rigidbody);
 
 	}
 }
 
 
+function SmallJump(){
+	Debug.Log("Small Jump");
+
+	if (character!=null && character.grounded){
+		//bodyPart.character.jump=true;	
+		character.rigidbody.AddForce(Vector3(0,jumpForce/2,0) );
+	}
+}
+
 function Attack(){
 	if (anim!=null){
 		anim.SetTrigger("Attack");	
 	}
-	
 }

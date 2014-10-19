@@ -5685,7 +5685,7 @@ AnimationClip:
     script: {fileID: 0}
   m_Events:
   - time: .366666675
-    functionName: Jump
+    functionName: SmallJump
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

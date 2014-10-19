@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"Spit",
+				"SpitBullet"
+			],
+			[
+				"Li",
+				"lifeTime"
+			],
+			[
+				"mob",
+				"mobIndex"
+			],
+			[
+				"jump",
+				"jumpInterval"
+			],
+			[
+				"jum",
+				"jumpInterval"
+			],
+			[
+				"jm",
+				"jumpToggle"
+			],
+			[
+				"att",
+				"attackInterval"
+			],
+			[
+				"atta",
+				"attackToggle"
+			],
+			[
+				"attac",
+				"attackInterval"
+			],
+			[
+				"Ve",
+				"Vector2"
+			],
+			[
+				"local",
+				"localPosition"
+			],
+			[
+				"ge",
+				"generatePos"
+			],
+			[
+				"BODY",
+				"bodyParts"
+			],
+			[
+				"gET",
+				"GetWalkPart"
+			],
+			[
+				"bo",
+				"bodyParts"
+			],
+			[
+				"Set",
+				"SetDir"
+			],
+			[
+				"pic",
+				"pickupInterval"
+			],
+			[
+				"rev",
+				"recoverInterval"
+			],
+			[
+				"d",
+				"Die"
+			],
+			[
 				"gr",
 				"gravity"
 			],
@@ -272,10 +348,6 @@
 				"Vector3	x, y, z"
 			],
 			[
-				"Ve",
-				"Vector3	x, y, z"
-			],
-			[
 				"m",
 				"m_Menu"
 			],
@@ -326,10 +398,6 @@
 			[
 				"gam",
 				"gameOver"
-			],
-			[
-				"bo",
-				"bonusToggle"
 			],
 			[
 				"Pla",
@@ -400,10 +468,6 @@
 				"WaitForSeconds"
 			],
 			[
-				"Set",
-				"SetActive"
-			],
-			[
 				"gameO",
 				"gameObject"
 			],
@@ -450,70 +514,6 @@
 			[
 				"game",
 				"gameObject"
-			],
-			[
-				"equ",
-				"equipSlots"
-			],
-			[
-				"En",
-				"EnableWeapon"
-			],
-			[
-				"Stamina",
-				"StaminaManager"
-			],
-			[
-				"Enem",
-				"enemyPlayer"
-			],
-			[
-				"Tr",
-				"Transform"
-			],
-			[
-				"UNI",
-				"UNITY_ANDROID"
-			],
-			[
-				"Defense",
-				"defenseSkill"
-			],
-			[
-				"Slot",
-				"SlotAttackItem"
-			],
-			[
-				"itemskill",
-				"bItemSkill1"
-			],
-			[
-				"GetCOmp",
-				"GetComponentsInChildren"
-			],
-			[
-				"Ra",
-				"Random"
-			],
-			[
-				"Generate",
-				"GenerateStarObject"
-			],
-			[
-				"Genera",
-				"GenerateStarObject"
-			],
-			[
-				"maxH",
-				"maxHurt"
-			],
-			[
-				"gamO",
-				"gameObject"
-			],
-			[
-				"inkO",
-				"inkObj"
 			]
 		]
 	},
@@ -565,8 +565,56 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets"
+	],
 	"file_history":
 	[
+		"/Users/yibojiang/Documents/GameDevelop/ChainEffectProject/ChainEffect/Assets/Script/Object/Player.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/CameraController.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SunPath.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/LevelLoading.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/GameManager.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SpitBullet.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/AttackArea.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Arts/sun.png.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Skyboxes/Textures/Sunny1/Sunny1_up.tif",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Spitter.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/JumpHelper.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/UI.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/HPContainer.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/ReorderableList/SerializedPropertyAdaptor.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/AutoDestroy.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/UI/GameStartIdle.anim",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/horse/upbody/upbody_horse.controller",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechRumblePad2MacProfile.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/horse/upbody.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animals/upbody_tuoniao.prefab",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Audio.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/CameraMotionBlur.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/CreaseApply.shader",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/NotRotate.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/NoiseEffect.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/New Terrain.asset",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Prefab/hpbar.prefab.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Prefab/hpbar.prefab",
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/GameManager.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/BodyManager.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_BloomAndFlares/BlendOneOne.shader",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/Bloom.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/BodyPart.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/Test/Attack.anim",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Library/Unity/DeviceProfiles/AmazonFireTVRemote.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/Images/InControlHeader.png.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/Crease.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Textures/hexShape.psd.meta",
 		"/Users/yibojiang/Documents/GameDevelop/2dPlatform/Assets/Scripts/PlayerControl.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Scripts/BodyManager.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Scripts/Object/BodyPart.js",
@@ -615,7 +663,6 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/FX/RainbowLaser.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/Android/google-play-services_lib/res/values-hy-rAM.meta",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/RU_glyphList.txt",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/GameManager.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Editor/LevelEditor.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/OldEnemy/EnemyBomb.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ScoreManager.js",
@@ -651,50 +698,7 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/DragItem.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/MachineGunController.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/RepairRobotController.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ShopManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/DragonBallController.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/NewCats2/Animation/Dragonball_Action.asset",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/DailyReward.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/iOS-SDK/Graphics/Skybox/upImage.png.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Database/ConfigHelper.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/NewTutorial/TutorialManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ProfileManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/P31RestKit.dll.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/PT_glyphList.txt",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/AndroidPlugins/AlterLenovo/Android/res/drawable-hdpi/gc_leaderboard_list_divider_line.png.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/SkullHeart_MouthClose.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/LevelUp.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/MapMenu/LevelDetailPanel.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Standard Assets/Analytics.cs",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Library/assetDatabase3",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/AdSDK.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/MainMenu/ReadyMenu.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/PandaController.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/OldEnemy/EnemyBoss01.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Behavior/CustomPath.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss01.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss05.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss04.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss03.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss02.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBoss0.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/Enemy/EnemyBoss0.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/EnemyBlueBody.controller",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Localization/Resources/Languages/EN_Enemy.xml",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/XcodePlugins/Video/SponsorPay/SPScreenMetricsProvider.h",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Object/QigongBall.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Editor/MissionEditor.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/LitJson/JsonData.cs",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/GUI/ObjectiveCompleteNotification.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/Others.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/MessageAlert.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/NewTutorial/TutorialComboTip.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Editor/PostprocessBuildPlayer_ADC",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/AdSDK/AdSDK.cs",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Object/Ship.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/ShipMenu.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/FriendShipManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/Android.meta"
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ShopManager.js"
 	],
 	"find":
 	{
@@ -716,6 +720,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hpObj",
+			"GeneratePlayer",
+			"ai",
+			"hurt",
+			"DetectDropItem",
+			"speed",
+			"AddBodyPart",
+			"RemoveHPObj",
+			"setd",
+			"detect",
+			"PickupBody",
+			"setdir",
 			"handle",
 			"GooglePlay",
 			"CloudToBackground",
@@ -831,19 +847,7 @@
 			"showmenu",
 			"skip",
 			"popUp",
-			"remove",
-			"loadlevel",
-			"popup",
-			"addmessage",
-			"立即",
-			"Debug.Logerror",
-			"OnContextChanged",
-			"loadlevel",
-			"DestroyShip",
-			"CleanCatPanel",
-			"LaunchFang",
-			"target",
-			"LaunchShell"
+			"remove"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -935,6 +939,82 @@
 		"selected_items":
 		[
 			[
+				"gamema",
+				"Game/Scripts/Manager/GameManager.js"
+			],
+			[
+				"sunp",
+				"Game/Scripts/Object/SunPath.js"
+			],
+			[
+				"char",
+				"Game/Scripts/Object/Character.js"
+			],
+			[
+				"jump",
+				"Game/Scripts/Object/JumpHelper.js"
+			],
+			[
+				"attacka",
+				"Game/Scripts/Object/AttackArea.js"
+			],
+			[
+				"spitbu",
+				"Game/Scripts/Object/SpitBullet.js"
+			],
+			[
+				"spitt",
+				"Game/Scripts/Object/Spitter.js"
+			],
+			[
+				"aut",
+				"Game/Scripts/Object/AutoDestroy.js"
+			],
+			[
+				"camera",
+				"Game/Scripts/Manager/CameraController.js"
+			],
+			[
+				"attack",
+				"Game/Scripts/Object/AttackArea.js"
+			],
+			[
+				"autode",
+				"Game/Scripts/Object/AutoDestroy.js"
+			],
+			[
+				"",
+				"Game/Scripts/Object/AttackArea.js"
+			],
+			[
+				"gamem",
+				"Game/Scripts/Manager/GameManager.js"
+			],
+			[
+				"notro",
+				"Game/Scripts/Object/NotRotate.js"
+			],
+			[
+				"hp",
+				"Game/Scripts/Object/HPContainer.js"
+			],
+			[
+				"body",
+				"Game/Scripts/Manager/BodyManager.js"
+			],
+			[
+				"characterbod",
+				"Game/Scripts/Object/CharacterBodyPart.js"
+			],
+			[
+				"bodyp",
+				"Game/Scripts/Object/BodyPart.js"
+			],
+			[
+				"attackar",
+				"Game/Scripts/Object/AttackArea.js"
+			],
+			[
 				"config",
 				"Assets/Game/Scripts/Database/ConfigHelper.js"
 			],
@@ -1009,10 +1089,6 @@
 			[
 				"enemy",
 				"Assets/Game/Scripts/Object/Enemy.js"
-			],
-			[
-				"gamema",
-				"Assets/Game/Scripts/Manager/GameManager.js"
 			],
 			[
 				"enemyman",
@@ -1373,78 +1449,6 @@
 			[
 				"lasergunc",
 				"Assets/Game/Scripts/Controller/LaserGunController.js"
-			],
-			[
-				"wind.js",
-				"Assets/Game/Scripts/FX/Wind.js"
-			],
-			[
-				"wind",
-				"Assets/Game/Prefab/Effect/wind.prefab"
-			],
-			[
-				"baseplayer",
-				"Assets/Game/Scripts/Mutiplay/BasePlayer.js"
-			],
-			[
-				"mutipla",
-				"Assets/Game/Scripts/Mutiplay/MutiplayPlayer.js"
-			],
-			[
-				"richca",
-				"Assets/Game/Scripts/Controller/RichCatController.js"
-			],
-			[
-				"basepl",
-				"Assets/Game/Scripts/Mutiplay/BasePlayer.js"
-			],
-			[
-				"coinsbu",
-				"Assets/Game/Scripts/Object/CoinsBullet.js"
-			],
-			[
-				"rich",
-				"Assets/Game/Scripts/Controller/RichCatController.js"
-			],
-			[
-				"wea",
-				"Assets/Game/Scripts/Menu/WeaponSlot.js"
-			],
-			[
-				"slotite",
-				"Assets/Game/Scripts/ItemSkill/SlotItem.js"
-			],
-			[
-				"messagema",
-				"Assets/Game/Scripts/Manager/MessageManager.js"
-			],
-			[
-				"split",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState_SplitScreenMenu.js"
-			],
-			[
-				"splitsc",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState_SplitScreenMenu.js"
-			],
-			[
-				"catdetailm",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState_CatDetailMenu.js"
-			],
-			[
-				"menustate",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState.js"
-			],
-			[
-				"robot",
-				"Assets/Game/Scripts/Controller/RobotController.js"
-			],
-			[
-				"debugobje",
-				"Assets/Game/Scripts/XBMenu/DebugObject.js"
-			],
-			[
-				"catslo",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState_CatSlotMachineMenu.js"
 			]
 		],
 		"width": 0.0
