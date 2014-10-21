@@ -592,7 +592,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -607,7 +606,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -640,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 15
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -661,7 +659,6 @@ MonoBehaviour:
   speed: 5
   jumpForce: 3000
   life: 0
-  lifeTime: 10
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -756,7 +753,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 0
   life: 0
-  lifeTime: 10
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,6 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spitPrefab: {fileID: 100000, guid: 8f24aa079a6eb44b8890269b0575c284, type: 2}
   shotTransform: {fileID: 400030}
+  throwForce: {x: 600, y: 100, z: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

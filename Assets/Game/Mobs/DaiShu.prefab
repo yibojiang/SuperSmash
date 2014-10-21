@@ -563,7 +563,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -578,7 +577,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -642,7 +640,8 @@ MonoBehaviour:
   anim: {fileID: 9500000}
   part: 0
   speed: 2
-  jumpForce: 3000
+  jumpForce: 1000
+  life: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -662,6 +661,7 @@ MonoBehaviour:
   part: 1
   speed: 5
   jumpForce: 6000
+  life: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
