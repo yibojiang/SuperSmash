@@ -1,20 +1,18 @@
 ﻿#pragma strict
-
 var hpObj:GameObject;
 var HP:float;
 var maxHP:float;
-
 var character:Character;
 var anim:Animator;
-
 var part:int;
 var speed:float=2;
-
 var jumpForce:float=3000;
+var mass:float=1;
 
-var life:float;
+var groundCheck:GameObject;
+
+private var life:float;
 private var lifeTime:float=30;
-
 private var atkState :int= Animator.StringToHash("Base Layer.Attack");
 private var walkState:int=Animator.StringToHash("Base Layer.Walk");
 private var idleState:int=Animator.StringToHash("Base Layer.Idle");
@@ -147,6 +145,7 @@ function Drop(){
 		
 		HP=maxHP;
 		gameObject.AddComponent(Rigidbody);
+		rigidbody.mass=mass;
 		SetColor(Color(150.0/255,150.0/255,150.0/255));
 
 	}
