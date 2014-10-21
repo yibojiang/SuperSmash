@@ -68,7 +68,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100008
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -236,6 +236,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &100028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400028}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -292,11 +307,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.87720001, z: 0}
+  m_LocalPosition: {x: 0, y: -.0651402473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400014}
-  m_RootOrder: 0
+  m_Father: {fileID: 400020}
+  m_RootOrder: 1
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -309,8 +324,9 @@ Transform:
   m_Children:
   - {fileID: 400000}
   - {fileID: 400002}
+  - {fileID: 400028}
   m_Father: {fileID: 400014}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &400012
 Transform:
   m_ObjectHideFlags: 1
@@ -334,7 +350,6 @@ Transform:
   m_LocalPosition: {x: 466.910004, y: 3, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400008}
   - {fileID: 400024}
   - {fileID: 400020}
   - {fileID: 400010}
@@ -377,8 +392,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400016}
+  - {fileID: 400008}
   m_Father: {fileID: 400014}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400022
 Transform:
   m_ObjectHideFlags: 1
@@ -404,7 +420,7 @@ Transform:
   - {fileID: 400022}
   - {fileID: 400006}
   m_Father: {fileID: 400014}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &400026
 Transform:
   m_ObjectHideFlags: 1
@@ -417,6 +433,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!4 &400028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.87720001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 2
 --- !u!23 &2300004
 Renderer:
   m_ObjectHideFlags: 1
@@ -534,6 +562,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -548,6 +577,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -600,7 +630,8 @@ MonoBehaviour:
   part: 1
   speed: 8
   jumpForce: 3000
-  life: 0
+  mass: 1
+  groundCheck: {fileID: 100028}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,7 +644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlIndex: 0
-  groundCheck: {fileID: 100008}
   grounded: 0
   bodyParts: []
   jump: 0
@@ -633,13 +663,6 @@ MonoBehaviour:
   pickupToggle: 0
   pickupInterval: 1
   pickupBar: {fileID: 100006}
-  dirToggle: 0
-  dirInterval: 0
-  attackToggle: 0
-  attackInterval: 0
-  dir: {x: 0, y: 0}
-  jumpToggle: 0
-  jumpInterval: 5
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,7 +682,8 @@ MonoBehaviour:
   part: 0
   speed: 6
   jumpForce: 1500
-  life: 0
+  mass: 1
+  groundCheck: {fileID: 100008}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

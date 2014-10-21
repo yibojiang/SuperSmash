@@ -5,7 +5,7 @@ import System.Collections.Generic;
 
 var controlIndex:int;
 
-var groundCheck:GameObject;
+//var groundCheck:GameObject;
 var grounded:boolean;
 
 
@@ -13,10 +13,9 @@ var bodyParts:List.<CharacterBodyPart>;
 
 var jump:boolean;
 
-
 var recoverRate:float;
 
-var recoverToggle:float;
+private var recoverToggle:float;
 var recoverInterval:float=3;
 
 
@@ -57,8 +56,6 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	}
 
 	_body.SetColor(originColor);
-	//groundCheck=GetWalkPart().collider.size;
-
 }
 
 function Start () {
@@ -76,7 +73,7 @@ function Start () {
 function Hurt(_damage:float,_force:Vector3){
 	recoverToggle=0;
 	recoverInterval=0;
-	rigidbody.AddForce(_force.normalized*3000 );
+	rigidbody.AddForce(_force.normalized*2000 );
 
 	if (_damage>20){
 		recoverInterval=0.5;
@@ -217,13 +214,13 @@ function GetWalkPart():CharacterBodyPart{
 		
 }
 
-var dirToggle:float;
-var dirInterval:float;
-var attackToggle:float;
-var attackInterval:float;
-var dir:Vector2;
-var jumpToggle:float;
-var jumpInterval:float=5;
+private var dirToggle:float;
+private var dirInterval:float;
+private var attackToggle:float;
+private var attackInterval:float;
+private var dir:Vector2;
+private var jumpToggle:float;
+private var jumpInterval:float=5;
 
 function Update () {
 
@@ -349,8 +346,6 @@ function Update () {
 
 		if (DetectDropItem()){
 			//tTip.text="'B' to pickup";
-
-			
 			//B button
 
 			if (!ai){
@@ -400,7 +395,7 @@ function Update () {
 		tTip.text="";
 	}
 
-	grounded = Physics.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
+	grounded = Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	//Debug.Log(grounded);
 	
 	
