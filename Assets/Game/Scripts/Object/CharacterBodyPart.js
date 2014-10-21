@@ -13,10 +13,6 @@ var groundCheck:GameObject;
 
 private var life:float;
 private var lifeTime:float=30;
-private var atkState :int= Animator.StringToHash("Base Layer.Attack");
-private var walkState:int=Animator.StringToHash("Base Layer.Walk");
-private var idleState:int=Animator.StringToHash("Base Layer.Idle");
-
 
 function RedFlash(){
 	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
@@ -53,7 +49,7 @@ function Awake(){
 }
 
 function Start(){
-	atkState=Animator.StringToHash("Base Layer.Attack");
+
 }
 
 function Alive():boolean{
@@ -66,7 +62,9 @@ function Alive():boolean{
 }
 
 function IsAttacking():boolean{
-	if (anim.GetCurrentAnimatorStateInfo(0).nameHash == atkState ){
+
+	//if (anim.GetCurrentAnimatorStateInfo(0).nameHash == atkState ){
+	if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack")){
 		return true;
 	}
 	else{
@@ -90,6 +88,7 @@ function Init(_character:Character){
 }
 
 function Update(){
+	//Debug.Log(anim.GetCurrentAnimatorStateInfo(0).nameHash+" & "+atkState);
 	if (hpObj!=null){
 		hpObj.transform.localScale.x=HP/maxHP*100;	
 	}
