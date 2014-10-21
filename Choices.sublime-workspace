@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"GEtk",
+				"GetKeyAction"
+			],
+			[
+				"GETKE",
+				"GetKeyActionDown"
+			],
+			[
+				"Ke",
+				"KeyboardMap"
+			],
+			[
+				"player",
+				"playerKeyMap"
+			],
+			[
+				"K",
+				"KeyboardMap"
+			],
+			[
 				"Spit",
 				"SpitBullet"
 			],
@@ -494,26 +514,6 @@
 			[
 				"Mutip",
 				"MutiplayManager"
-			],
-			[
-				"bi",
-				"bItemSkill1"
-			],
-			[
-				"Ope",
-				"OpenDoor"
-			],
-			[
-				"vE",
-				"Vector3"
-			],
-			[
-				"MGsH",
-				"MGshootInterval"
-			],
-			[
-				"game",
-				"gameObject"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 347.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -547,7 +547,7 @@
 				"Package Control: Add Channel"
 			]
 		],
-		"width": 467.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -571,19 +571,33 @@
 	],
 	"file_history":
 	[
-		"/Users/yibojiang/Documents/GameDevelop/ChainEffectProject/ChainEffect/Assets/Script/Object/Player.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/CameraController.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/JumpHelper.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/KeyboardManager.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SunPath.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechDualActionProfile.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechF710ModeDWinProfile.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechF710ModeDWinProfile.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/LevelLoading.js.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/LevelLoading.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/GrayscaleEffect.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/CreateInputManagerObject.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Control.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Examples/InterfaceMovement/ButtonFocus.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireTVRemote.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/GameManager.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/bear.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Particles/Sources/Animations/Light explosion.anim",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Loading.unity",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_BloomAndFlares/BlendOneOne.shader",
+		"/Users/yibojiang/Documents/GameDevelop/ChainEffectProject/ChainEffect/Assets/Script/Object/Player.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/CameraController.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SunPath.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SpitBullet.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/AttackArea.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Arts/sun.png.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Skyboxes/Textures/Sunny1/Sunny1_up.tif",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Spitter.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/JumpHelper.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/UI.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/HPContainer.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/ReorderableList/SerializedPropertyAdaptor.cs",
@@ -605,7 +619,6 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/GameManager.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/BodyManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_BloomAndFlares/BlendOneOne.shader",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/Bloom.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/BodyPart.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js.meta",
@@ -685,20 +698,7 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Object/Beam.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam/Beam.mat",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam/Beam.asset",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam3.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Library/metadata/be/bea0d3ca38e274edfbb293358ef0b594",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/StaminaManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/StaminaAdd.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/StaminaReduce.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Standard Assets (Mobile)/Shaders/Vertex Colored Shaders/Mobile Transparent Vertex Color.shader",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/NewCats2/Animation/NureseCat_Action.asset.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Standard Assets.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Product/splash_tele.jpg.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/DragItem.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/MachineGunController.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Controller/RepairRobotController.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ShopManager.js"
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam3.meta"
 	],
 	"find":
 	{
@@ -720,6 +720,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ShowGameOverUI",
 			"hpObj",
 			"GeneratePlayer",
 			"ai",
@@ -846,8 +847,7 @@
 			"CtrEvtType",
 			"showmenu",
 			"skip",
-			"popUp",
-			"remove"
+			"popUp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,20 +939,48 @@
 		"selected_items":
 		[
 			[
-				"gamema",
-				"Game/Scripts/Manager/GameManager.js"
+				"leveleditor",
+				"Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechDualActionProfile.cs"
 			],
 			[
-				"sunp",
-				"Game/Scripts/Object/SunPath.js"
+				"leveled",
+				"Game/Scripts/Manager/LevelLoading.js.meta"
+			],
+			[
+				"body",
+				"Game/Scripts/Object/CharacterBodyPart.js"
+			],
+			[
+				"level",
+				"Game/Scripts/Manager/LevelLoading.js"
+			],
+			[
+				"keybo",
+				"Game/Scripts/Manager/KeyboardManager.js"
+			],
+			[
+				"jump",
+				"Game/Scripts/Object/JumpHelper.js"
 			],
 			[
 				"char",
 				"Game/Scripts/Object/Character.js"
 			],
 			[
-				"jump",
-				"Game/Scripts/Object/JumpHelper.js"
+				"chara",
+				"Game/Scripts/Object/CharacterBodyPart.js"
+			],
+			[
+				"game",
+				"Game/Scripts/Manager/GameManager.js"
+			],
+			[
+				"gamema",
+				"Game/Scripts/Manager/GameManager.js"
+			],
+			[
+				"sunp",
+				"Game/Scripts/Object/SunPath.js"
 			],
 			[
 				"attacka",
@@ -999,10 +1027,6 @@
 				"Game/Scripts/Object/HPContainer.js"
 			],
 			[
-				"body",
-				"Game/Scripts/Manager/BodyManager.js"
-			],
-			[
 				"characterbod",
 				"Game/Scripts/Object/CharacterBodyPart.js"
 			],
@@ -1037,10 +1061,6 @@
 			[
 				"kplu",
 				"Assets/Editor/Tools/KPluginHelper.cs"
-			],
-			[
-				"leveled",
-				"Assets/Game/Scripts/Editor/LevelEditor.js"
 			],
 			[
 				"camerac",
@@ -1429,26 +1449,6 @@
 			[
 				"tip",
 				"Assets/Game/Scripts/NewTutorial/TipBar.js"
-			],
-			[
-				"repairrobot",
-				"Assets/Game/Scripts/Controller/RepairRobotController.js"
-			],
-			[
-				"dragonballc",
-				"Assets/Game/Scripts/Controller/DragonBallController.js"
-			],
-			[
-				"xbpro",
-				"Assets/Game/Scripts/XBMenu/XBProfileManager.js"
-			],
-			[
-				"dragonballcon",
-				"Assets/Game/Scripts/Controller/DragonBallController.js"
-			],
-			[
-				"lasergunc",
-				"Assets/Game/Scripts/Controller/LaserGunController.js"
 			]
 		],
 		"width": 0.0
