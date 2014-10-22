@@ -298,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35164189, y: .502154827, z: .667978764}
+  m_LocalPosition: {x: 3.35164189, y: .502154827, z: .420423836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -310,7 +310,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35164189, y: .502154827, z: -.500144899}
+  m_LocalPosition: {x: 3.35164189, y: .502154827, z: -.354489088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -591,7 +591,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -606,7 +605,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -651,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 80
+  damage: 125
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -664,14 +662,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 100
+  maxHP: 100
   character: {fileID: 0}
   anim: {fileID: 9500000}
   part: 0
-  speed: 2
+  speed: 5
   jumpForce: 1000
-  mass: 1
+  mass: 2
   groundCheck: {fileID: 100022}
 --- !u!114 &11400006
 MonoBehaviour:
@@ -685,14 +683,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 400
+  maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
-  speed: 5
+  speed: 6
   jumpForce: 6000
-  mass: 1
+  mass: 5
   groundCheck: {fileID: 100030}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -733,7 +731,6 @@ MonoBehaviour:
   bodyParts: []
   jump: 0
   recoverRate: 100
-  recoverToggle: 0
   recoverInterval: 0
   hpObj: {fileID: 11400010}
   initPart1: {fileID: 11400004}
@@ -857,7 +854,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 70c28430496d2462e84794ee27b3a56b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200008
@@ -879,7 +876,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 70c28430496d2462e84794ee27b3a56b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200010
