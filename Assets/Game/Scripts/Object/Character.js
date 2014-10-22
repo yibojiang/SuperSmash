@@ -92,21 +92,22 @@ function Hurt(_damage:float,_force:Vector3){
 	
 }
 
-function Attack(){
-	if(bodyParts.Count<1){
-		return;
-	}
-	if (bodyParts[0]!=null){
-		bodyParts[0].Attack();
-	}
-}
 
-function Attack2(){
+function Attack(_part:int){
+	/*
 	if(bodyParts.Count<2){
 		return;
 	}
 	if (bodyParts[1]!=null){
 		bodyParts[1].Attack();
+	}
+	*/
+
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].part==_part){
+			bodyParts[i].Attack();	
+		}
 	}
 }
 
@@ -286,25 +287,28 @@ function Update () {
 			attackInterval=Random.Range(2.0,3.0);
 			attackToggle-=attackInterval;
 			if(Random.value>0.5){
-				Attack();
+				Attack(0);
 			}
 			else{
-				Attack2();	
+				Attack(1);	
 			}
 			
 		}
 	}
 
+	var grounded= Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
+	
 
-	if (!GetWalkPart().IsAttacking() && !IsHurting() ){
+	if (!GetWalkPart().IsAttacking() && !IsHurting() || (!grounded)   ){
 		
 		var newPos:Vector3=transform.position;
-
 		var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
 		newPos.x+=walkSpeed;
 		GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
 		rigidbody.MovePosition(newPos);
 	}
+
+	
 
 
 	if (dir.x>0){
@@ -321,11 +325,11 @@ function Update () {
 		//X button
 		if (!ai ){
 			if (device!=null && device.Action3.WasPressed){
-
+				Attack(0);
 			}
 			else{
 				if (km.GetKeyActionDown("Attack1",controlIndex)){
-					Attack();
+					Attack(0);
 				}
 			}
 			
@@ -335,11 +339,11 @@ function Update () {
 		//Y button
 		if (!ai ){
 			if (device!=null && device.Action4.WasPressed){
-				Attack2();	
+				Attack(1);	
 			}
 			else{
 				if (km.GetKeyActionDown("Attack2",controlIndex)){
-					Attack2();
+					Attack(1);
 				}
 			}
 		}
@@ -395,7 +399,7 @@ function Update () {
 		tTip.text="";
 	}
 
-	grounded = Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
+	
 	//Debug.Log(grounded);
 	
 	

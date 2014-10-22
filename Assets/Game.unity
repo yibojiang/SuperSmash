@@ -4549,7 +4549,7 @@ MonoBehaviour:
   hpPrefab: {fileID: 100000, guid: 60419bd3cf0924d51bbb36efc6f59c29, type: 2}
   characters: []
   playerCharacters:
-  - {fileID: 11400012, guid: ff6358b7266f84bf9ab3496248796524, type: 2}
+  - {fileID: 11400004, guid: 9d2102755bdb542f4b33e6a91f6c685e, type: 2}
   - {fileID: 11400004, guid: 5bfecf6727a4441cfada48b02c6cf6f8, type: 2}
   mobs:
   - {fileID: 100024, guid: 86f3c09438e764c4dbaadfc4992e684b, type: 2}
