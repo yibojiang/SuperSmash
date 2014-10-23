@@ -1,14 +1,6 @@
 fileFormatVersion: 2
 guid: b296ff86fe2ed463f9c5e298ef1a7422
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: elephant_0
-    21300002: elephant_1
-    21300004: elephant_2
-    21300006: elephant_3
-    21300008: elephant_4
-    21300010: elephant_5
-    21300012: elephant_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,8 +49,8 @@ TextureImporter:
         y: 762
         width: 890
         height: 619
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .862563491, y: .688245416}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: elephant_1
       rect:
