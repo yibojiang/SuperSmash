@@ -1,0 +1,96 @@
+fileFormatVersion: 2
+guid: 992596a18c748a24497dc8c23efdeaae
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: gamera_0
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1216
+        width: 905
+        height: 698
+      alignment: 9
+      pivot: {x: .130976319, y: .801886678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gamera_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1047
+        width: 1495
+        height: 1474
+      alignment: 9
+      pivot: {x: .367030352, y: .17362912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gamera_2
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 1039
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gamera_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 205
+        width: 996
+        height: 554
+      alignment: 9
+      pivot: {x: .843291104, y: .851649344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gamera_4
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 78
+        width: 657
+        height: 953
+      alignment: 9
+      pivot: {x: .221633986, y: .829577565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
