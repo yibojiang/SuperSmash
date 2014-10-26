@@ -62,7 +62,7 @@ function Alive():boolean{
 }
 
 function IsAttacking():boolean{
-
+	
 	//if (anim.GetCurrentAnimatorStateInfo(0).nameHash == atkState ){
 	if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack")){
 		return true;
@@ -162,6 +162,12 @@ function SmallJump(){
 
 function Attack(){
 	if (anim!=null){
-		anim.SetTrigger("Attack");	
+		anim.SetTrigger("Attack");
 	}
+}
+
+function Attacking(_attacking:boolean){
+	if (anim!=null){
+		anim.SetBool("Attacking",_attacking);
+	}	
 }

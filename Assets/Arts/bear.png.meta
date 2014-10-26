@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: 5e90b3e71785e421bb2f387eff5c417d
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: bear_0
+    21300002: bear_1
+    21300004: bear_2
+    21300006: bear_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,7 +44,11 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -3
+    compressionQuality: 50
   spriteSheet:
     sprites:
     - name: bear_0

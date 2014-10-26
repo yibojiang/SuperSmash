@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: 10730e55fe923464d8a837537a75819d
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: eggman_0
+    21300002: eggman_1
+    21300004: eggman_2
+    21300006: eggman_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,7 +44,11 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -3
+    compressionQuality: 50
   spriteSheet:
     sprites:
     - name: eggman_0

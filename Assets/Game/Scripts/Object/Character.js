@@ -73,7 +73,7 @@ function Start () {
 function Hurt(_damage:float,_force:Vector3){
 	recoverToggle=0;
 	recoverInterval=0;
-	rigidbody.AddForce(_force.normalized*2000 );
+	rigidbody.AddForce(_force );
 
 	if (_damage>20){
 		recoverInterval=0.5;
@@ -82,31 +82,29 @@ function Hurt(_damage:float,_force:Vector3){
 
 	if (_damage>40){
 		recoverInterval=1;
-		//rigidbody.AddForce(_force.normalized*1000 );
 	}
 
 	if (_damage>100){
-		recoverInterval=1.5;	
-		//rigidbody.AddForce(_force.normalized*2000);
+		recoverInterval=1.5;
 	}
 	
 }
 
 
 function Attack(_part:int){
-	/*
-	if(bodyParts.Count<2){
-		return;
-	}
-	if (bodyParts[1]!=null){
-		bodyParts[1].Attack();
-	}
-	*/
-
 	var i:int;
 	for (i=0;i<bodyParts.Count;i++){
 		if (bodyParts[i].part==_part){
 			bodyParts[i].Attack();	
+		}
+	}
+}
+
+function Attacking(_attacking:boolean,_part:int){
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].part==_part){
+			bodyParts[i].Attacking(_attacking);	
 		}
 	}
 }
@@ -298,25 +296,29 @@ function Update () {
 
 	var grounded= Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	
+	//Debug.Log(GetWalkPart().IsAttacking() );
+	if (!GetWalkPart().IsAttacking() && !IsHurting() || (!grounded)  ){
 
-	if (!GetWalkPart().IsAttacking() && !IsHurting() || (!grounded)   ){
-		
+
+
 		var newPos:Vector3=transform.position;
 		var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
 		newPos.x+=walkSpeed;
 		GetWalkPart().anim.SetFloat("Speed",Mathf.Abs(walkSpeed) );
 		rigidbody.MovePosition(newPos);
+
+		if (dir.x>0){
+			SetDir(1);
+		}
+		else if (dir.x<0){
+			SetDir(-1);
+		}
 	}
 
 	
 
 
-	if (dir.x>0){
-		SetDir(1);
-	}
-	else if (dir.x<0){
-		SetDir(-1);
-	}
+	
 
 	
 	//if is recoving, cant attack or jump
@@ -331,6 +333,8 @@ function Update () {
 				if (km.GetKeyActionDown("Attack1",controlIndex)){
 					Attack(0);
 				}
+
+				Attacking(km.GetKeyAction("Attack1",controlIndex),0);
 			}
 			
 		}
@@ -345,6 +349,10 @@ function Update () {
 				if (km.GetKeyActionDown("Attack2",controlIndex)){
 					Attack(1);
 				}
+
+				
+				Attacking(km.GetKeyAction("Attack1",controlIndex),1);
+
 			}
 		}
 

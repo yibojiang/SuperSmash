@@ -562,6 +562,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -576,6 +577,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -608,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18bf62ce22814d41be33a2f63e04538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlIndex: 2
+  controlIndex: 0
   grounded: 0
   bodyParts: []
   jump: 0
@@ -619,7 +621,7 @@ MonoBehaviour:
   initPart2: {fileID: 11400010}
   flipDir: 0
   tTip: {fileID: 10200000}
-  ai: 1
+  ai: 0
   characterName: Tuo Niao
   originColor: {r: 1, g: 1, b: 1, a: 1}
   mobIndex: 0
@@ -639,6 +641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  sustainDamage: 0
+  sustainOn: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,6 +655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  sustainDamage: 0
+  sustainOn: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
