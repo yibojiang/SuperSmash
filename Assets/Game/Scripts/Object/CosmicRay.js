@@ -17,6 +17,8 @@ var spark:ParticleSystem;
 var scrolSpeed:float=15;
 
 var color:Color=Color.white;
+
+private var endWidth:float=3;
 function Update () {
 	if (anim.GetBool("Attacking") && anim.GetCurrentAnimatorStateInfo(0).IsName("attacking") ){
 		var dir:Vector3=dirTransform.position-line.transform.position;
@@ -75,7 +77,14 @@ function Update () {
 			spark.Stop();
 		}
 
+		if (endWidth>1){
+			endWidth-=10*Time.deltaTime;
+		}
+		else{
+			endWidth=1;	
+		}
 
+		//line.SetWidth(1,endWidth);
 		line.SetPosition(1, Vector3(endPos,0,0));
 		line.renderer.material.mainTextureOffset.x-=scrolSpeed*Time.deltaTime;
 		line.renderer.material.mainTextureScale = Vector2 (endPos,1);
@@ -84,5 +93,6 @@ function Update () {
 		line.gameObject.SetActive(false);
 		line.SetPosition(1, Vector3(0,0,0));
 		endPos=0;
+		endWidth=3;
 	}
 }

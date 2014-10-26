@@ -885,13 +885,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 12000000}
-  speed: 20
+  speed: 30
   endPos: 0
   anim: {fileID: 9500000}
   sustainDamage: 1
   hitForce: 0
   dirTransform: {fileID: 400034}
   spark: {fileID: 19800000}
+  scrolSpeed: 10
   color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!120 &12000000
 LineRenderer:
@@ -915,7 +916,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     startWidth: 1
     endWidth: 1
@@ -979,7 +980,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .800000012
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -994,7 +995,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .375
+          value: .600000024
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1129,16 +1130,11 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .200000003
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
@@ -1149,18 +1145,13 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 0
+          value: .200000003
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     startRotation:
       scalar: 0
       maxCurve:
@@ -2024,7 +2015,7 @@ ParticleSystemRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
