@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"jum",
+				"jump"
+			],
+			[
 				"GEtk",
 				"GetKeyAction"
 			],
@@ -37,10 +41,6 @@
 			],
 			[
 				"jump",
-				"jumpInterval"
-			],
-			[
-				"jum",
 				"jumpInterval"
 			],
 			[
@@ -571,21 +571,46 @@
 	],
 	"file_history":
 	[
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireGameController.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireGameController.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Components/InControlManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Components/InControlManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Examples/InterfaceMovement/ButtonManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Examples/InterfaceMovement/ButtonManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/XInput/XInputDeviceManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/XInput/XInputDeviceManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/UnityInputDeviceManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/UnityInputDeviceManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Device/InputDeviceManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Device/InputDeviceManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/CreateInputManagerObject.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/CreateInputManagerObject.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Test/TestInputManager.unity.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Test/TestInputManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Test/TestInputManager.unity",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Test/TestInputManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/InputManagerAssetGenerator.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/InputManagerAssetGenerator.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/InputManager.cs.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/InputManager.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/Test/Idle.anim",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/JumpHelper.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/KeyboardManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechDualActionProfile.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechF710ModeDWinProfile.cs.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechF710ModeDWinProfile.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/LevelLoading.js.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/LevelLoading.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/GrayscaleEffect.cs",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Editor/InControl Editor/Editor/CreateInputManagerObject.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Control.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Examples/InterfaceMovement/ButtonFocus.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireTVRemote.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/GameManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/bear.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Particles/Sources/Animations/Light explosion.anim",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Loading.unity",
@@ -673,32 +698,7 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Database/Database.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Tools/UILayout.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/UnityVS.NaughtyKitties.sln",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/FX/RainbowLaser.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/Android/google-play-services_lib/res/values-hy-rAM.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/RU_glyphList.txt",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Editor/LevelEditor.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/OldEnemy/EnemyBomb.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/ScoreManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/storyboom_cut7.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Scripts.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/EnemyBomb.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/NewEnemy2/EnemyBomb2.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Enemy/EnemyBoss0.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/NewCats/Animation/GunAnimation.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Library/guidmapper",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Scripts/AdColonyAdManager.meta",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/CatsMenu/CatDetailMenu.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/WeaponManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Manager/LevelLoadManager.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/NewMenu/CatTeamSlot.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/NewMenu/CatSelectSlot.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Menu/NewMenu/CatUpgradeSlot.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/CatTalk_Talk.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Object/Beam.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam/Beam.mat",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam/Beam.asset",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/NewTexture/Beam3.meta"
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/FX/RainbowLaser.js"
 	],
 	"find":
 	{
@@ -720,6 +720,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Attack",
+			"Attack2",
+			"rigidbody",
+			"rigdbody",
 			"ShowGameOverUI",
 			"hpObj",
 			"GeneratePlayer",
@@ -843,11 +847,7 @@
 			"Pause",
 			"TutorialFinish",
 			"tutorialOn",
-			"slot",
-			"CtrEvtType",
-			"showmenu",
-			"skip",
-			"popUp"
+			"slot"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,6 +939,18 @@
 		"selected_items":
 		[
 			[
+				"inputm",
+				"Plugins/InControl Plugin/Lib/InputManager.cs"
+			],
+			[
+				"character",
+				"Game/Scripts/Object/CharacterBodyPart.js"
+			],
+			[
+				"chara",
+				"Game/Scripts/Object/Character.js"
+			],
+			[
 				"leveleditor",
 				"Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/LogitechDualActionProfile.cs"
 			],
@@ -965,10 +977,6 @@
 			[
 				"char",
 				"Game/Scripts/Object/Character.js"
-			],
-			[
-				"chara",
-				"Game/Scripts/Object/CharacterBodyPart.js"
 			],
 			[
 				"game",
@@ -1441,14 +1449,6 @@
 			[
 				"itemsk",
 				"Assets/Game/Scripts/ItemSkill/ItemSkill.js"
-			],
-			[
-				"xbtip",
-				"Assets/Game/Scripts/XBMenu/XBTipbar.js"
-			],
-			[
-				"tip",
-				"Assets/Game/Scripts/NewTutorial/TipBar.js"
 			]
 		],
 		"width": 0.0

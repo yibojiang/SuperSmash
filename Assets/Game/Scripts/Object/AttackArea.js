@@ -1,6 +1,11 @@
 ﻿#pragma strict
 
 var damage:float;
+var sustainDamage:float;
+
+var sustainOn:boolean;
+
+var hitForce:float=2000;
 
 function OnTriggerEnter(_other:Collider){
 
@@ -20,7 +25,8 @@ function OnTriggerEnter(_other:Collider){
 				if (myChar!=bp.character ){
 					
 					//GameManager.Instance().LogEvent(myChar.name+" X "+ bp.character.name+" "+damage+" Damage" );
-					bp.Hurt(damage,bp.character.transform.position- myChar.transform.position,myChar);
+					var forceDir:Vector3=bp.character.transform.position- myChar.transform.position;
+					bp.Hurt(damage,forceDir.normalized*hitForce,myChar);
 					
 				}	
 			}
@@ -29,5 +35,23 @@ function OnTriggerEnter(_other:Collider){
 			
 		}
 		
+	}
+}
+
+function OnTriggerStay(_other:Collider){
+	if (sustainOn){
+		if (_other.CompareTag("BodyPart")){
+			var bp:CharacterBodyPart=_other.GetComponent(CharacterBodyPart) as CharacterBodyPart;
+			if (bp.Alive() ){
+				var myChar:Character=GetComponentInParent(Character) as Character;
+				if (myChar!=null){
+					if (myChar!=bp.character ){
+						bp.Hurt(sustainDamage*Time.timeScale*Time.fixedDeltaTime,bp.character.transform.position- myChar.transform.position,myChar);
+						
+					}	
+				}
+			}
+			
+		}
 	}
 }
