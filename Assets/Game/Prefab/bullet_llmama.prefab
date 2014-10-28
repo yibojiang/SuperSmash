@@ -60,7 +60,7 @@ MonoBehaviour:
   life: 0
   lifeTime: 2
   character: {fileID: 0}
-  damage: 5
+  damage: 30
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

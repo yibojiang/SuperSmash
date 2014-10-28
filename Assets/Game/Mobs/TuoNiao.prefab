@@ -396,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 452.138916, y: 2.66983247, z: -279.093384}
+  m_LocalPosition: {x: 452.138916, y: 2.66983247, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -586,8 +586,8 @@ MonoBehaviour:
   anim: {fileID: 9500000}
   part: 0
   speed: 5
-  jumpForce: 1000
-  mass: 1
+  jumpForce: 2000
+  mass: .5
   groundCheck: {fileID: 100010}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -601,14 +601,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 300
-  maxHP: 300
+  HP: 200
+  maxHP: 200
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
   speed: 12
   jumpForce: 4000
-  mass: 5
+  mass: 1
   groundCheck: {fileID: 100026}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -645,6 +645,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  sustainDamage: 0
+  sustainOn: 1
+  hitForce: -1000
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -657,6 +660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  sustainDamage: 0
+  sustainOn: 0
+  hitForce: 2000
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1

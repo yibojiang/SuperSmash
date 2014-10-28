@@ -382,7 +382,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 475.253387, y: 3.37198687, z: -279.093384}
+  m_LocalPosition: {x: 475.253387, y: 3.37198687, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
@@ -684,6 +684,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  sustainDamage: 0
+  sustainOn: 0
+  hitForce: 1000
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -696,14 +699,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 400
-  maxHP: 400
+  HP: 600
+  maxHP: 600
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
-  speed: 6
-  jumpForce: 6000
-  mass: 5
+  speed: 5
+  jumpForce: 2500
+  mass: 3
   groundCheck: {fileID: 100022}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -751,7 +754,7 @@ MonoBehaviour:
   flipDir: 0
   tTip: {fileID: 10200000}
   ai: 0
-  characterName: Australian
+  characterName: Bear
   originColor: {r: 1, g: 1, b: 1, a: 1}
   mobIndex: 0
   detectRadius: 1.20000005
@@ -769,7 +772,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 125
+  damage: 0
+  sustainDamage: 40
+  sustainOn: 1
+  hitForce: 500
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,13 +788,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 100
-  maxHP: 100
+  HP: 400
+  maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 9500002}
   part: 0
-  speed: 5
-  jumpForce: 1000
+  speed: 4
+  jumpForce: 2000
   mass: 2
   groundCheck: {fileID: 100004}
 --- !u!114 &11400014
@@ -802,7 +808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 125
+  damage: 120
+  sustainDamage: 0
+  sustainOn: 0
+  hitForce: 6000
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

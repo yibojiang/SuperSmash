@@ -447,9 +447,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
-  m_LocalRotation: {x: .0800627768, y: -.70255959, z: -.0800627321, w: .70255959}
-  m_LocalPosition: {x: .523145318, y: -3.97061086, z: 18.0479908}
-  m_LocalScale: {x: 33.0419655, y: 12.5021353, z: 14.1556139}
+  m_LocalRotation: {x: -.000617091602, y: -.707106531, z: .000617091602, w: .707106531}
+  m_LocalPosition: {x: .523145199, y: .187968656, z: 26.5335808}
+  m_LocalScale: {x: 44.0999985, y: 13.1000004, z: 14.6000004}
   m_Children: []
   m_Father: {fileID: 400034}
   m_RootOrder: 0
@@ -460,7 +460,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 466.380005, y: 4.83729982, z: -286}
+  m_LocalPosition: {x: 463.202148, y: 3.19619989, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -663,7 +663,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -678,7 +677,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -712,14 +710,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 1000
-  maxHP: 1000
+  HP: 900
+  maxHP: 900
   character: {fileID: 0}
   anim: {fileID: 9500000}
   part: 0
-  speed: 5
-  jumpForce: 5000
-  mass: 2
+  speed: 2
+  jumpForce: 3000
+  mass: 4.5
   groundCheck: {fileID: 100002}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -755,10 +753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 125
+  damage: 40
   sustainDamage: 0
   sustainOn: 0
-  hitForce: 2000
+  hitForce: 4000
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,8 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41282066b81471e8772a74afab944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  sustainDamage: 5
+  damage: 0
+  sustainDamage: 80
   sustainOn: 1
   hitForce: 0
 --- !u!114 &11400010
@@ -785,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18bf62ce22814d41be33a2f63e04538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlIndex: 0
+  controlIndex: 1
   grounded: 0
   bodyParts: []
   jump: 0
@@ -797,7 +795,7 @@ MonoBehaviour:
   flipDir: 0
   tTip: {fileID: 10200000}
   ai: 0
-  characterName: Australian
+  characterName: Gamera
   originColor: {r: 1, g: 1, b: 1, a: 1}
   mobIndex: 0
   detectRadius: 1.20000005
@@ -816,14 +814,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 100
-  maxHP: 100
+  HP: 400
+  maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
-  speed: 2
-  jumpForce: 3000
-  mass: 5
+  speed: 1
+  jumpForce: 1500
+  mass: 2
   groundCheck: {fileID: 100010}
 --- !u!135 &13500000
 SphereCollider:
@@ -1886,7 +1884,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1.20000005
+      scalar: 1.10000002
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1901,7 +1899,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .833333313
+          value: .818181753
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2101,7 +2099,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 40
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2428,19 +2426,19 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 1
     z:
-      scalar: 10
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: -.0104166269
-          inSlope: .928819239
-          outSlope: .928819239
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
         - time: 1
           value: 1
-          inSlope: 1.07680047
-          outSlope: 1.07680047
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2

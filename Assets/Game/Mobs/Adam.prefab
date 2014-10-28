@@ -347,7 +347,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 460.769135, y: 3, z: -279.093384}
+  m_LocalPosition: {x: 460.769135, y: 3, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400024}
@@ -609,6 +609,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 60
+  sustainDamage: 0
+  sustainOn: 0
+  hitForce: 1500
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -621,14 +624,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 300
+  maxHP: 300
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
   speed: 7
   jumpForce: 3000
-  mass: 2
+  mass: 1.5
   groundCheck: {fileID: 100028}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -672,14 +675,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 200
-  maxHP: 200
+  HP: 300
+  maxHP: 300
   character: {fileID: 0}
   anim: {fileID: 9500002}
   part: 0
   speed: 6
-  jumpForce: 1500
-  mass: 2
+  jumpForce: 2000
+  mass: 1.5
   groundCheck: {fileID: 100008}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -716,6 +719,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 81
+  sustainDamage: 0
+  sustainOn: 0
+  hitForce: 2500
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
