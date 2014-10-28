@@ -316,11 +316,6 @@ function Update () {
 	}
 
 	
-
-
-	
-
-	
 	//if is recoving, cant attack or jump
 	if (!IsHurting()){
 
@@ -410,7 +405,9 @@ function Update () {
 	
 	//Debug.Log(grounded);
 	
-	
+	if (grounded){
+		GetWalkPart().jumpCount=0;
+	}
 
 	if (ai){
 		jumpToggle+=Time.deltaTime;
@@ -420,28 +417,34 @@ function Update () {
 		else{
 			jumpToggle-=jumpInterval;
 			jumpInterval=Random.Range(8.0,12.0);
-			if ( grounded && !IsHurting()){
-				jump=true;		
+			if ( GetWalkPart().jumpCount<GetWalkPart().maxJumpCount  && !IsHurting()){
+				jump=true;	
+				GetWalkPart().jumpCount++;	
 			}
 			
 		}
 	}
 	else{
-		if ( grounded && !IsHurting()  ){
+		if ( GetWalkPart().jumpCount<GetWalkPart().maxJumpCount && !IsHurting()  ){
 			if (device!=null && device.Action1.WasPressed ){
 				jump=true;	
+				GetWalkPart().jumpCount++;
 			}
 			else{
 				if (km.GetKeyActionDown("Jump",controlIndex) ){
 					jump=true;			
+					GetWalkPart().jumpCount++;
 				}
 			}
 			
 		}	
 	}
-
+	
 	if (jump){
 		rigidbody.AddForce(Vector3(0,GetWalkPart().jumpForce,0) );
 		jump=false;
 	}
+	
+
+
 }

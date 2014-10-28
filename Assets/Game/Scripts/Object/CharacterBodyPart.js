@@ -14,6 +14,9 @@ var groundCheck:GameObject;
 private var life:float;
 private var lifeTime:float=30;
 
+var jumpCount:int;
+var maxJumpCount:int=1;
+
 function RedFlash(){
 	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
 	var toggle:float=0;
