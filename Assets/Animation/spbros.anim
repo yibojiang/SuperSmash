@@ -19,9 +19,9 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 63034bcc39f787f45be6df3ac29e4a43, type: 3}
-    - time: .600000024
+    - time: .633333325
       value: {fileID: 21300000, guid: d173e9e63e47aa346b72411b9b367886, type: 3}
-    - time: 1.20000005
+    - time: 1.23333335
       value: {fileID: 21300000, guid: 63034bcc39f787f45be6df3ac29e4a43, type: 3}
     attribute: m_Sprite
     path: sfbros
@@ -47,7 +47,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1.2166667
+    m_StopTime: 1.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
