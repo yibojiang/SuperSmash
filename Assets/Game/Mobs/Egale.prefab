@@ -258,7 +258,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 449.589203, y: 2.06524563, z: -279.093384}
+  m_LocalPosition: {x: 461.410004, y: 2.06520009, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
@@ -562,6 +562,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -576,6 +577,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -620,7 +622,7 @@ MonoBehaviour:
   flipDir: 0
   tTip: {fileID: 10200000}
   ai: 0
-  characterName: Egale
+  characterName: Tuo Niao
   originColor: {r: 1, g: 1, b: 1, a: 1}
   mobIndex: 0
   detectRadius: 1.20000005
@@ -692,15 +694,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 100
-  maxHP: 100
+  HP: 300
+  maxHP: 300
   character: {fileID: 0}
   anim: {fileID: 0}
   part: 1
-  speed: 4
-  jumpForce: 2000
-  mass: .5
+  speed: 12
+  jumpForce: 1500
+  mass: 5
   groundCheck: {fileID: 100014}
+  jumpCount: 0
+  maxJumpCount: 100000
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -718,10 +722,12 @@ MonoBehaviour:
   character: {fileID: 0}
   anim: {fileID: 9500002}
   part: 0
-  speed: 6
-  jumpForce: 0
-  mass: .5
+  speed: 5
+  jumpForce: 3000
+  mass: 1
   groundCheck: {fileID: 100016}
+  jumpCount: 0
+  maxJumpCount: 1
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
