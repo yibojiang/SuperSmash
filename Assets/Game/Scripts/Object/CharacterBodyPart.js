@@ -114,6 +114,7 @@ function Hurt(_damage:float,_force:Vector3,_character:Character){
 
 		if (!_character.ai){
 			GameManager.Instance().AddScore(_character.controlIndex,50);	
+			CameraController.Instance().ShakeCamera(0.5,1);
 		}
 		
 		FlyAway(_force);
