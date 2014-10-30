@@ -29,7 +29,6 @@ function OnTriggerEnter(_other:Collider){
 					forceDir=forceDir.normalized;
 					forceDir.y=0.1;
 					bp.Hurt(damage,forceDir.normalized*hitForce,myChar);
-					
 				}	
 			}
 			
