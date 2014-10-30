@@ -26,8 +26,9 @@ function OnTriggerEnter(_other:Collider){
 					
 					//GameManager.Instance().LogEvent(myChar.name+" X "+ bp.character.name+" "+damage+" Damage" );
 					var forceDir:Vector3=bp.character.transform.position- myChar.transform.position;
+					forceDir=forceDir.normalized;
+					forceDir.y=0.1;
 					bp.Hurt(damage,forceDir.normalized*hitForce,myChar);
-					
 				}	
 			}
 			
@@ -46,7 +47,8 @@ function OnTriggerStay(_other:Collider){
 				var myChar:Character=GetComponentInParent(Character) as Character;
 				if (myChar!=null){
 					if (myChar!=bp.character ){
-						bp.Hurt(sustainDamage*Time.timeScale*Time.fixedDeltaTime,bp.character.transform.position- myChar.transform.position,myChar);
+						var hitDir:Vector3=bp.character.transform.position- myChar.transform.position;
+						bp.Hurt(sustainDamage*Time.timeScale*Time.fixedDeltaTime,hitDir.normalized*hitForce,myChar);
 						
 					}	
 				}

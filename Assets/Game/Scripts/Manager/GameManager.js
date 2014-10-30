@@ -53,6 +53,10 @@ var sunPath:SunPath;
 var adamApple:GameObject;
 var evaApple:GameObject;
 
+var brosAnim:Animator;
+var brosTransform:Transform;
+var brosSmoke:ParticleSystem;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
@@ -108,6 +112,30 @@ function ShowGameOverUI(){
 
 var gameOver:boolean;
 
+function PlayBrosAnim(){
+	var toggle:float=0;
+	var interval:float=20;
+	brosSmoke.Play();
+	CameraController.Instance().ShakeCamera(0.5);
+	while(toggle<interval){
+		//Debug.Log(toggle);
+		toggle+=Time.deltaTime;
+
+		brosTransform.localPosition.y=Mathf.Lerp(-5.3,0,toggle/interval);
+
+
+		yield WaitForEndOfFrame();
+	}
+
+	brosTransform.localPosition.y=0;
+
+	CameraController.Instance().StopShakeCamera();
+	brosSmoke.Stop();
+
+	brosAnim.Play("spbros");
+
+}
+
 function Update(){
 	tLog.text="";
 	tScoreBoard.text="";
@@ -150,10 +178,12 @@ function Update(){
 				gameStart=true;
 				GeneratePlayer(0,0,Vector3(460,15,-286));
 				GeneratePlayer(1,1,Vector3(470,15,-286));
-				gameStartAnim.Play("GameStart");
+				//gameStartAnim.SetTrigger("GameStart");
 				gameBgm.Play();
 				gameUI.SetActive(true);
 				titleUI.SetActive(false);	
+				
+				PlayBrosAnim();
 			}
 			
 

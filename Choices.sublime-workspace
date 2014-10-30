@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"Ins",
+				"Instance"
+			],
+			[
+				"to",
+				"toggle"
+			],
+			[
+				"b",
+				"brosAnim"
+			],
+			[
+				"for",
+				"forceDir"
+			],
+			[
+				"hit",
+				"hitForce"
+			],
+			[
 				"fire",
 				"fierInterval"
 			],
@@ -494,26 +514,6 @@
 			[
 				"gameO",
 				"gameObject"
-			],
-			[
-				"Play",
-				"PlayMutiplay"
-			],
-			[
-				"Slide",
-				"SlideToRestart"
-			],
-			[
-				"catc",
-				"catConfig2P"
-			],
-			[
-				"shipcon",
-				"shipConfig1P"
-			],
-			[
-				"shipco",
-				"shipConfig1P"
 			]
 		]
 	},
@@ -523,15 +523,7 @@
 			"file": "Assets/Game/Scripts/Object/Character.js",
 			"settings":
 			{
-				"buffer_size": 7579,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Game/Scripts/Object/AttackArea.js",
-			"settings":
-			{
-				"buffer_size": 1313,
+				"buffer_size": 7802,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +531,23 @@
 			"file": "Assets/Game/Scripts/Object/CharacterBodyPart.js",
 			"settings":
 			{
-				"buffer_size": 3438,
+				"buffer_size": 3533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Game/Scripts/Tools/RenderQueue.js",
+			"settings":
+			{
+				"buffer_size": 134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Game/Scripts/Object/AttackArea.js",
+			"settings":
+			{
+				"buffer_size": 1416,
 				"line_ending": "Unix"
 			}
 		},
@@ -548,6 +556,22 @@
 			"settings":
 			{
 				"buffer_size": 2115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Game/Scripts/Manager/GameManager.js",
+			"settings":
+			{
+				"buffer_size": 5054,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Game/Scripts/Manager/CameraController.js",
+			"settings":
+			{
+				"buffer_size": 2281,
 				"line_ending": "Unix"
 			}
 		}
@@ -603,8 +627,15 @@
 	],
 	"file_history":
 	[
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/UVScroller.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Arts.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animals.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/AttackArea.js",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/spbro_ready.anim",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Tools/RendererQueue.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Arts/cosmicRay.psd.meta",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/CameraController.js",
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Plugins/PlayGameServices/demo-RealTimeMultiplayer/GPGMultiplayerUI.cs",
+		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/UVScroller.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/ControlSources.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/ControlSources/UnityMouseAxisSource.cs",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Image Effects (Pro Only)/ContrastStretchEffect.cs",
@@ -613,8 +644,6 @@
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/UI.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animation/Test/Attack.anim",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireTVRemote.cs",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Animals.meta",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Manager/CameraController.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/CharacterBodyPart.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Character.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Plugins/InControl Plugin/Lib/Unity/DeviceProfiles/AmazonFireGameController.cs.meta",
@@ -660,7 +689,6 @@
 		"/Users/yibojiang/Documents/GameDevelop/ChainEffectProject/ChainEffect/Assets/Script/Object/Player.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SunPath.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/SpitBullet.js",
-		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/AttackArea.js",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Arts/sun.png.meta",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Standard Assets/Skyboxes/Textures/Sunny1/Sunny1_up.tif",
 		"/Users/yibojiang/Documents/GameDevelop/ChoicesProject/ChoicesBattle/Assets/Game/Scripts/Object/Spitter.js",
@@ -726,11 +754,7 @@
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/OldEnemy/BonusShip.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/OldEnemy/Weapons/EnemyMachineGun.js",
 		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Scripts/Object/Enemy.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/EN_glyphList.txt",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/Others/ConfigHelperDataHelper.js",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Prefab/NewEnemy/BonusShip.prefab",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Game/Animation/Ballon_Open.anim",
-		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/Assets/Body.controller"
+		"/Users/yibojiang/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/EN_glyphList.txt"
 	],
 	"find":
 	{
@@ -752,6 +776,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"brosAnim",
+			"space",
+			"FlyAway",
+			"jump",
 			"Attack",
 			"hurt",
 			"isattacking()",
@@ -875,11 +903,7 @@
 			"normalslot",
 			"CheckEquipSlotFree",
 			"GameResume",
-			"vibrate",
-			"VibrateAll",
-			"die",
-			"camera",
-			"skill"
+			"vibrate"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -928,15 +952,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7579,
+						"buffer_size": 7802,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1639,
-								1639
+								4376,
+								4376
 							]
 						],
 						"settings":
@@ -945,33 +969,61 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1494.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Game/Scripts/Object/AttackArea.js",
+					"file": "Assets/Game/Scripts/Object/CharacterBodyPart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1313,
+						"buffer_size": 3533,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								1951,
+								1951
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Game/Scripts/Tools/RenderQueue.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -981,20 +1033,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Assets/Game/Scripts/Object/CharacterBodyPart.js",
+					"buffer": 3,
+					"file": "Assets/Game/Scripts/Object/AttackArea.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3438,
+						"buffer_size": 1416,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1920,
-								1924
+								219,
+								219
 							]
 						],
 						"settings":
@@ -1002,15 +1054,15 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 37.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Assets/Game/Scripts/Object/CosmicRay.js",
 					"semi_transient": false,
 					"settings":
@@ -1022,19 +1074,78 @@
 						"selection":
 						[
 							[
-								1624,
-								1624
+								204,
+								204
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 970.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Game/Scripts/Manager/GameManager.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2471,
+								2471
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1967.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Game/Scripts/Manager/CameraController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								804,
+								804
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 362.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1042,7 +1153,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1078,7 +1189,7 @@
 	"project": "Choices.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1086,6 +1197,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"area",
+				"Game/Scripts/Object/AttackArea.js"
+			],
+			[
+				"rend",
+				"Game/Scripts/Tools/RenderQueue.js"
+			],
+			[
+				"render",
+				"Game/Scripts/Tools/RendererQueue.js"
+			],
+			[
+				"camera",
+				"Game/Scripts/Manager/CameraController.js"
+			],
+			[
+				"gamema",
+				"Game/Scripts/Manager/GameManager.js"
+			],
+			[
+				"character",
+				"Game/Scripts/Object/CharacterBodyPart.js"
+			],
 			[
 				"cosmicray",
 				"Game/Scripts/Object/CosmicRay.js"
@@ -1109,10 +1244,6 @@
 			[
 				"inputm",
 				"Plugins/InControl Plugin/Lib/InputManager.cs"
-			],
-			[
-				"character",
-				"Game/Scripts/Object/CharacterBodyPart.js"
 			],
 			[
 				"leveleditor",
@@ -1147,10 +1278,6 @@
 				"Game/Scripts/Manager/GameManager.js"
 			],
 			[
-				"gamema",
-				"Game/Scripts/Manager/GameManager.js"
-			],
-			[
 				"sunp",
 				"Game/Scripts/Object/SunPath.js"
 			],
@@ -1169,10 +1296,6 @@
 			[
 				"aut",
 				"Game/Scripts/Object/AutoDestroy.js"
-			],
-			[
-				"camera",
-				"Game/Scripts/Manager/CameraController.js"
 			],
 			[
 				"attack",
@@ -1585,18 +1708,6 @@
 			[
 				"shipdetail",
 				"Assets/Game/Scripts/XBMenu/MenuState_ShipDetailMenu.js"
-			],
-			[
-				"menustate_catmachine",
-				"Assets/Game/FromPeter/Scripts/XboxControllerManager/MenuState_CatSlotMachineMenu.js"
-			],
-			[
-				"catslotmachine",
-				"Assets/Game/Scripts/Menu/CatsMenu/CatSlotMachine.js"
-			],
-			[
-				"mutipl",
-				"Assets/Game/Scripts/Mutiplay/MutiplayPlayer.js"
 			]
 		],
 		"width": 0.0
@@ -1608,7 +1719,7 @@
 		[
 			[
 				"",
-				"~/Documents/GameDevelop/NaughtyKittiesProject/NaughtyKitties/nk.sublime-project"
+				"~/Documents/GameDevelop/CatBattle2Project/CatBattle2_0/catbattle2.sublime-project"
 			]
 		],
 		"width": 380.0
