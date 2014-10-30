@@ -701,10 +701,12 @@ MonoBehaviour:
   part: 1
   speed: 12
   jumpForce: 1500
+  flyForce: 2000
   mass: 5
   groundCheck: {fileID: 100014}
   jumpCount: 0
-  maxJumpCount: 100000
+  maxJumpCount: 1
+  fly: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -724,10 +726,12 @@ MonoBehaviour:
   part: 0
   speed: 5
   jumpForce: 3000
+  flyForce: 2000
   mass: 1
   groundCheck: {fileID: 100016}
   jumpCount: 0
   maxJumpCount: 1
+  fly: 1
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

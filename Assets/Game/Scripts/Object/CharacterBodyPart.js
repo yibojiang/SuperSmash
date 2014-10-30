@@ -7,6 +7,7 @@ var anim:Animator;
 var part:int;
 var speed:float=2;
 var jumpForce:float=3000;
+var flyForce:float=2000;
 var mass:float=1;
 
 var groundCheck:GameObject;
@@ -16,6 +17,7 @@ private var lifeTime:float=30;
 
 var jumpCount:int;
 var maxJumpCount:int=1;
+var fly:boolean;
 
 function RedFlash(){
 	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
