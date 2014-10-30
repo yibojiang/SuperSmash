@@ -726,7 +726,7 @@ MonoBehaviour:
   part: 0
   speed: 5
   jumpForce: 3000
-  flyForce: 2000
+  flyForce: 200
   mass: 1
   groundCheck: {fileID: 100016}
   jumpCount: 0

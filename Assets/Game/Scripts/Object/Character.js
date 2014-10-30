@@ -434,7 +434,7 @@ function Update () {
 	}
 	else{
 
-		if (GetFlyPart()!=null ){
+		if (GetFlyPart()==null ){
 			if ( GetWalkPart().jumpCount<GetWalkPart().maxJumpCount && !IsHurting()  ){
 				if (device!=null && device.Action1.WasPressed ){
 					jump=true;	
@@ -449,14 +449,26 @@ function Update () {
 			}		
 		}
 		else{
-			if (device!=null && device.Action1.WasPressed ){
-				rigidbody.AddForce(Vector3(0,GetWalkPart().flyForce,0) );
-			}
-			else{
-				if (km.GetKeyActionDown("Jump",controlIndex) ){
-					rigidbody.AddForce(Vector3(0,GetWalkPart().flyForce,0) );
+			//Debug.Log("flying");
+
+			
+			if( !IsHurting() ){
+				if (device!=null && device.Action1.IsPressed ){
+					GetFlyPart().anim.SetFloat("Speed",1 );
+					rigidbody.AddForce(Vector3(0,GetFlyPart().flyForce,0) );
 				}
+				else{
+					if (km.GetKeyAction("Jump",controlIndex) ){
+						GetFlyPart().anim.SetFloat("Speed",1 );
+						rigidbody.AddForce(Vector3(0,GetFlyPart().flyForce,0) );
+					}
+					else{
+						GetFlyPart().anim.SetFloat("Speed",0 );
+					}
+				}
+
 			}
+		
 		}
 	}
 	
