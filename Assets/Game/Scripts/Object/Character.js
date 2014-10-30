@@ -198,6 +198,16 @@ function Reborn(_spawnDuration:float){
 	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(444,485),15,-286 ));
 }
 
+
+function GetFlyPart():CharacterBodyPart{
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].fly){
+			return bodyParts[i];
+		}
+	}
+}
+
 function GetWalkPart():CharacterBodyPart{
 	var i:int;
 	for (i=0;i<bodyParts.Count;i++){
@@ -208,9 +218,7 @@ function GetWalkPart():CharacterBodyPart{
 
 	for (i=0;i<bodyParts.Count;i++){
 		return bodyParts[i];
-	}
-	
-		
+	}	
 }
 
 private var dirToggle:float;
@@ -425,19 +433,31 @@ function Update () {
 		}
 	}
 	else{
-		if ( GetWalkPart().jumpCount<GetWalkPart().maxJumpCount && !IsHurting()  ){
+
+		if (GetFlyPart()!=null ){
+			if ( GetWalkPart().jumpCount<GetWalkPart().maxJumpCount && !IsHurting()  ){
+				if (device!=null && device.Action1.WasPressed ){
+					jump=true;	
+					GetWalkPart().jumpCount++;
+				}
+				else{
+					if (km.GetKeyActionDown("Jump",controlIndex) ){
+						jump=true;			
+						GetWalkPart().jumpCount++;
+					}
+				}
+			}		
+		}
+		else{
 			if (device!=null && device.Action1.WasPressed ){
-				jump=true;	
-				GetWalkPart().jumpCount++;
+				rigidbody.AddForce(Vector3(0,GetWalkPart().flyForce,0) );
 			}
 			else{
 				if (km.GetKeyActionDown("Jump",controlIndex) ){
-					jump=true;			
-					GetWalkPart().jumpCount++;
+					rigidbody.AddForce(Vector3(0,GetWalkPart().flyForce,0) );
 				}
 			}
-			
-		}	
+		}
 	}
 	
 	if (jump){
