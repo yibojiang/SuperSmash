@@ -44,6 +44,25 @@ function ShakeCamera(_strength:float,_duration:float){
 	StopShakeCamera();
 }
 
+function BlurOff(){
+	var blur:BlurEffect=GetComponent(BlurEffect) as BlurEffect;
+	blur.enabled=false;
+}
+
+function BlurOn(){
+	var blur:BlurEffect=GetComponent(BlurEffect) as BlurEffect;
+	blur.enabled=true;	
+}
+
+function LightOn(){
+	var ge:GrayscaleEffect=GetComponent(GrayscaleEffect) as GrayscaleEffect;
+	ge.rampOffset=0;
+}
+
+function LightOff(){
+	var ge:GrayscaleEffect=GetComponent(GrayscaleEffect) as GrayscaleEffect;
+	ge.rampOffset=-0.05;
+}
 
 function LateUpdate () {
 	//Debug.Log(Mathf.Tan(40.0/180*Mathf.PI));

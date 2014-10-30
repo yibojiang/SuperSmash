@@ -29,13 +29,13 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110209679}
   m_DstState: {fileID: 110276479}
-  m_TransitionDuration: .12396694
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
     m_ConditionEvent: 
     m_EventTreshold: 0
-    m_ExitTime: .876033068
+    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -81,7 +81,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 914d6667eb10a8046a61cfa34e46afd2, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 120, y: 180, z: 0}
+  m_Position: {x: 108, y: 204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
