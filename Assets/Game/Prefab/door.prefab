@@ -85,7 +85,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -.678542137, z: 0, w: .734561563}
+  m_LocalRotation: {x: .0825878009, y: -.667119741, z: .0809215307, w: .735922694}
   m_LocalPosition: {x: -3.04916382, y: -7.47971535, z: 0}
   m_LocalScale: {x: 4.51071692, y: 4.51071882, z: 4.51071882}
   m_Children:
@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.29382324, y: 1.72916174, z: -1.67776489}
+  m_LocalPosition: {x: -21.446228, y: 1.72916174, z: -1.67776489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.86990047, z: 0}
+  m_LocalPosition: {x: .0953120962, y: 2.69821382, z: -6.83021517e-06}
   m_LocalScale: {x: .158010721, y: .158010766, z: .158010706}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 150
   m_Sprite: {fileID: 21300004, guid: c36109431bf12df45a8e7cdcf20c3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
@@ -184,7 +184,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 160
   m_Sprite: {fileID: 21300000, guid: c36109431bf12df45a8e7cdcf20c3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200004
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 159
   m_Sprite: {fileID: 21300002, guid: c36109431bf12df45a8e7cdcf20c3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200006
@@ -228,7 +228,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 151
   m_Sprite: {fileID: 21300000, guid: 685ae5742556b4620908eeafd223e3ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
