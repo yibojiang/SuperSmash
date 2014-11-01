@@ -587,8 +587,12 @@ MonoBehaviour:
   part: 0
   speed: 5
   jumpForce: 2000
+  flyForce: 2000
   mass: .5
   groundCheck: {fileID: 100010}
+  jumpCount: 0
+  maxJumpCount: 1
+  fly: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -608,8 +612,12 @@ MonoBehaviour:
   part: 1
   speed: 12
   jumpForce: 4000
+  flyForce: 2000
   mass: 1
   groundCheck: {fileID: 100026}
+  jumpCount: 0
+  maxJumpCount: 1
+  fly: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,7 +766,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 195
   m_Sprite: {fileID: 21300000, guid: 7d717b5bfd43b49f2afbc8c9e219b4a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200004
@@ -780,7 +788,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 205
   m_Sprite: {fileID: 21300000, guid: 7d717b5bfd43b49f2afbc8c9e219b4a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200006
@@ -802,7 +810,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -1199
   m_Sprite: {fileID: 21300000, guid: 675a30c0f5f9e4042af35c8118a2ca94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200008
@@ -824,7 +832,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: b10fef19a75d04688b18821c29c0d099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
