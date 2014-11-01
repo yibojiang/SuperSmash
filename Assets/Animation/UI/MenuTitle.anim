@@ -24,7 +24,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -43,7 +43,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -62,7 +62,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -81,7 +81,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -191,7 +191,7 @@ AnimationClip:
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -211,7 +211,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -230,7 +230,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -249,7 +249,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -268,7 +268,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -327,4 +327,11 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: 1.98333335
+    functionName: GameStart
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

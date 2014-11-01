@@ -18,7 +18,7 @@ var characters:List.<Character>;
 var playerCharacters:List.<Character>;
 var mobs:GameObject[];
 
-var mobToggle:float;
+private var mobToggle:float;
 var mobInterval:float=2;
 
 var countDown:float=30;
@@ -31,8 +31,8 @@ var smokePrefab:GameObject;
 
 var tLog:TextMesh;
 
-var gameStartAnim:Animator;
-var gameOverAnim:Animator;
+//var gameStartAnim:Animator;
+//var gameOverAnim:Animator;
 
 var logString:List.<String>;
 
@@ -40,7 +40,7 @@ var tScoreBoard:TextMesh;
 
 var scoreString:List.<int>;
 
-var tWin:TextMesh;
+//var tWin:TextMesh;
 
 var titleUI:GameObject;
 var gameUI:GameObject;
@@ -56,6 +56,8 @@ var evaApple:GameObject;
 var brosAnim:Animator;
 var brosTransform:Transform;
 var brosSmoke:ParticleSystem;
+
+var menuAnim:Animator;
 
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
@@ -116,7 +118,7 @@ function PlayBrosAnim(){
 	var toggle:float=0;
 	var interval:float=20;
 	brosSmoke.Play();
-	CameraController.Instance().ShakeCamera(0.5);
+	CameraController.Instance().ShakeCamera(0.3);
 	while(toggle<interval){
 		//Debug.Log(toggle);
 		toggle+=Time.deltaTime;
@@ -133,6 +135,34 @@ function PlayBrosAnim(){
 	brosSmoke.Stop();
 
 	brosAnim.Play("spbros");
+
+}
+
+function Start(){
+	CameraController.Instance().BlurOn();
+	CameraController.Instance().LightOff();
+	brosTransform.localPosition.y=-5.3;
+}
+
+function GameStart(){
+	maxCountDown=countDown;
+	//max_time
+	gameStart=true;
+	GeneratePlayer(0,0,Vector3(460,15,-286));
+	GeneratePlayer(1,1,Vector3(470,15,-286));
+	//gameStartAnim.SetTrigger("GameStart");
+	gameBgm.Play();
+	gameUI.SetActive(true);
+	titleUI.SetActive(false);	
+
+	adamApple.SetActive(false);
+	evaApple.SetActive(false);
+	
+	PlayBrosAnim();
+
+	CameraController.Instance().BlurOff();
+	CameraController.Instance().LightOn();
+
 
 }
 
@@ -173,6 +203,10 @@ function Update(){
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || device.Action1.WasPressed ){
 			
 			if (!gameOver){
+				menuAnim.Play("MenuStart");
+			}
+			/*
+			if (!gameOver){
 				maxCountDown=countDown;
 				//max_time
 				gameStart=true;
@@ -185,10 +219,10 @@ function Update(){
 				
 				PlayBrosAnim();
 			}
-			
-
+			*/
 		}
 	}
+
 	if (gameStart){
 		if (countDown>0){
 			if (scoreString[0]>scoreString[1]){
@@ -213,12 +247,12 @@ function Update(){
 			gameOver=true;
 			//gameOverAnim.Play("GameStart");
 			
-			tWin.text=(winPlayerIndex+1)+"P WINS !";
+			//tWin.text=(winPlayerIndex+1)+"P WINS !";
 			gameStart=false;
 
 
-			tWin.gameObject.SetActive(true);
-			tWin.gameObject.SetActive(false);
+			//tWin.gameObject.SetActive(true);
+			//tWin.gameObject.SetActive(false);
 
 			ShowGameOverUI();
 		}
