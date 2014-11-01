@@ -10171,7 +10171,7 @@ MonoBehaviour:
   hpPrefab: {fileID: 100000, guid: 60419bd3cf0924d51bbb36efc6f59c29, type: 2}
   characters: []
   playerCharacters:
-  - {fileID: 11400000, guid: 8d1a1314e96b69744ae21ff1a1abbdaa, type: 2}
+  - {fileID: 11400010, guid: d87c3195e1bb0b141b68b3f48a234875, type: 2}
   - {fileID: 11400004, guid: 5bfecf6727a4441cfada48b02c6cf6f8, type: 2}
   mobs:
   - {fileID: 100024, guid: 86f3c09438e764c4dbaadfc4992e684b, type: 2}
@@ -16376,7 +16376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1642501243
 Transform:
   m_ObjectHideFlags: 0
