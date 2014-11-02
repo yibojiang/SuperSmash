@@ -166,8 +166,8 @@ function LateUpdate () {
 		//Debug.Log("hdist: "+hDist+" deg: "+ rad*Mathf.Rad2Deg);
 		//var targetZ:float=-286-( hDist / Mathf.Tan(rad ) );
 		//cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*3;
-		targetFOV=Mathf.Atan(dist/14.0)*Mathf.Rad2Deg*2;
-		targetFOV=Mathf.Clamp(targetFOV,50,120);
+		targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;
+		targetFOV=Mathf.Clamp(targetFOV,50,150);
 		cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
 
 

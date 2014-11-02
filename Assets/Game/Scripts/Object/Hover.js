@@ -10,7 +10,7 @@ function Start () {
 function FixedUpdate () {
 
 	if (cb.character!=null){
-		cb.character.gameObject.rigidbody.AddForce(-10*cb.character.gameObject.rigidbody.velocity);
+		//cb.character.gameObject.rigidbody.AddForce(-10*cb.character.gameObject.rigidbody.velocity);
 		if (cb.character.GetWalkPart().gameObject==gameObject){
 			var dist:float=cb.character.GroundDistance();
 

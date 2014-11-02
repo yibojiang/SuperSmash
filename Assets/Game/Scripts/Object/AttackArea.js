@@ -40,7 +40,7 @@ function OnTriggerEnter(_other:Collider){
 
 	//Debug.Log(_other.name);
 	if (_other.CompareTag("Ball")){
-		Debug.Log("ball");
+		//Debug.Log("ball");
 		myChar=GetComponentInParent(Character) as Character;
 		forceDir=_other.transform.position-myChar.transform.position;
 		forceDir=forceDir.normalized;
