@@ -19,6 +19,29 @@ public static function Instance() : CameraController
     return instance;
 }
 
+function SlowMotion(_timeScale:float,_duration:float){
+	var toggle:float=0;
+	var prevTimeScale:float=Time.timeScale;
+	while(toggle<_duration){
+		//Debug.Log(toggle);
+		toggle+=Time.fixedDeltaTime;
+		Time.timeScale=_timeScale;
+		yield WaitForEndOfFrame();
+	}
+
+
+	Time.timeScale=prevTimeScale;
+
+}
+
+function Update(){
+	if (Input.GetKeyDown(KeyCode.K)){
+		SlowMotion(0.1,2);
+	}
+}
+
+
+
 function ShakeCamera(_strength:float){
 	shakeStrength=_strength;
 	shaking=true;

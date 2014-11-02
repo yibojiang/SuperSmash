@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
+  - 114: {fileID: 11400016}
   m_Layer: 0
   m_Name: ptcSmoke
   m_TagString: Untagged
@@ -664,6 +665,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -678,6 +680,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -788,7 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18bf62ce22814d41be33a2f63e04538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlIndex: 1
+  controlIndex: 0
   grounded: 0
   bodyParts: []
   jump: 0
@@ -844,6 +847,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderQueue: 4000
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42490898b01bb45e3a662b3f1e50792b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 200
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2932,14 +2947,14 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 1816323776f874f52a85b497210c471a, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0

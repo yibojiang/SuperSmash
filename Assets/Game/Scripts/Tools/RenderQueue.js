@@ -1,10 +1,17 @@
 ﻿#pragma strict
 
-var renderQueue:float=4000;
-function Start () {
+private var mt:Material;
+//@script ExecuteInEditMode()
+var renderQueue:int=4000;
 
-}
-
+//particleSystem.renderer.sortingOrder = 2;
 function Update () {
-	renderer.material.renderQueue=renderQueue;
+	if (mt==null){
+		mt=renderer.material;
+	}
+	else{
+		mt.renderQueue=renderQueue;
+		
+	}
+	//renderer.sortingOrder=sortingOrder;
 }

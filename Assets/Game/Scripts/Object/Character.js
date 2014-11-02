@@ -59,8 +59,15 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 }
 
 function Start () {
-	AddBodyPart(0,initPart1);
-	AddBodyPart(1,initPart2);
+
+	if (initPart1!=null){
+		AddBodyPart(0,initPart1);	
+	}
+	
+	if (initPart2!=null){
+		AddBodyPart(1,initPart2);
+	}
+	
 
 	if (controlIndex % 2==0){
 		SetDir(1);
