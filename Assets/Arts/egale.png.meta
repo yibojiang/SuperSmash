@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: 19972317c46c3431cb72cf4727817d07
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: egale_0
-    21300002: egale_1
-    21300004: egale_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -46,7 +42,7 @@ TextureImporter:
   buildTargetSettings:
   - buildTarget: Standalone
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -2
     compressionQuality: 50
   spriteSheet:
     sprites:

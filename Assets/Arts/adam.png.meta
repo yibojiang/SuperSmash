@@ -1,11 +1,6 @@
 fileFormatVersion: 2
 guid: e8d78850586b7403ba650e859e828e94
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: adam_0
-    21300002: adam_1
-    21300004: adam_2
-    21300006: adam_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -43,11 +38,11 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
-  textureType: 8
+  textureType: 5
   buildTargetSettings:
   - buildTarget: Standalone
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: 5
     compressionQuality: 50
   spriteSheet:
     sprites:
@@ -59,7 +54,7 @@ TextureImporter:
         width: 277
         height: 874
       alignment: 9
-      pivot: {x: .318799287, y: .897898078}
+      pivot: {x: .298670918, y: .908843577}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: adam_1
       rect:
@@ -69,7 +64,7 @@ TextureImporter:
         width: 235
         height: 841
       alignment: 9
-      pivot: {x: .385579348, y: .896459162}
+      pivot: {x: .376949608, y: .900326312}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: adam_2
       rect:
@@ -79,7 +74,7 @@ TextureImporter:
         width: 364
         height: 905
       alignment: 9
-      pivot: {x: .29808715, y: .876345336}
+      pivot: {x: .307069898, y: .849192858}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: adam_3
       rect:
@@ -89,7 +84,7 @@ TextureImporter:
         width: 351
         height: 1079
       alignment: 9
-      pivot: {x: .474464357, y: .119551748}
+      pivot: {x: .376424164, y: .153518721}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

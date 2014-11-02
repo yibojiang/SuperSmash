@@ -1,11 +1,6 @@
 fileFormatVersion: 2
 guid: 70c28430496d2462e84794ee27b3a56b
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: daishu_0
-    21300002: daishu_1
-    21300004: daishu_2
-    21300006: daishu_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -47,7 +42,7 @@ TextureImporter:
   buildTargetSettings:
   - buildTarget: Standalone
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -2
     compressionQuality: 50
   spriteSheet:
     sprites:

@@ -1,14 +1,6 @@
 fileFormatVersion: 2
 guid: b296ff86fe2ed463f9c5e298ef1a7422
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: elephant_0
-    21300002: elephant_1
-    21300004: elephant_2
-    21300006: elephant_3
-    21300008: elephant_4
-    21300010: elephant_5
-    21300012: elephant_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -28,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -50,7 +42,7 @@ TextureImporter:
   buildTargetSettings:
   - buildTarget: Standalone
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -2
     compressionQuality: 50
   spriteSheet:
     sprites:

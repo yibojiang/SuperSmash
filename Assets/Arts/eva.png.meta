@@ -1,11 +1,6 @@
 fileFormatVersion: 2
 guid: 51a27506402b34f528e42c71f5d1b9fa
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: eva_0
-    21300002: eva_1
-    21300004: eva_2
-    21300006: eva_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -47,7 +42,7 @@ TextureImporter:
   buildTargetSettings:
   - buildTarget: Standalone
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -2
     compressionQuality: 50
   spriteSheet:
     sprites:

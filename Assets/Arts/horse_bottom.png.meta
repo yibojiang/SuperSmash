@@ -1,8 +1,6 @@
 fileFormatVersion: 2
 guid: dd146164341074ffe9dae96f46bd9089
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: horse_bottom
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1

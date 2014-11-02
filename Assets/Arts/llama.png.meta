@@ -1,12 +1,6 @@
 fileFormatVersion: 2
 guid: 91952993b287b4bdeb09b69bd5fb7aa6
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: llama_0
-    21300002: llama_1
-    21300004: llama_2
-    21300006: llama_3
-    21300008: llama_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1

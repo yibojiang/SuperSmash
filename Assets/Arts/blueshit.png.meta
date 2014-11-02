@@ -1,11 +1,6 @@
 fileFormatVersion: 2
 guid: 0de3c6b4b962d4a40811d4355fd03528
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: blueshit_0
-    21300002: blueshit_1
-    21300004: blueshit_2
-    21300006: blueshit_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1

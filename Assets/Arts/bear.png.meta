@@ -1,11 +1,6 @@
 fileFormatVersion: 2
 guid: 5e90b3e71785e421bb2f387eff5c417d
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: bear_0
-    21300002: bear_1
-    21300004: bear_2
-    21300006: bear_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1

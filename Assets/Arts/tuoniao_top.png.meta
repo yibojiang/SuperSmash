@@ -1,8 +1,6 @@
 fileFormatVersion: 2
 guid: b10fef19a75d04688b18821c29c0d099
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tuoniao_top
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
