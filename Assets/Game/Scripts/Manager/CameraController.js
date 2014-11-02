@@ -10,6 +10,8 @@ var perspFactor:float=0.45;
 var targetFOV:float=80;
 
 var cam:Camera;
+
+
 private static var instance : CameraController;
  
 public static function Instance() : CameraController
@@ -89,6 +91,7 @@ function LightOff(){
 	ge.rampOffset=-0.05;
 }
 
+var ball:GameObject;
 function LateUpdate () {
 	//Debug.Log(Mathf.Tan(40.0/180*Mathf.PI));
 
@@ -101,6 +104,8 @@ function LateUpdate () {
 	//Get left player
 	var leftX:float=100000;
 	var rightX:float=-100000;
+	var downY:float=100000;
+	var upY:float=-100000;
 
 
 	for (i=0;i<GameManager.Instance().characters.Count;i++){
@@ -111,14 +116,8 @@ function LateUpdate () {
 
 		if (GameManager.Instance().characters[i].transform.position.x>rightX){
 			rightX=GameManager.Instance().characters[i].transform.position.x;
-
 		}
-	}
 
-	var downY:float=100000;
-	var upY:float=-100000;
-
-	for (i=0;i<GameManager.Instance().characters.Count;i++){
 		if (GameManager.Instance().characters[i].transform.position.y<downY){
 			downY=GameManager.Instance().characters[i].transform.position.y;
 
@@ -126,7 +125,24 @@ function LateUpdate () {
 
 		if (GameManager.Instance().characters[i].transform.position.y>upY){
 			upY=GameManager.Instance().characters[i].transform.position.y;
+		}
+	}
 
+	if(ball!=null){
+		if (ball.transform.position.x<leftX){
+			leftX=ball.transform.position.x;
+		}
+
+		if (ball.transform.position.x>rightX){
+			rightX=ball.transform.position.x;
+		}
+
+		if (ball.transform.position.y<downY){
+			downY=ball.transform.position.y;
+		}
+
+		if (ball.transform.position.x>upY){
+			upY=ball.transform.position.y;
 		}
 	}
 	
@@ -151,7 +167,7 @@ function LateUpdate () {
 		//var targetZ:float=-286-( hDist / Mathf.Tan(rad ) );
 		//cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*3;
 		targetFOV=Mathf.Atan(dist/14.0)*Mathf.Rad2Deg*2;
-		targetFOV=Mathf.Clamp(targetFOV,50,150);
+		targetFOV=Mathf.Clamp(targetFOV,50,120);
 		cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
 
 

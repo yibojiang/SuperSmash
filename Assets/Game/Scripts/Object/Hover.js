@@ -2,6 +2,7 @@
 var cb:CharacterBodyPart;
 var hoverForce:float;
 var ps:ParticleSystem;
+var hoverHeight:float=1.0;
 function Start () {
 
 }
@@ -13,7 +14,7 @@ function FixedUpdate () {
 		if (cb.character.GetWalkPart().gameObject==gameObject){
 			var dist:float=cb.character.GroundDistance();
 
-			var force:float=1.0/dist*hoverForce;
+			var force:float=hoverHeight/dist*hoverForce;
 			cb.character.gameObject.rigidbody.AddForce(Vector3(0,force,0));		
 
 			if (ps!=null){

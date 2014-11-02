@@ -206,21 +206,25 @@ function Update(){
 				
 				menuAnim.Play("MenuStart");
 			}
-			/*
-			if (!gameOver){
-				maxCountDown=countDown;
-				//max_time
-				gameStart=true;
-				GeneratePlayer(0,0,Vector3(460,15,-286));
-				GeneratePlayer(1,1,Vector3(470,15,-286));
-				//gameStartAnim.SetTrigger("GameStart");
-				gameBgm.Play();
-				gameUI.SetActive(true);
-				titleUI.SetActive(false);	
-				
-				PlayBrosAnim();
+
+
+			if (!menuAnim.gameObject.activeInHierarchy){
+				if (!gameOver){
+					maxCountDown=countDown;
+					//max_time
+					gameStart=true;
+					GeneratePlayer(0,0,Vector3(460,15,-286));
+					GeneratePlayer(1,1,Vector3(470,15,-286));
+					//gameStartAnim.SetTrigger("GameStart");
+					gameBgm.Play();
+					gameUI.SetActive(true);
+					titleUI.SetActive(false);	
+					
+					PlayBrosAnim();
+				}	
 			}
-			*/
+			
+			
 		}
 	}
 
