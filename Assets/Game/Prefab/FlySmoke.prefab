@@ -11,6 +11,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: FlySmoke
   m_TagString: Untagged
@@ -44,6 +45,18 @@ MonoBehaviour:
   life: 0
   lifeTime: 1
   ps: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42490898b01bb45e3a662b3f1e50792b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 400
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
