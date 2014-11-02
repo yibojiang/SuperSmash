@@ -822,12 +822,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 400
+  HP: 1
   maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
-  part: 1
-  speed: 1
+  part: 400
+  speed: 400
   jumpForce: 1500
   flyForce: 2000
   mass: 2
@@ -877,7 +877,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  lengthInSec: 2.5
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -2947,7 +2947,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1816323776f874f52a85b497210c471a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

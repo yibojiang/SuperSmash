@@ -1,8 +1,6 @@
 fileFormatVersion: 2
 guid: 5f222cb76e69e482eb3eece68b78b96f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: horse_leg_back
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
