@@ -19,6 +19,8 @@ var jumpCount:int;
 var maxJumpCount:int=1;
 var fly:boolean;
 
+var hover:boolean;
+
 function RedFlash(){
 	var sr:SpriteRenderer[]=this.GetComponentsInChildren.<SpriteRenderer>();
 	var toggle:float=0;
@@ -107,6 +109,15 @@ function Update(){
 		}
 	}
 }
+/*
+function FixedUpdate(){
+	if (hover){
+		if (character.grounded){
+			
+		}
+	}
+}
+*/
 
 function Hurt(_damage:float,_force:Vector3,_character:Character){
 	HP-=_damage;

@@ -236,6 +236,21 @@ private var dir:Vector2;
 private var jumpToggle:float;
 private var jumpInterval:float=5;
 
+function CheckGrounded():boolean{
+	return Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground")); 
+}
+
+function GroundDistance():float{
+	var hit:RaycastHit;
+	if (Physics.Raycast ( GetWalkPart().groundCheck.transform.position, Vector3(0,-1,0),hit, 1 << LayerMask.NameToLayer("Ground") )) {
+		return hit.distance;
+	}
+	else{
+		return Mathf.Infinity;	
+	}
+	
+}
+
 function Update () {
 
 	if (transform.position.y<0){
@@ -309,13 +324,10 @@ function Update () {
 		}
 	}
 
-	var grounded= Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
+	grounded = Physics.Linecast(transform.position, GetWalkPart().groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"));  
 	
 	//Debug.Log(GetWalkPart().IsAttacking() );
 	if (!GetWalkPart().IsAttacking() && !IsHurting() || (!grounded)  ){
-
-
-
 		var newPos:Vector3=transform.position;
 		var walkSpeed:float=dir.x*GetWalkPart().speed*Time.deltaTime;
 		newPos.x+=walkSpeed;

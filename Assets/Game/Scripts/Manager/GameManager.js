@@ -139,7 +139,7 @@ function PlayBrosAnim(){
 }
 
 function Start(){
-	CameraController.Instance().BlurOn();
+	//CameraController.Instance().BlurOn();
 	CameraController.Instance().LightOff();
 	brosTransform.localPosition.y=-5.3;
 }

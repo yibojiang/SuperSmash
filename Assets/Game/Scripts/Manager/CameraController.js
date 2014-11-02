@@ -35,9 +35,11 @@ function SlowMotion(_timeScale:float,_duration:float){
 }
 
 function Update(){
+	/*
 	if (Input.GetKeyDown(KeyCode.K)){
 		SlowMotion(0.1,2);
 	}
+	*/
 }
 
 

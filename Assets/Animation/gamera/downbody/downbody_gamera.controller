@@ -81,7 +81,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110289811}
-  m_TransitionDuration: .375
+  m_TransitionDuration: .0385333002
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
