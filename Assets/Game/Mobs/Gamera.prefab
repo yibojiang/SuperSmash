@@ -666,7 +666,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -681,7 +680,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -849,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42490898b01bb45e3a662b3f1e50792b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingOrder: 201
+  sortingOrder: 300
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
