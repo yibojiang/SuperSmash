@@ -874,7 +874,7 @@ MonoBehaviour:
   cb: {fileID: 11400000}
   hoverForce: 100
   ps: {fileID: 19800000}
-  hoverHeight: 1
+  hoverHeight: 2
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -904,7 +904,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1041,7 +1041,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4284769380
+        rgba: 4290295992
       minMaxState: 0
     startSize:
       scalar: 1.5
