@@ -251,8 +251,15 @@ function GroundDistance():float{
 	
 }
 
-function Update () {
+function Explode(){
+	DropBodyPart(0);
+	DropBodyPart(1);
+}
 
+function Update () {
+	if(Input.GetKeyDown(KeyCode.Y)){
+		Explode();
+	}
 	if (transform.position.y<0){
 		GameManager.Instance().characters.Remove(this);
 

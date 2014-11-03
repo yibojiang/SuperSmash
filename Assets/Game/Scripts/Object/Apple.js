@@ -1,16 +1,20 @@
 ﻿#pragma strict
-
+/*
 function OnTriggerEnter(_other:Collider){
 	if (_other.CompareTag("Basket")){
 		Debug.Log("goal");
-	}
-	
-}
+		var basket:Basket=_other.gameObject.GetComponent.<Basket>();
 
-function Start () {
+		if (basket!=null){
+			GameManager.Instance().AddScore(basket.flag,1);
+			GameManager.Instance().SpawnBall();
+			basket.ps.Play();
 
-}
 
-function Update () {
+			Destroy(this.gameObject);
 
-}
+
+		}
+		
+	}	
+}*/

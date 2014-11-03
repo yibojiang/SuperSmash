@@ -11,6 +11,8 @@ var targetFOV:float=80;
 
 var cam:Camera;
 
+var factor:float=1;
+
 
 private static var instance : CameraController;
  
@@ -86,7 +88,7 @@ function LightOff(){
 	ge.rampOffset=-0.05;
 }
 
-var ball:GameObject;
+
 function LateUpdate () {
 	//Debug.Log(Mathf.Tan(40.0/180*Mathf.PI));
 
@@ -102,6 +104,7 @@ function LateUpdate () {
 	var downY:float=100000;
 	var upY:float=-100000;
 
+	var gm:GameManager=GameManager.Instance();
 
 	for (i=0;i<GameManager.Instance().characters.Count;i++){
 		if (GameManager.Instance().characters[i].transform.position.x<leftX){
@@ -123,21 +126,21 @@ function LateUpdate () {
 		}
 	}
 
-	if(ball!=null){
-		if (ball.transform.position.x<leftX){
-			leftX=ball.transform.position.x;
+	if(gm.apple!=null){
+		if (gm.apple.transform.position.x<leftX){
+			leftX=gm.apple.transform.position.x;
 		}
 
-		if (ball.transform.position.x>rightX){
-			rightX=ball.transform.position.x;
+		if (gm.apple.transform.position.x>rightX){
+			rightX=gm.apple.transform.position.x;
 		}
 
-		if (ball.transform.position.y<downY){
-			downY=ball.transform.position.y;
+		if (gm.apple.transform.position.y<downY){
+			downY=gm.apple.transform.position.y;
 		}
 
-		if (ball.transform.position.x>upY){
-			upY=ball.transform.position.y;
+		if (gm.apple.transform.position.x>upY){
+			upY=gm.apple.transform.position.y;
 		}
 	}
 	
@@ -145,7 +148,7 @@ function LateUpdate () {
 		target.position.x=(leftX+rightX)/2;
 
 
-		cameraTransform.position.x+=(target.position.x-cameraTransform.position.x)*Time.deltaTime*3;
+		cameraTransform.position.x+=(target.position.x-cameraTransform.position.x)*Time.deltaTime*10;
 
 	
 		//var targetZ:float=(-293-(rightX-leftX)*perspFactor );
@@ -157,10 +160,10 @@ function LateUpdate () {
 
 		var dist:float=Mathf.Max(hDist,vDist);
 
-		var rad:float=cam.fieldOfView/2*Mathf.Deg2Rad;
+		var rad:float=cam.fieldOfView*factor*Mathf.Deg2Rad;
 		//Debug.Log("hdist: "+hDist+" deg: "+ rad*Mathf.Rad2Deg);
-		var targetZ:float=-200-( dist / Mathf.Tan(rad ) );
-		cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*3;
+		var targetZ:float=-300-( dist / Mathf.Tan(rad ) );
+		cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*10;
 
 		/*
 		targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;

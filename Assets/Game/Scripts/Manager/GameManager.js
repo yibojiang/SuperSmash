@@ -40,7 +40,6 @@ var tScoreBoard:TextMesh;
 
 var scoreString:List.<int>;
 
-//var tWin:TextMesh;
 
 var titleUI:GameObject;
 var gameUI:GameObject;
@@ -56,10 +55,16 @@ var evaApple:GameObject;
 var brosAnim:Animator;
 var brosTransform:Transform;
 var brosSmoke:ParticleSystem;
+var goalPS:ParticleSystem;
 
 var menuAnim:Animator;
 
 var tScore:TextMesh;
+
+var applePrefab:GameObject;
+var apple:GameObject;
+
+var platform:Transform;
 
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
@@ -141,7 +146,7 @@ function PlayBrosAnim(){
 }
 
 function Start(){
-	//CameraController.Instance().BlurOn();
+	CameraController.Instance().BlurOn();
 	CameraController.Instance().LightOff();
 	brosTransform.localPosition.y=-5.3;
 }
@@ -150,6 +155,10 @@ function GameStart(){
 	maxCountDown=countDown;
 	//max_time
 	gameStart=true;
+	gameOver=false;
+
+	SpawnBall(3);
+
 	GeneratePlayer(0,0,Vector3(460,15,-286));
 	GeneratePlayer(1,1,Vector3(470,15,-286));
 	//gameStartAnim.SetTrigger("GameStart");
@@ -168,9 +177,17 @@ function GameStart(){
 
 }
 
+function SpawnBall(_duration:float){
+	yield WaitForSeconds(_duration);
+	apple=Instantiate(applePrefab);
+	apple.transform.parent=platform;
+	apple.transform.localPosition=Vector3(3,30,-3);
+}
+
 function Update(){
 	tLog.text="";
 	tScoreBoard.text="";
+
 	var i:int;
 	for (i=0;i<logString.Count;i++){
 		tLog.text+=logString[i]+"\n";
@@ -201,13 +218,17 @@ function Update(){
 
 		//Time.timeScale=0;
 		//tCountDown.text="Press 'A' or 'Space' to Start.";
+		tScore.text="";
 		tCountDown.text="";
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || device.Action1.WasPressed ){
-			
-			if (!gameOver){
-				
-				menuAnim.Play("MenuStart");
+			if (menuAnim.gameObject.activeInHierarchy){
+				if (!gameOver){
+					
+					menuAnim.Play("MenuStart");
+					gameOver=true;
+				}	
 			}
+			
 
 
 			if (!menuAnim.gameObject.activeInHierarchy){
@@ -231,7 +252,10 @@ function Update(){
 	}
 
 	if (gameStart){
+		tScore.text=String.Format("{0} - {1}",scoreString[0],scoreString[1]);
 		if (countDown>0){
+
+			
 			if (scoreString[0]>scoreString[1]){
 				adamApple.SetActive(true);
 				evaApple.SetActive(false);
@@ -252,14 +276,7 @@ function Update(){
 		}
 		else{
 			gameOver=true;
-			//gameOverAnim.Play("GameStart");
-			
-			//tWin.text=(winPlayerIndex+1)+"P WINS !";
 			gameStart=false;
-
-
-			//tWin.gameObject.SetActive(true);
-			//tWin.gameObject.SetActive(false);
 
 			ShowGameOverUI();
 		}

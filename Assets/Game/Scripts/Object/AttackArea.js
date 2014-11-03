@@ -27,7 +27,8 @@ function OnTriggerEnter(_other:Collider){
 					//GameManager.Instance().LogEvent(myChar.name+" X "+ bp.character.name+" "+damage+" Damage" );
 					var forceDir:Vector3=bp.character.transform.position- myChar.transform.position;
 					forceDir=forceDir.normalized;
-					forceDir.y=0.1;
+					forceDir.y=0.2;
+					forceDir.z=0;
 					bp.Hurt(damage,forceDir.normalized*hitForce,myChar);
 				}	
 			}
@@ -44,7 +45,11 @@ function OnTriggerEnter(_other:Collider){
 		myChar=GetComponentInParent(Character) as Character;
 		forceDir=_other.transform.position-myChar.transform.position;
 		forceDir=forceDir.normalized;
-		forceDir.y=0.1;
+		//Debug.Log(forceDir);
+		//forceDir.y=Mathf.Clamp(forceDir.y,0.2,1);
+		forceDir.y=Mathf.Max(0.2,forceDir.y);
+		forceDir.z=0;
+		//Debug.Log(forceDir);
 		_other.gameObject.rigidbody.AddForce(forceDir.normalized*hitForce);
 	}
 }
