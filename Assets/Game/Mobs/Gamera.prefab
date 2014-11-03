@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpObj: {fileID: 0}
-  HP: 1
+  HP: 400
   maxHP: 400
   character: {fileID: 0}
   anim: {fileID: 0}
