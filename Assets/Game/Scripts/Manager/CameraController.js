@@ -36,20 +36,10 @@ function SlowMotion(_timeScale:float,_duration:float){
 
 }
 
-function Update(){
-	/*
-	if (Input.GetKeyDown(KeyCode.K)){
-		SlowMotion(0.1,2);
-	}
-	*/
-}
-
-
 
 function ShakeCamera(_strength:float){
 	shakeStrength=_strength;
 	shaking=true;
-
 }
 
 function StopShakeCamera(){
@@ -58,8 +48,13 @@ function StopShakeCamera(){
 }
 
 function ShakeCamera(_strength:float,_duration:float){
+
+	if (shaking){
+		return;
+	}
 	//DoShakeCamera(_strength,_duration);
 	var toggle:float=0;
+
 	ShakeCamera(_strength);
 
 	while (toggle<_duration){

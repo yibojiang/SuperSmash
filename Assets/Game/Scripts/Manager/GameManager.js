@@ -59,6 +59,8 @@ var brosSmoke:ParticleSystem;
 
 var menuAnim:Animator;
 
+var tScore:TextMesh;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
