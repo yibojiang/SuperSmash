@@ -298,8 +298,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35164189, y: .502154827, z: .420423836}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.70850825, y: .502155066, z: 0}
+  m_LocalScale: {x: .885212898, y: .885212839, z: .885212839}
   m_Children: []
   m_Father: {fileID: 400008}
   m_RootOrder: 2
@@ -310,7 +310,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35164189, y: .502154827, z: -.354489088}
+  m_LocalPosition: {x: 2.82895565, y: .502155066, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -351,8 +351,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.750696838, y: -.932257175, z: .777909994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .00712928595, y: -.932257473, z: 0}
+  m_LocalScale: {x: .939999998, y: .939999998, z: .939999998}
   m_Children: []
   m_Father: {fileID: 400016}
   m_RootOrder: 1
@@ -363,7 +363,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.750696838, y: -.932257175, z: -.619666636}
+  m_LocalPosition: {x: -.750677288, y: -.932257473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -640,7 +640,7 @@ MonoBehaviour:
   damage: 20
   sustainDamage: 0
   sustainOn: 0
-  hitForce: 1000
+  hitForce: 3000
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -655,7 +655,7 @@ MonoBehaviour:
   damage: 125
   sustainDamage: 0
   sustainOn: 0
-  hitForce: 10000
+  hitForce: 3000
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -681,6 +681,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,6 +707,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
