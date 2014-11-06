@@ -148,7 +148,7 @@ function LateUpdate () {
 				downY=gm.apple.transform.position.y;
 			}
 
-			if (gm.apple.transform.position.x>upY){
+			if (gm.apple.transform.position.y>upY){
 				upY=gm.apple.transform.position.y;
 			}
 		}
@@ -165,14 +165,17 @@ function LateUpdate () {
 
 			var hDist:float=(rightX-leftX)/2+1;
 			
-			var vDist:float=(upY-downY)+5;
+			var vDist:float=(upY-downY)+10;
 
 			var dist:float=Mathf.Max(hDist,vDist);
 
 			var rad:float=cam.fieldOfView*factor*Mathf.Deg2Rad;
 			//Debug.Log("hdist: "+hDist+" deg: "+ rad*Mathf.Rad2Deg);
 			var targetZ:float=-300-( dist / Mathf.Tan(rad ) );
+
+			//var targetY:float=( vDist / Mathf.Tan(rad ) );
 			cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*10;
+			//cameraTransform.position.y+=(targetY-cameraTransform.position.y)*Time.deltaTime*10;
 
 			/*
 			targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;

@@ -16,6 +16,7 @@ var hpPrefab:GameObject;
 
 var characters:List.<Character>;
 var playerCharacters:List.<Character>;
+var emptyCharacter:Character;
 var mobs:GameObject[];
 
 private var mobToggle:float;
@@ -89,20 +90,22 @@ function LogEvent(_eventStr:String){
 
 function GeneratePlayer(_playerIndex:int,_characterIndex:int,_pos:Vector3,_random:boolean){
 	var randomPart:GameObject;
-	if (_random){
-		//var mobPrefab:GameObject=mobs[Random.Range(x)];
-		//var randomPart:CharacterPart=
-	}
-	else{
-		var generatePos:Vector3=_pos;
-		var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
-		mob.ai=false;
-		mob.mobIndex=_characterIndex;
-		mob.controlIndex=_playerIndex;
-		mob.SetColor(Color.white);
-		characters.Add(mob);	
-	}
+	var generatePos:Vector3=_pos;
 	
+	
+		
+	var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+	mob.ai=false;
+	mob.mobIndex=_characterIndex;
+	mob.controlIndex=_playerIndex;
+	mob.SetColor(Color.white);
+	characters.Add(mob);		
+
+	if (_random){
+		var bs:BodySwitch=mob.gameObject.AddComponent(BodySwitch).GetComponent.<BodySwitch>();
+		bs.character=mob;
+		bs.RandomBody();
+	}
 }
 
 
@@ -183,7 +186,9 @@ function PlayBrosAnim(){
 }
 
 function Start(){
-	CameraController.Instance().BlurOn();
+	if (menuAnim.gameObject.activeInHierarchy){
+		CameraController.Instance().BlurOn();
+	}
 	CameraController.Instance().LightOff();
 	brosTransform.localPosition.y=-5.3;
 }
@@ -198,7 +203,6 @@ function GameStart(){
 
 	GeneratePlayer(0,0,Vector3(-10,15,-286),false);
 	GeneratePlayer(1,1,Vector3(10,15,-286),false);
-	//gameStartAnim.SetTrigger("GameStart");
 	
 	gameUI.SetActive(true);
 	titleUI.SetActive(false);	
@@ -224,6 +228,12 @@ function SpawnBall(_duration:float){
 function Update(){
 	tLog.text="";
 	tScoreBoard.text="";
+
+	/*
+	if (Input.GetKeyDown(KeyCode.R)){
+		GeneratePlayer(1,0,Vector3(0,15,-286),true );
+	}
+	*/
 
 	var i:int;
 	for (i=0;i<logString.Count;i++){

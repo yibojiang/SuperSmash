@@ -46,7 +46,7 @@ function SetColor(_color:Color){
 }
 
 function AddBodyPart(_part:int,_body:CharacterBodyPart){
-	//bodyParts[_part]=_body;
+
 	bodyParts.Add(_body);
 	_body.Init(this);
 
@@ -56,6 +56,35 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	}
 
 	_body.SetColor(originColor);
+}
+
+function ReplaceBodyPart(_part:int,_body:CharacterBodyPart){
+	DestroyBodyPart(_part);
+	bodyParts.Add(_body);
+	_body.Init(this);
+
+	var i:int;
+	for (i=0;i<bodyParts.Count;i++){
+		bodyParts[i].transform.localPosition=Vector3(0,0,0);
+	}
+
+	_body.SetColor(originColor);
+}
+
+function DestroyBodyPart(_part:int){
+	var i:int;
+	var bp:CharacterBodyPart;
+	for (i=0;i<bodyParts.Count;i++){
+		if (bodyParts[i].part==_part){
+			bp=bodyParts[i];
+		}
+	}
+
+	if (bp!=null){
+		bodyParts.Remove(bp);
+		Destroy(bp.gameObject);
+	}
+
 }
 
 function Start () {
@@ -116,6 +145,8 @@ function Attacking(_attacking:boolean,_part:int){
 	}
 }
 
+
+
 function DropBodyPart(_part:int){
 	var i:int;
 	for (i=0;i<bodyParts.Count;i++){
@@ -124,9 +155,6 @@ function DropBodyPart(_part:int){
 			
 		}
 	}
-
-
-
 }
 
 function PickupBodyPart(){
@@ -311,7 +339,7 @@ function Update () {
 			dirToggle-=dirInterval;
 			dir=Vector2(Random.Range(-2,2),0);
 			dir.Normalize();
-			dirInterval=Random.Range(1.0,4.0);
+			dirInterval=Random.Range(1.0,3.0);
 		}
 
 		attackToggle+=Time.deltaTime;

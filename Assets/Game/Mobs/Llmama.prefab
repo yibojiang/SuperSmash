@@ -560,7 +560,7 @@ Rigidbody:
   m_GameObject: {fileID: 100014}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: .5
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -620,6 +620,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -634,6 +635,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -695,6 +697,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,6 +791,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1

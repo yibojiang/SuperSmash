@@ -1,4 +1,20 @@
 ﻿#pragma strict
+
+var ps:ParticleSystem;
+var fireSpeed:float=10;
+function Update(){
+	//Debug.Log(rigidbody.velocity.magnitude);
+	if (rigidbody.velocity.magnitude>fireSpeed){
+		if (!ps.isPlaying){
+			ps.Play();	
+		}
+	}
+	else{
+		if (ps.isPlaying){
+			ps.Stop();
+		}
+	}
+}
 /*
 function OnTriggerEnter(_other:Collider){
 	if (_other.CompareTag("Basket")){
