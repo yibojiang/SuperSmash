@@ -23,7 +23,13 @@ public static function Instance() : CameraController
     return instance;
 }
 
+var slowMotion:boolean=false;
 function SlowMotion(_timeScale:float,_duration:float){
+
+	if (slowMotion){
+		return;
+	}
+	slowMotion=true;
 	var toggle:float=0;
 	var prevTimeScale:float=Time.timeScale;
 	while(toggle<_duration){
@@ -35,7 +41,7 @@ function SlowMotion(_timeScale:float,_duration:float){
 
 
 	Time.timeScale=prevTimeScale;
-
+	slowMotion=false;
 }
 
 
@@ -104,72 +110,76 @@ function LateUpdate () {
 	var downY:float=100000;
 	var upY:float=-100000;
 
-	var gm:GameManager=GameManager.Instance();
+	if (target!=null){
 
-	for (i=0;i<GameManager.Instance().characters.Count;i++){
-		if (GameManager.Instance().characters[i].transform.position.x<leftX){
-			leftX=GameManager.Instance().characters[i].transform.position.x;
 
+		var gm:GameManager=GameManager.Instance();
+
+		for (i=0;i<GameManager.Instance().characters.Count;i++){
+			if (GameManager.Instance().characters[i].transform.position.x<leftX){
+				leftX=GameManager.Instance().characters[i].transform.position.x;
+
+			}
+
+			if (GameManager.Instance().characters[i].transform.position.x>rightX){
+				rightX=GameManager.Instance().characters[i].transform.position.x;
+			}
+
+			if (GameManager.Instance().characters[i].transform.position.y<downY){
+				downY=GameManager.Instance().characters[i].transform.position.y;
+
+			}
+
+			if (GameManager.Instance().characters[i].transform.position.y>upY){
+				upY=GameManager.Instance().characters[i].transform.position.y;
+			}
 		}
 
-		if (GameManager.Instance().characters[i].transform.position.x>rightX){
-			rightX=GameManager.Instance().characters[i].transform.position.x;
+		if(gm.apple!=null){
+			if (gm.apple.transform.position.x<leftX){
+				leftX=gm.apple.transform.position.x;
+			}
+
+			if (gm.apple.transform.position.x>rightX){
+				rightX=gm.apple.transform.position.x;
+			}
+
+			if (gm.apple.transform.position.y<downY){
+				downY=gm.apple.transform.position.y;
+			}
+
+			if (gm.apple.transform.position.x>upY){
+				upY=gm.apple.transform.position.y;
+			}
 		}
-
-		if (GameManager.Instance().characters[i].transform.position.y<downY){
-			downY=GameManager.Instance().characters[i].transform.position.y;
-
-		}
-
-		if (GameManager.Instance().characters[i].transform.position.y>upY){
-			upY=GameManager.Instance().characters[i].transform.position.y;
-		}
-	}
-
-	if(gm.apple!=null){
-		if (gm.apple.transform.position.x<leftX){
-			leftX=gm.apple.transform.position.x;
-		}
-
-		if (gm.apple.transform.position.x>rightX){
-			rightX=gm.apple.transform.position.x;
-		}
-
-		if (gm.apple.transform.position.y<downY){
-			downY=gm.apple.transform.position.y;
-		}
-
-		if (gm.apple.transform.position.x>upY){
-			upY=gm.apple.transform.position.y;
-		}
-	}
-	
-	if (GameManager.Instance().characters.Count>0){
-		target.position.x=(leftX+rightX)/2;
-
-
-		cameraTransform.position.x+=(target.position.x-cameraTransform.position.x)*Time.deltaTime*10;
-
-	
-		//var targetZ:float=(-293-(rightX-leftX)*perspFactor );
-		//perspFactor
-
-		var hDist:float=(rightX-leftX)/2+1;
 		
-		var vDist:float=(upY-downY)+5;
+		if (GameManager.Instance().characters.Count>0){
+			target.position.x=(leftX+rightX)/2;
 
-		var dist:float=Mathf.Max(hDist,vDist);
 
-		var rad:float=cam.fieldOfView*factor*Mathf.Deg2Rad;
-		//Debug.Log("hdist: "+hDist+" deg: "+ rad*Mathf.Rad2Deg);
-		var targetZ:float=-300-( dist / Mathf.Tan(rad ) );
-		cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*10;
+			cameraTransform.position.x+=(target.position.x-cameraTransform.position.x)*Time.deltaTime*10;
 
-		/*
-		targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;
-		targetFOV=Mathf.Clamp(targetFOV,50,150);
-		cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
-		*/
+		
+			//var targetZ:float=(-293-(rightX-leftX)*perspFactor );
+			//perspFactor
 
+			var hDist:float=(rightX-leftX)/2+1;
+			
+			var vDist:float=(upY-downY)+5;
+
+			var dist:float=Mathf.Max(hDist,vDist);
+
+			var rad:float=cam.fieldOfView*factor*Mathf.Deg2Rad;
+			//Debug.Log("hdist: "+hDist+" deg: "+ rad*Mathf.Rad2Deg);
+			var targetZ:float=-300-( dist / Mathf.Tan(rad ) );
+			cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*10;
+
+			/*
+			targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;
+			targetFOV=Mathf.Clamp(targetFOV,50,150);
+			cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
+			*/
+
+		}
 	}
 }

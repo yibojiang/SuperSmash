@@ -533,6 +533,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -547,6 +548,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -593,6 +595,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -618,6 +621,7 @@ MonoBehaviour:
   jumpCount: 0
   maxJumpCount: 1
   fly: 0
+  hover: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -810,7 +814,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: -1199
+  m_SortingOrder: 199
   m_Sprite: {fileID: 21300000, guid: 675a30c0f5f9e4042af35c8118a2ca94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200008

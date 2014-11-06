@@ -22,7 +22,7 @@ private var mobToggle:float;
 var mobInterval:float=2;
 
 var countDown:float=30;
-var maxCountDown:float;
+private var maxCountDown:float;
 var tCountDown:TextMesh;
 
 var gameStart:boolean;
@@ -44,7 +44,8 @@ var scoreString:List.<int>;
 var titleUI:GameObject;
 var gameUI:GameObject;
 var gameBgm:AudioSource;
-
+var gameOverBgm:AudioClip;
+var gameStartBgm:AudioClip;
 var gameOverUI:GameObject;
 
 var sunPath:SunPath;
@@ -65,6 +66,7 @@ var applePrefab:GameObject;
 var apple:GameObject;
 
 var platform:Transform;
+var sunface:SunFace;
 
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
@@ -85,15 +87,22 @@ function LogEvent(_eventStr:String){
 
 }
 
-function GeneratePlayer(_playerIndex:int,_characterIndex:int,_pos:Vector3){
-	//GeneratePlayer(_playerIndex,_characterIndex );
-	var generatePos:Vector3=_pos;//Vector3(Random.Range(444,485),15,-286 );
-	var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
-	mob.ai=false;
-	mob.mobIndex=_characterIndex;
-	mob.controlIndex=_playerIndex;
-	mob.SetColor(Color.white);
-	characters.Add(mob);
+function GeneratePlayer(_playerIndex:int,_characterIndex:int,_pos:Vector3,_random:boolean){
+	var randomPart:GameObject;
+	if (_random){
+		//var mobPrefab:GameObject=mobs[Random.Range(x)];
+		//var randomPart:CharacterPart=
+	}
+	else{
+		var generatePos:Vector3=_pos;
+		var mob:Character=Instantiate(playerCharacters[_characterIndex],generatePos,Quaternion.identity).GetComponent(Character) as Character;	
+		mob.ai=false;
+		mob.mobIndex=_characterIndex;
+		mob.controlIndex=_playerIndex;
+		mob.SetColor(Color.white);
+		characters.Add(mob);	
+	}
+	
 }
 
 
@@ -116,6 +125,34 @@ function ShowGameOverUI(){
 		}
 		yield WaitForEndOfFrame();
 	}
+
+}
+
+function PlayGameOverAnim(){
+	titleUI.SetActive(true);
+	menuAnim.Play("MenuEndStart");
+
+	gameBgm.Stop();
+	gameBgm.volume=0.6;
+	gameBgm.clip=gameOverBgm;
+	gameBgm.Play();
+	if (scoreString[0]>scoreString[1]){
+		menuAnim.SetInteger("Win",0);
+	}
+	else if (scoreString[0]<scoreString[1]){
+		menuAnim.SetInteger("Win",1);
+	}
+	else{
+		menuAnim.SetInteger("Win",2);
+	}
+
+	while(1){
+		if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+			Application.LoadLevel("Game");
+		}
+		yield WaitForEndOfFrame();
+	}
+
 
 }
 
@@ -159,10 +196,10 @@ function GameStart(){
 
 	SpawnBall(3);
 
-	GeneratePlayer(0,0,Vector3(460,15,-286));
-	GeneratePlayer(1,1,Vector3(470,15,-286));
+	GeneratePlayer(0,0,Vector3(-10,15,-286),false);
+	GeneratePlayer(1,1,Vector3(10,15,-286),false);
 	//gameStartAnim.SetTrigger("GameStart");
-	gameBgm.Play();
+	
 	gameUI.SetActive(true);
 	titleUI.SetActive(false);	
 
@@ -223,7 +260,9 @@ function Update(){
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || device.Action1.WasPressed ){
 			if (menuAnim.gameObject.activeInHierarchy){
 				if (!gameOver){
-					
+					gameBgm.clip=gameStartBgm;
+					gameBgm.volume=1;
+					gameBgm.Play();
 					menuAnim.Play("MenuStart");
 					gameOver=true;
 				}	
@@ -236,13 +275,15 @@ function Update(){
 					maxCountDown=countDown;
 					//max_time
 					gameStart=true;
-					GeneratePlayer(0,0,Vector3(460,15,-286));
-					GeneratePlayer(1,1,Vector3(470,15,-286));
+					GeneratePlayer(0,0,Vector3(-10,15,-286),false);
+					GeneratePlayer(1,1,Vector3(10,15,-286),false);
 					//gameStartAnim.SetTrigger("GameStart");
+					gameBgm.clip=gameStartBgm;
+					gameBgm.volume=1;
 					gameBgm.Play();
 					gameUI.SetActive(true);
 					titleUI.SetActive(false);	
-					
+					CameraController.Instance().BlurOff();
 					PlayBrosAnim();
 				}	
 			}
@@ -271,6 +312,8 @@ function Update(){
 
 
 			sunPath.UpdateTime(countDown/maxCountDown);
+
+			sunface.SetTime(1-countDown/maxCountDown);
 			countDown-=Time.deltaTime;
 			tCountDown.text=countDown.ToString("f2");
 		}
@@ -278,7 +321,8 @@ function Update(){
 			gameOver=true;
 			gameStart=false;
 
-			ShowGameOverUI();
+			//ShowGameOverUI();
+			PlayGameOverAnim();
 		}
 
 		mobToggle+=Time.deltaTime;
@@ -287,7 +331,7 @@ function Update(){
 		}
 		else{
 			mobToggle-=mobInterval;
-			var generatePos:Vector3=Vector3(Random.Range(444,485),15,-286 );
+			var generatePos:Vector3=Vector3(Random.Range(-100,100),15,-286 );
 			
 
 			var randomIndex:int=Random.Range(0,mobs.Length);

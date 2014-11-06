@@ -43,14 +43,17 @@ function OnTriggerEnter(_other:Collider){
 	if (_other.CompareTag("Ball")){
 		//Debug.Log("ball");
 		myChar=GetComponentInParent(Character) as Character;
-		forceDir=_other.transform.position-myChar.transform.position;
-		forceDir=forceDir.normalized;
-		//Debug.Log(forceDir);
-		//forceDir.y=Mathf.Clamp(forceDir.y,0.2,1);
-		forceDir.y=Mathf.Max(0.2,forceDir.y);
-		forceDir.z=0;
-		//Debug.Log(forceDir);
-		_other.gameObject.rigidbody.AddForce(forceDir.normalized*hitForce);
+		if (myChar!=null){
+			forceDir=_other.transform.position-myChar.transform.position;
+			forceDir=forceDir.normalized;
+			//Debug.Log(forceDir);
+			//forceDir.y=Mathf.Clamp(forceDir.y,0.2,1);
+			forceDir.y=Mathf.Max(0.2,forceDir.y);
+			forceDir.z=0;
+			//Debug.Log(forceDir);
+			_other.gameObject.rigidbody.AddForce(forceDir.normalized*hitForce);	
+		}
+		
 	}
 }
 

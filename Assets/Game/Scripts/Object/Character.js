@@ -202,7 +202,7 @@ function Die(){
 function Reborn(_spawnDuration:float){
 	//Debug.Log("REBORN");
 	//yield WaitForSeconds(_spawnDuration);
-	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(444,485),15,-286 ));
+	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(-50,50),15,-286 ),false);
 }
 
 
@@ -480,6 +480,8 @@ function Update () {
 			
 			if( !IsHurting() ){
 				if (device!=null && device.Action1.IsPressed ){
+
+					//var flyForce:float=
 					GetFlyPart().anim.SetFloat("Speed",1 );
 					rigidbody.AddForce(Vector3(0,GetFlyPart().flyForce,0) );
 				}
