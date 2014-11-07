@@ -230,7 +230,7 @@ function Die(){
 function Reborn(_spawnDuration:float){
 	//Debug.Log("REBORN");
 	//yield WaitForSeconds(_spawnDuration);
-	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(-50,50),15,-286 ),false);
+	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(-50,50),15,-286 ),true);
 }
 
 

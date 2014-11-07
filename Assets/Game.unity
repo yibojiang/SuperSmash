@@ -119,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &50817451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 50817450}
-  lengthInSec: .400000006
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -150,30 +150,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .5
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - time: 0
-          value: .600000024
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-      minMaxState: 3
-    startSpeed:
-      scalar: 30
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -189,6 +166,29 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: .5
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startSpeed:
+      scalar: 20
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .75
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2204,7 +2204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 142895556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130, y: 1.12989998, z: -6.1010437}
+  m_LocalPosition: {x: 151.24678, y: 1.12989998, z: -6.1010437}
   m_LocalScale: {x: 200, y: 440.923218, z: 168.659882}
   m_Children:
   - {fileID: 603733974}
@@ -6691,7 +6691,7 @@ Transform:
   m_PrefabInternal: {fileID: 1473654763}
   m_GameObject: {fileID: 603733973}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: -.51836729, y: 0, z: .0262260288}
+  m_LocalPosition: {x: -.538549542, y: 0, z: .0262260288}
   m_LocalScale: {x: .00499999989, y: .00226796861, z: .00592909241}
   m_Children:
   - {fileID: 1153456908}
@@ -9630,7 +9630,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904923850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -130, y: 1.12989998, z: -6.1010437}
+  m_LocalPosition: {x: -149.607071, y: 1.12989998, z: -6.1010437}
   m_LocalScale: {x: 200, y: 440.923218, z: 168.659882}
   m_Children:
   - {fileID: 1197519402}
@@ -13310,7 +13310,7 @@ Transform:
   m_PrefabInternal: {fileID: 1771985667}
   m_GameObject: {fileID: 1197519401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .51836729, y: .00376044121, z: .0262260288}
+  m_LocalPosition: {x: .538627863, y: .00376044121, z: .0262260288}
   m_LocalScale: {x: .00499999989, y: .00226796861, z: .00592909241}
   m_Children:
   - {fileID: 1533790674}
@@ -16725,7 +16725,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400006, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.51836729
+      value: -.538549542
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -16902,7 +16902,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500002, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_Enabled
@@ -16962,7 +16962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.79705882
+      value: 2.98739576
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -19271,7 +19271,7 @@ Transform:
   m_PrefabInternal: {fileID: 1473654763}
   m_GameObject: {fileID: 1594282433}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: -9.08226395, y: 20.7752209, z: -2.79705882}
+  m_LocalPosition: {x: -9.08226395, y: 20.7752209, z: 2.98739576}
   m_LocalScale: {x: 4.11000013, y: 5.63999987, z: 4.51071882}
   m_Children:
   - {fileID: 2013526796}
@@ -20276,7 +20276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1696611328
 Transform:
   m_ObjectHideFlags: 0
@@ -20309,7 +20309,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696611327}
-  lengthInSec: .400000006
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -20320,30 +20320,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .5
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - time: 0
-          value: .600000024
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-      minMaxState: 3
-    startSpeed:
-      scalar: 30
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -20359,6 +20336,29 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: .5
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startSpeed:
+      scalar: 20
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .75
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -22008,7 +22008,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400006, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .51836729
+      value: .538627863
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -22120,7 +22120,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500002, guid: a6003d77c444abc4182f14c6c2a7e5f3, type: 2}
       propertyPath: m_Size.x
