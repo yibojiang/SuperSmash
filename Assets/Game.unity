@@ -74,6 +74,62 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &21619933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 21619934}
+  - 114: {fileID: 21619936}
+  - 65: {fileID: 21619935}
+  m_Layer: 0
+  m_Name: FireAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &21619934
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21619933}
+  m_LocalRotation: {x: 0, y: 8.74227766e-08, z: -0, w: -1}
+  m_LocalPosition: {x: -5, y: -.956973433, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1153456908}
+  m_RootOrder: 2
+--- !u!65 &21619935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21619933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 3, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &21619936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21619933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcc790ec11563a4fa2aa36014ea7994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  sustainDamage: 100
+  sustainOn: 1
+  hitForce: 0
 --- !u!1 &32981584
 GameObject:
   m_ObjectHideFlags: 0
@@ -4230,7 +4286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b528b639d34654f48ba4b510a3a30781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 506051961}
+  target: {fileID: 2123239816}
   shaking: 0
   shakeStrength: .400000006
   cameraTransform: {fileID: 32981585}
@@ -4240,7 +4296,10 @@ MonoBehaviour:
   cam: {fileID: 232852748}
   factor: .850000024
   speedLineAnim: {fileID: 1591383801}
+  targets: []
+  offset: {x: 0, y: 5, z: 0}
   slowMotion: 0
+  inTraget: 0
 --- !u!114 &232852751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5823,6 +5882,10 @@ MonoBehaviour:
   flag: 1
   ps: {fileID: 1225573452}
   score: 2
+  fireArea: {fileID: 0}
+  firing: 0
+  interval: 5
+  fireInterval: 4
 --- !u!65 &468752253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9293,6 +9356,10 @@ MonoBehaviour:
   flag: 0
   ps: {fileID: 624054479}
   score: 4
+  fireArea: {fileID: 0}
+  firing: 0
+  interval: 5
+  fireInterval: 4
 --- !u!65 &823297150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13058,8 +13125,8 @@ MonoBehaviour:
   - {fileID: 100016, guid: ef6fd087f00745842b62ff86729d4120, type: 2}
   - {fileID: 100014, guid: 1d3d8c9e7b3282a4cbed5b69d4b205f7, type: 2}
   - {fileID: 100024, guid: d87c3195e1bb0b141b68b3f48a234875, type: 2}
-  mobInterval: 200
-  countDown: 200
+  mobInterval: 20
+  countDown: 180
   tCountDown: {fileID: 1269634762}
   gameStart: 0
   smokePrefab: {fileID: 100000, guid: 9aa3b97ef5c4a4f39adca293813f44d0, type: 2}
@@ -15112,6 +15179,7 @@ Transform:
   m_Children:
   - {fileID: 1696611328}
   - {fileID: 1679318306}
+  - {fileID: 21619934}
   m_Father: {fileID: 603733974}
   m_RootOrder: 0
 --- !u!212 &1153456909
@@ -15151,6 +15219,10 @@ MonoBehaviour:
   flag: 0
   ps: {fileID: 1696611330}
   score: 1
+  fireArea: {fileID: 21619936}
+  firing: 0
+  interval: 10
+  fireInterval: 4
 --- !u!65 &1153456911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18554,6 +18626,10 @@ MonoBehaviour:
   flag: 0
   ps: {fileID: 1316301720}
   score: 2
+  fireArea: {fileID: 0}
+  firing: 0
+  interval: 5
+  fireInterval: 4
 --- !u!65 &1281947085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20058,6 +20134,62 @@ SpriteRenderer:
   m_SortingOrder: 200
   m_Sprite: {fileID: 21300006, guid: 51a27506402b34f528e42c71f5d1b9fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1353704287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1353704288}
+  - 114: {fileID: 1353704290}
+  - 65: {fileID: 1353704289}
+  m_Layer: 0
+  m_Name: FireAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1353704288
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353704287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: -.948788285, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1533790674}
+  m_RootOrder: 2
+--- !u!65 &1353704289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353704287}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 3, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1353704290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353704287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcc790ec11563a4fa2aa36014ea7994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  sustainDamage: 100
+  sustainOn: 1
+  hitForce: 0
 --- !u!1 &1356524784
 GameObject:
   m_ObjectHideFlags: 0
@@ -21725,6 +21857,7 @@ Transform:
   m_Children:
   - {fileID: 50817454}
   - {fileID: 747041691}
+  - {fileID: 1353704288}
   m_Father: {fileID: 1197519402}
   m_RootOrder: 0
 --- !u!212 &1533790675
@@ -21778,6 +21911,10 @@ MonoBehaviour:
   flag: 1
   ps: {fileID: 50817452}
   score: 1
+  fireArea: {fileID: 1353704290}
+  firing: 0
+  interval: 10
+  fireInterval: 4
 --- !u!1 &1536413846
 GameObject:
   m_ObjectHideFlags: 0
@@ -21923,6 +22060,10 @@ MonoBehaviour:
   flag: 1
   ps: {fileID: 1142387474}
   score: 4
+  fireArea: {fileID: 0}
+  firing: 0
+  interval: 5
+  fireInterval: 4
 --- !u!65 &1539531864
 BoxCollider:
   m_ObjectHideFlags: 0

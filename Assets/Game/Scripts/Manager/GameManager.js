@@ -140,7 +140,7 @@ function PlayGameOverAnim(){
 	gameBgm.Stop();
 	gameBgm.volume=0.6;
 	gameBgm.clip=gameOverBgm;
-	gameBgm.Play();
+	//gameBgm.Play();
 	if (scoreString[0]>scoreString[1]){
 		menuAnim.SetInteger("Win",0);
 	}
@@ -150,9 +150,11 @@ function PlayGameOverAnim(){
 	else{
 		menuAnim.SetInteger("Win",2);
 	}
-
+	yield WaitForEndOfFrame();
+	
 	while(1){
-		if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+		if (menuAnim.GetCurrentAnimatorStateInfo(0).IsName("MenuIdle")){
+		//if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
 			Application.LoadLevel("Game");
 		}
 		yield WaitForEndOfFrame();

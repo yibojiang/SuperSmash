@@ -14,6 +14,9 @@ var cam:Camera;
 var factor:float=1;
 var speedLineAnim:Animator;
 
+var targets:List.<Transform>;
+
+var offset:Vector3;
 
 private static var instance : CameraController;
  
@@ -97,6 +100,15 @@ function LightOff(){
 	ge.rampOffset=-0.05;
 }
 
+var inTraget:boolean=false;
+function SetTarget(_targets:List.<Transform>,_duration:float){
+	inTraget=true;
+	targets.Clear();
+	//targets.Add(_target);
+	targets=_targets;
+	yield WaitForSeconds(_duration);
+	inTraget=false;
+}
 
 function LateUpdate () {
 	//Debug.Log(Mathf.Tan(40.0/180*Mathf.PI));
@@ -112,63 +124,55 @@ function LateUpdate () {
 	var rightX:float=-100000;
 	var downY:float=100000;
 	var upY:float=-100000;
-
+	var gm:GameManager=GameManager.Instance();
+	
 	if (target!=null){
-
-
-		var gm:GameManager=GameManager.Instance();
-
-		for (i=0;i<GameManager.Instance().characters.Count;i++){
-			if (GameManager.Instance().characters[i].transform.position.x<leftX){
-				leftX=GameManager.Instance().characters[i].transform.position.x;
-
+	
+		if (!inTraget){
+			targets.Clear();
+			if (gm.characters.Count>0){
+				for (i=0;i<gm.characters.Count;i++ ){
+					targets.Add(gm.characters[i].transform);
+				}
 			}
-
-			if (GameManager.Instance().characters[i].transform.position.x>rightX){
-				rightX=GameManager.Instance().characters[i].transform.position.x;
-			}
-
-			if (GameManager.Instance().characters[i].transform.position.y<downY){
-				downY=GameManager.Instance().characters[i].transform.position.y;
-
-			}
-
-			if (GameManager.Instance().characters[i].transform.position.y>upY){
-				upY=GameManager.Instance().characters[i].transform.position.y;
-			}
-		}
-
-		if(gm.apple!=null){
-			if (gm.apple.transform.position.x<leftX){
-				leftX=gm.apple.transform.position.x;
-			}
-
-			if (gm.apple.transform.position.x>rightX){
-				rightX=gm.apple.transform.position.x;
-			}
-
-			if (gm.apple.transform.position.y<downY){
-				downY=gm.apple.transform.position.y;
-			}
-
-			if (gm.apple.transform.position.y>upY){
-				upY=gm.apple.transform.position.y;
+			
+			if(gm.apple!=null){
+				targets.Add(gm.apple.transform);
 			}
 		}
 		
-		if (GameManager.Instance().characters.Count>0){
-			target.position.x=(leftX+rightX)/2;
+		
+		
+		for (i=0;i<targets.Count;i++){
+			if (targets[i].position.x<leftX){
+				leftX=targets[i].position.x;
+			}
+			
+			if (targets[i].position.x>rightX){
+				rightX=targets[i].position.x;
+			}
+			
+			if (targets[i].position.y<downY){
+				downY=targets[i].position.y;
+			}
+			
+			if (targets[i].position.y>upY){
+				upY=targets[i].position.y;
+			}
+		}
+
+		//if (GameManager.Instance().characters.Count>0){
+			target.position.x=(leftX+rightX)/2+offset.x;
+			target.position.y=(upY+downY)/2+offset.y;
 
 
 			cameraTransform.position.x+=(target.position.x-cameraTransform.position.x)*Time.deltaTime*10;
 
+			cameraTransform.position.y+=(target.position.y-cameraTransform.position.y)*Time.deltaTime*10;
 		
-			//var targetZ:float=(-293-(rightX-leftX)*perspFactor );
-			//perspFactor
-
 			var hDist:float=(rightX-leftX)/2+1;
 			
-			var vDist:float=(upY-downY)+10;
+			var vDist:float=(upY-downY)+5;
 
 			var dist:float=Mathf.Max(hDist,vDist);
 
@@ -180,12 +184,11 @@ function LateUpdate () {
 			cameraTransform.position.z+=(targetZ-cameraTransform.position.z)*Time.deltaTime*10;
 			//cameraTransform.position.y+=(targetY-cameraTransform.position.y)*Time.deltaTime*10;
 
-			/*
-			targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;
-			targetFOV=Mathf.Clamp(targetFOV,50,150);
-			cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
-			*/
+			
+			//targetFOV=Mathf.Atan(dist/20.0)*Mathf.Rad2Deg*2;
+			//targetFOV=Mathf.Clamp(targetFOV,50,150);
+			//cam.fieldOfView+=(targetFOV-cam.fieldOfView)*Time.deltaTime*3;
 
-		}
+		//}
 	}
 }
