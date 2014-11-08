@@ -12,6 +12,7 @@ var targetFOV:float=80;
 var cam:Camera;
 
 var factor:float=1;
+var speedLineAnim:Animator;
 
 
 private static var instance : CameraController;
@@ -29,6 +30,7 @@ function SlowMotion(_timeScale:float,_duration:float){
 	if (slowMotion){
 		return;
 	}
+	speedLineAnim.gameObject.SetActive(true);
 	slowMotion=true;
 	var toggle:float=0;
 	var prevTimeScale:float=Time.timeScale;
@@ -41,6 +43,7 @@ function SlowMotion(_timeScale:float,_duration:float){
 
 
 	Time.timeScale=prevTimeScale;
+	speedLineAnim.gameObject.SetActive(false);
 	slowMotion=false;
 }
 

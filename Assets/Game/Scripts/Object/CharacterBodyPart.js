@@ -157,7 +157,7 @@ function Drop(){
 		Destroy(hpObj);
 		
 		character.bodyParts.Remove(this);
-		character.CheckDie();
+		//character.CheckDie();
 		transform.parent=null;
 		character=null;
 		

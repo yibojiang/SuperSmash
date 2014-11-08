@@ -69,6 +69,8 @@ var apple:GameObject;
 var platform:Transform;
 var sunface:SunFace;
 
+var gameStartClip:AudioClip;
+
 InvokeRepeating("RefreshEvent", 0, 3);
 function RefreshEvent(){
 	if (logString.Count>0){
@@ -201,6 +203,8 @@ function GameStart(){
 
 	SpawnBall(3);
 
+
+
 	GeneratePlayer(0,0,Vector3(-10,15,-286),false);
 	GeneratePlayer(1,1,Vector3(10,15,-286),false);
 	
@@ -223,17 +227,19 @@ function SpawnBall(_duration:float){
 	apple=Instantiate(applePrefab);
 	apple.transform.parent=platform;
 	apple.transform.localPosition=Vector3(3,30,-3);
+	gameBgm.PlayOneShot(gameStartClip);
 }
 
 function Update(){
 	tLog.text="";
 	tScoreBoard.text="";
 
-	/*
+	
 	if (Input.GetKeyDown(KeyCode.R)){
-		GeneratePlayer(1,0,Vector3(0,15,-286),true );
+		GeneratePlayer(0,0,Vector3(Random.Range(-10,10),15,-286),true );
+		GeneratePlayer(1,0,Vector3(Random.Range(-10,10),15,-286),true );
 	}
-	*/
+	
 
 	var i:int;
 	for (i=0;i<logString.Count;i++){
@@ -291,6 +297,9 @@ function Update(){
 					gameBgm.clip=gameStartBgm;
 					gameBgm.volume=1;
 					gameBgm.Play();
+
+					
+
 					gameUI.SetActive(true);
 					titleUI.SetActive(false);	
 					CameraController.Instance().BlurOff();

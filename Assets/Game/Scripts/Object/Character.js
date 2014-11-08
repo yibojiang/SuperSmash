@@ -4,10 +4,7 @@ import InControl;
 import System.Collections.Generic;
 
 var controlIndex:int;
-
-//var groundCheck:GameObject;
 var grounded:boolean;
-
 
 var bodyParts:List.<CharacterBodyPart>;
 
@@ -50,6 +47,13 @@ function AddBodyPart(_part:int,_body:CharacterBodyPart){
 	bodyParts.Add(_body);
 	_body.Init(this);
 
+	if (flipDir>0){
+		_body.transform.eulerAngles.y=0;
+	}
+	else{
+		_body.transform.eulerAngles.y=180;
+	}
+
 	var i:int;
 	for (i=0;i<bodyParts.Count;i++){
 		bodyParts[i].transform.localPosition=Vector3(0,0,0);
@@ -62,6 +66,13 @@ function ReplaceBodyPart(_part:int,_body:CharacterBodyPart){
 	DestroyBodyPart(_part);
 	bodyParts.Add(_body);
 	_body.Init(this);
+
+	if (flipDir>0){
+		_body.transform.eulerAngles.y=0;
+	}
+	else{
+		_body.transform.eulerAngles.y=180;
+	}
 
 	var i:int;
 	for (i=0;i<bodyParts.Count;i++){
@@ -88,6 +99,12 @@ function DestroyBodyPart(_part:int){
 }
 
 function Start () {
+	if (controlIndex % 2==0){
+		SetDir(1);
+	}
+	else{
+		SetDir(-1);		
+	}
 
 	if (initPart1!=null){
 		AddBodyPart(0,initPart1);	
@@ -98,12 +115,7 @@ function Start () {
 	}
 	
 
-	if (controlIndex % 2==0){
-		SetDir(1);
-	}
-	else{
-		SetDir(-1);		
-	}
+	
 }
 
 function Hurt(_damage:float,_force:Vector3){
@@ -210,27 +222,12 @@ function DetectDropItem():boolean{
 
 
 
-function CheckDie(){
-	if (bodyParts.Count==0){
-		Die();
-	}
-
-	//Debug.Log("Die");
-}
-
-function Die(){
-	//Debug.Log("Die");
-	//Destroy(rigidbody);
-
-	
-
-}
 
 
 function Reborn(_spawnDuration:float){
 	//Debug.Log("REBORN");
 	//yield WaitForSeconds(_spawnDuration);
-	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(-50,50),15,-286 ),true);
+	GameManager.Instance().GeneratePlayer(controlIndex,mobIndex,Vector3(Random.Range(-40,40),15,-286 ),true);
 }
 
 
