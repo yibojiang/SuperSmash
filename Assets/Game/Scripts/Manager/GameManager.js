@@ -226,7 +226,7 @@ function SpawnBall(_duration:float){
 	yield WaitForSeconds(_duration);
 	apple=Instantiate(applePrefab);
 	apple.transform.parent=platform;
-	apple.transform.localPosition=Vector3(3,30,-3);
+	apple.transform.localPosition=Vector3(0,50,-3);
 	gameBgm.PlayOneShot(gameStartClip);
 }
 
@@ -350,7 +350,7 @@ function Update(){
 		}
 		else{
 			mobToggle-=mobInterval;
-			var generatePos:Vector3=Vector3(Random.Range(-100,100),15,-286 );
+			var generatePos:Vector3=Vector3(Random.Range(-20,20),50,-286 );
 			
 
 			var randomIndex:int=Random.Range(0,mobs.Length);
